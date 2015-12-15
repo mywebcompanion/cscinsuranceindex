@@ -1,0 +1,25 @@
+{
+  "name": "csc-index",
+  "authors": [
+    "Arun <mywebcompanion@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.4.8",
+    "highcharts": "~4.1.10",
+    "bootstrap": "~3.3.6",
+    "highcharts-ng": "~0.0.11"
+  }
+}

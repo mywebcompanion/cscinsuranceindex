@@ -1,0 +1,18 @@
+<div ng-controller="AnalyticsController">
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="menu-list">
+                <li class="list-item" ng-repeat="item in menu">
+                    <span class="glyphicon {{item.icon}}" aria-hidden="true"></span> &nbsp;
+                    <a href="#/{{item.url}}">{{item.name}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <div id="csc-index-column-chart">
+                <highchart id="chart1" config="chartConfig"></highchart>
+            </div>
+
+        </div>
+    </div>
+</div>

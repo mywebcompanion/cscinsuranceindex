@@ -1,0 +1,90 @@
+[
+  {
+    "country": {
+      "name" : "singapore",
+      "icon" : "fa fa-map-marker",
+      "value-icon" :"",
+      "value-url" : ""
+    },
+    "companyName": {
+      "name" : "AIA, Singapore",
+      "icon" : "fa fa-university",
+      "value-icon" :"",
+      "value-url" : ""
+    },
+    "url": {
+      "name" : "http://aia.com.sg",
+      "icon" : "fa fa-globe",
+      "value-icon" :"",
+      "value-url" : "yes"
+    },
+    "blog": {
+      "name" : "http://aia.com.sg/blog",
+      "icon" : "fa fa-sticky-note",
+      "value-icon" :"",
+      "value-url" : "yes"
+    },
+    "App store": {
+      "name" : "App Store",
+      "icon" : "fa fa-play-circle",
+      "value-icon" :"",
+      "value-url" : "yes"
+    },
+    "play store": {
+      "name" : "Play store",
+      "icon" : "fa fa-play-circle",
+      "value-icon" :"",
+      "value-url" : "yes"
+    },
+    "Facebook Account": {
+      "name" : "facebook.com/aia",
+      "icon" : "fa fa-facebook-square",
+      "value-icon" :"",
+      "value-url" : "yes"
+    },
+    "Twitter Account": {
+      "name" : "twitter.com/aia",
+      "icon" : "fa fa-twitter-square",
+      "value-icon" :"",
+      "value-url" : "yes"
+    },
+    "Instagram Account": {
+      "name" : "instagram.com/aia",
+      "icon" : "fa fa-instagram",
+      "value-icon" :"",
+      "value-url" : "yes"
+    },
+    "Youtube channel": {
+      "name" : "youtube.com/aia",
+      "icon" : "fa fa-youtube-square",
+      "value-icon" :"",
+      "value-url" : "yes"
+    },
+    "Newsletter": {
+      "name" : "http://aia.com.sg/blog",
+      "icon" : "fa fa-newspaper-o",
+      "value-icon" :"",
+      "value-url" : "yes"
+    },
+    "Online Purchase": {
+      "name" : "Not present",
+      "icon" : "fa fa-paypal",
+      "value-icon" :"",
+      "value-url" : "yes"
+    }
+  },
+  {
+    "country": "singapore",
+    "companyName": "Axa",
+    "url": "",
+    "blog": "",
+    "App store": "",
+    "play store": "",
+    "Facebook Account": "",
+    "Twitter Account": "",
+    "Instagram Account": "",
+    "Youtube channel": "",
+    "Newsletter": "",
+    "Online Purchase": ""
+  }
+]

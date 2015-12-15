@@ -1,0 +1,29 @@
+[
+  {
+    "name" : "Social Media",
+    "data": [["AIA",9], ["NTUS",7.7], ["AXA",9.6], ["Aviva",8.7],["Great Eastern",4.2], ["Tokio Marine",6.8], ["Swiss Life",9.1], ["Allianz",5.5]],
+    "color" : "#EF2525"
+  },
+  {
+    "name" : "Support",
+    "data" : [4, 6.2, 4.2, 6.4,8.2, 6.8, 7.8, 3.4],
+    "color" : "#A51D13"
+
+  },
+  {
+    "name" : "Marketing",
+    "data" : [8.4, 3.2, 4.2, 4.4,5.2, 7.6, 9.8, 5.4],
+    "color" : "#FEB300"
+  },
+  {
+    "name" : "Analytics",
+    "data" : [8.8, 5.7, 8.1, 8.4,3.2, 3.8, 5.8, 3.4],
+    "color" : "#1A5F80"
+
+  },
+  {
+    "name" : "Mobility",
+    "data" : [3.2, 5.9, 7.7, 8.4,3.9, 4.8, 3.8, 6.4],
+    "color" : "#09395C"
+  }
+]
