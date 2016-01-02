@@ -1,0 +1,108 @@
+@import "styles.scss";
+
+.company-info-section{
+
+}
+
+.admin-form-field{
+  margin-top:10px;
+  max-width:500px;
+  min-width:100px;
+  margin-bottom:10px;
+  border-radius:0px;
+  margin-left:0px;
+}
+.company-form{
+  border-radius : 0px;
+}
+
+.required-flag{
+  color:#F00000;
+  float:left;
+}
+
+.btn-add-company{
+
+  border-radius: 0px;
+  margin:30px 0px 50px 0px;
+  padding:10px;
+  max-width:300px;
+  min-width:100px;
+  margin-bottom:40px;
+
+}
+
+.input.ng-invalid.ng-touched {
+  background-color: #FA787E;
+}
+
+.input.ng-valid.ng-touched {
+  background-color: #78FA89;
+}
+
+.admin-menu-item{
+  display:block;
+  line-height:10px;
+  font-size:14px;
+  width:70%;
+  padding:10px;
+  margin:0px;
+  border : solid 1px #ccc;
+  vertical-align: middle;
+
+
+}
+
+.admin-menu-item-heading{
+  display:block;
+  line-height:10px;
+  font-size:14px;
+  width:70%;
+  margin:0px;
+  padding:10px;
+  border : solid 1px #ccc;
+  vertical-align: middle;
+  color:#fff;
+  background:#6A428E;
+
+}
+.admin-menu-area{
+  vertical-align: middle;
+  width:100%;
+  line-height:20px;
+  margin-top:100px;
+  position:absolute;
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+}
+.admin-menu-list{
+  padding-left:0px;
+  margin-bottom:0px;
+  a{
+
+  }
+}
+
+.metric-name{
+  width:60%;
+  margin-bottom:20px;
+}
+.metric-option{
+  width:60%;
+  marrgin-top:20px;
+  margin-bottom:20px;
+}
+.select-placeholder{
+  color:#cccccc;
+}
+input[type=checkbox], input[type=radio]{
+  display: inline;
+}
+
+.ui-slider-range{
+  width:59%;
+  margin-bottom:20px;
+  margin-left:10px;
+}

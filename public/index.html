@@ -23,67 +23,79 @@
     <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.src.js"></script>
     <script src="libs/angular/angular.min.js"></script>
-    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
     <script src="libs/highcharts-ng/dist/highcharts-ng.min.js"></script>
     <script src="app.js"></script>
+    <script src="services/GlobalValues.js"></script>
     <script src="services/StaticResourceFactory.js"></script>
     <script src="services/ChartConfig.js"></script>
     <script src="services/CountryStatsFactory.js"></script>
     <script src="controllers/HomeController.js"></script>
+    <script src="controllers/CountryController.js"></script>
     <script src="controllers/SocialController.js"></script>
     <script src="controllers/SupportController.js"></script>
     <script src="controllers/MarketingController.js"></script>
     <script src="controllers/AnalyticsController.js"></script>
     <script src="controllers/MobilityController.js"></script>
     <script src="controllers/MainController.js"></script>
+    <script src="//npmcdn.com/angular-formly"></script>
+
 
 </head>
 <body ng-app="InsuranceIndex">
+<div id="wrapper">
+    <div id="content">
+        <div class="container-fluid container-full">
+            <div class="row navrow">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <img class="csc-logo" src="images/logo-CSC.gif">
 
-<div class="container-fluid container-full">
-    <div class="row navrow">
-        <div class="col-md-12">
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <img class="csc-logo" src="images/logo-CSC.gif">
-
-                        <a class="navbar-brand" href="#">
-                            <span class="nav-heading"> Insurance Index - Omnichannel Experience </span>
-                        </a>
-                    </div>
+                                <a class="navbar-brand" href="#">
+                                    <span class="nav-heading"> Insurance Index - Omnichannel Experience </span>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
-        </div>
+            </div>
+            <div class="row" ng-controller="MainController">
+
+                <div class="insurance-heading" ng-show="insuranceHeading">
+                    <h1 class="text-header">Know your Company's Digital Insurance Index!</h1>
+                    <h2 class="text-sub-header">Benchmark your insurance company against your competition . Select Market/Company to analyse </h2>
+                </div>
+
+                <div class="col-md-1 menuarea" ng-show="menuVisibility">
+                    <ul class="menu-list">
+                        <li class="list-item" ng-repeat="item in menu">
+                            <span class="glyphicon {{item.icon}}" aria-hidden="true"></span> &nbsp;
+                            <span class="item-name"><a href="#/{{item.url}}">{{item.name}}</a></span>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-md-11">
+                    <div ng-controller="HomeController">
+                        <div ng-include="'views/home.html'"></div>
+                    </div>
+                    <div ui-view></div>
+                </div>
+            </div>
+
+        </div><!-- /.container -->
     </div>
-    <div class="row" ng-controller="MainController">
-        <div class="col-md-1 menuarea">
-                <ul class="menu-list">
-                    <li class="list-item" ng-repeat="item in menu">
-                        <span class="glyphicon {{item.icon}}" aria-hidden="true"></span> &nbsp;
-                        <span class="item-name"><a href="#/{{item.url}}">{{item.name}}</a></span>
-                    </li>
-
-                </ul>
+    <section>
+        <div id="footer">
+            <div class="container">
+                <span class="copyrights-text">Copyrights &copy 2015. All rights reserved</span>
+            </div>
         </div>
-        <div class="col-md-11">
-            <ng-view></ng-view>
-        </div>
-    </div>
-
-</div><!-- /.container -->
-<section>
-    <footer class="footer">
-        <div class="container">
-            <span class="copyrights-text">Copyrights &copy 2015. All rights reserved</span>
-        </div>
-    </footer>
-</section>
-
-
-
-
+    </section>
+</div>
 </body>
 </html>

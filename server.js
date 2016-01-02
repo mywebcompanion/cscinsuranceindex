@@ -3,13 +3,32 @@
  */
 
 var express = require('express');
+var config = require('config');
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+
+var port = 8000;
+
+if(config.has('Application.port')){
+    port = config.Application.port;
+}
+
+
+mongoose.connect('mongodb://localhost/cscindex');
 
 var app = express();
+app.use(bodyParser.urlencoded({extended : false}));
+app.use(bodyParser.json());
+var MainRouter = require("./router/MainRouter");
 app.use(express.static(__dirname +'/public'));
-app.get('/', function(req,res){
-    res.send("index.html");
+
+app.use('/',MainRouter);
+
+app.on('uncaughtException', function (err) {
+    console.log("UncaughtException " + err);
 });
 
-app.listen(8001, function(){
-    console.log("server listening in port 8001");
+app.listen(port , function(){
+    console.log("server listening in port " + port);
 });

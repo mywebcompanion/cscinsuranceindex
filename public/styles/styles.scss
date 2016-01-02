@@ -4,19 +4,66 @@ $theme-color-1 : #09395C;
 
 $theme-color-2 : #EF2525;
 $theme-color-3 : #EBEBEB;
+$theme-color-gradient-1 : linear-gradient(to right, #7b4397 0%,$theme-color-1 59%,#dc2430 87%);
+
 $navbar-heading-color : #fff !important;
 $navbar-heading-font-size : 28px;
 $menu-color : #000;
 
 body{
-    background-color: $theme-color-3;
+    //background-image: url("../images/insurance.jpg");
+    //background-repeat : no-repeat;
+    //background-size : 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    .text-header{
+      margin: 5% 0% 0% 10%;
+      margin-bottom: 0px;
+      font-weight: 700;
+      font-size: 49px;
+    }
+    .text-sub-header{
+      margin-left:5%;
+    }
     .navrow{
       height:50px;
-      background-color: $theme-color-1;
+      //background-color: $theme-color-1;
+      background: $theme-color-gradient-1;
+
       .navbar{
-        background-color: $theme-color-1;
+        //background-color: $theme-color-1;
+        background: $theme-color-gradient-1;
+
       }
     }
+
+  .insurance-search{
+    margin-top:20px;
+    height:50px;
+    border-radius:0px;
+  }
+  .btn-insurance-search{
+    margin-top:20px;
+    height:50px;
+    border-radius:0px;
+    width:70px;
+  }
+  .country-controller {
+    margin : 30px;
+  }
+    .btn-blocks {
+      width:100%;
+      .btn-default{
+        padding: 12px 12px;
+        width:100%;
+        margin-top:40px;
+        border-radius:0px;
+      }
+    }
+
+
+
   #main-info-table{
     table{
       border: solid 1px $theme-color-1;
@@ -43,7 +90,7 @@ body{
       .navbar-brand{
         color:$navbar-heading-color;
         font-size: $navbar-heading-font-size;
-        background-color:$theme-color-1;
+        //background-color:$theme-color-1;
         .nav-heading{
           padding:10px !important;
           text-align:center;
@@ -137,27 +184,11 @@ body{
       }
     }
   }
+
 }
-section {
-  .footer{
-    background-color: $theme-color-1;
-    color : #fff;
-    height:50px;
-    width:100%;
-    position:absolute;
-    bottom:0px;
-    padding:15px;
-  }
-  .home-controller .custom-popup-wrapper > .dropdown-menu {
-    position: static;
-    float: none;
-    display: block;
-    background-color: transparent;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-  }
-}
+
+
+
 .copyrights-text{
   text-align:center;
   margin-top:20px;
@@ -170,9 +201,36 @@ section {
   background-color:$theme-color-2;
 }
 .chart-area{
-  background-color: $theme-color-3;
+  border : 1px solid #ccc;
 }
 
-#main-chart{
-  padding-top:20px;
+
+//
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+* html #wrapper {
+  height:100%;
+}
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+#content {
+  padding-bottom: 30px; /* ATTENTION! padding-bottom should be equal to the footer height (this keeps the footer from overlapping the content) */
+}
+#footer {
+  position: absolute;
+  width: 100%;
+  clear: both;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  /* ATTENTION! The following elements below
+  can be set to whatever your heart desires */
+  height: 30px; /* REMEMBER height = padding-bottom */
+  background: $theme-color-gradient-1;
+  color : #fff;
 }

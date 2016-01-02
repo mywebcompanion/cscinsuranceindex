@@ -1,0 +1,110 @@
+/**
+ * Created by ARUN on 23/12/2015.
+ */
+
+{
+
+  "Application" : {
+    "port" : 8090
+  },
+  // Please note that the below Admin company details should have key that follows javascript variable naming convention
+  "Admin" : {
+    "Company" : [
+      {
+        "name" : "companyname",
+        "label" : "company name",
+        "type" : "text",
+        "required" : "required",
+        "description" : "Enter name of company",
+        "data" : ""
+      },
+      {
+        "name" : "countryname",
+        "label" : "Country name",
+        "type" : "text",
+        "required" : "required",
+        "description" : "Enter the country of operation",
+        "data" : ""
+      },
+      {
+        "name" : "weburl",
+        "label" : "Website url",
+        "type" : "url",
+        "required" : "required",
+        "description" : "Enter company's web url",
+        "data" : ""
+      },
+      {
+        "name" : "blogurl",
+        "label" : "Blog Url",
+        "type" : "url",
+        "required" : "",
+        "description" : "Enter company's blog url",
+        "data" : ""
+      },
+      {
+        "name" : "newsletter",
+        "label" : "Newsletter",
+        "type" : "url",
+        "required" : "",
+        "description" : "Do you have newsletter subscription? ",
+        "data" : ""
+      },
+      {
+        "name" : "androidapps",
+        "label" : "Android Apps",
+        "type" : "text",
+        "required" : "",
+        "description" : "Enter list of android apps separated by comma",
+        "data" : ""
+      },
+      {
+        "name" : "iosapps",
+        "label" : "ios Apps",
+        "type" : "text",
+        "required" : "",
+        "description" : "Enter list of ios apps separated by comma",
+        "data" : ""
+      },
+      {
+        "name" : "twitterhandle",
+        "label" : "Twitter Handle",
+        "type" : "url",
+        "required" : "",
+        "description" : "Enter company's twitter handle",
+        "data" : ""
+      },
+      {
+        "name" : "facebookpage",
+        "label" : "Facebook page",
+        "type" : "url",
+        "required" : "",
+        "description" : "Enter company's facebook page",
+        "data" : ""
+      },
+      {
+        "name" : "googlepage",
+        "label" : "Google+ page",
+        "type" : "url",
+        "required" : "",
+        "description" : "Enter company's google+ page",
+        "data" : ""
+      },
+      {
+        "name" : "instagrampage",
+        "label" : "Instagram page",
+        "type" : "url",
+        "required" : "",
+        "description" : "Enter company's Instagram page",
+        "data" : ""
+      },
+      {
+        "name" : "youtubechannel",
+        "label" : "Youtube channel",
+        "type" : "url",
+        "required" : "",
+        "description" : "Enter company's youtube channel",
+        "data" : ""
+      }
+    ]}
+}

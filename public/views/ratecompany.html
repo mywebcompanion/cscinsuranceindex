@@ -1,0 +1,48 @@
+<h1> Rate company's key performance metrics</h1>
+<div flash-message="3000" ></div>
+<button ng-show="loader.loading" class="btn btn-success">Saving...
+    <i class="fa fa-spinner fa-spin"></i>
+</button>
+
+<select ng-model="metric.company" class="metric-option input-lg form-control"  ng-options="mdata.companyName as mdata.companyName for mdata in metricsData | unique : 'companyName' ">
+    <option value="" disabled selected style="display: none;">
+        <span class="select-placeholder">Select the company Name?</span>
+    </option>
+</select>
+
+<select ng-model="metric.market" ng-show="metric.company"  class="metric-option input-lg form-control"  ng-options="mdata.market as mdata.market for mdata in metricsData  | filter:{ companyName:metric.company } ">
+    <option value="" disabled selected style="display: none;">
+        <span class="select-placeholder">Select the market?</span>
+    </option>
+</select>
+    <div ng-show="metric.market" ng-repeat = "cdata in metricsData  | filter : {companyName:metric.company, market : metric.country } | unique : 'companyName'">
+        <div ng-repeat = "data in cdata.metrics">
+
+            <div ng-if="data.type === 'Value'">
+                <input ng-model="metric.metric[data.name]" type="text" class="metric-option input-lg form-control" placeholder="Enter value for {{data.name}}">
+            </div>
+            <div ng-if="data.type === 'Boolean'">
+                <span><h4>Does {{metric.company}}, {{metric.market}} have {{data.name}} ?</h4></span>
+                <label>
+                <input type="radio" name="metric.radio.{{data.name}}" ng-model="metric.metric[data.name]">
+                &nbsp;Yes
+                </label>
+                <label> <input type="radio" name="metric.radio.{{data.name}}" ng-model="metric.metric[data.name]" >&nbsp;No </label>
+            </div>
+            <div ng-if="data.type === 'Rating'">
+
+
+                <h4> How do you rate {{metric.company}}, {{metric.market}}'s {{data.name}} ? {{metric.metric[data.name]}}</h4>
+
+                <div ui-slider min="0" max="10" class="ui-slider-range" ng-model="metric.metric[data.name]"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+<button class="btn btn-info btn-lg btn-add-metric" type="submit" ng-click="submit()">Rate Metric</button>
+
+

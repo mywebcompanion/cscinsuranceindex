@@ -2,30 +2,36 @@
  * Created by ARUN on 9/12/2015.
  */
 
-var InsuranceIndex = angular.module('InsuranceIndex',['ngRoute','highcharts-ng','ngAnimate', 'ui.bootstrap']);
-InsuranceIndex.config(function($routeProvider){
-    $routeProvider.when('/', {
-        controller : 'HomeController',
-        templateUrl : 'views/Home.html'
-    }).when('/overview', {
-        controller : 'HomeController',
-        templateUrl : 'views/Home.html'
-    }).when('/social', {
+var InsuranceIndex = angular.module('InsuranceIndex',['highcharts-ng','ngAnimate', 'ui.bootstrap','ui.router']);
+InsuranceIndex.config(['$logProvider','$stateProvider','$urlRouterProvider',function($logProvider, $stateProvider, $urlRouterProvider){
+    $stateProvider.state('home', {
+        url : '/home',
+        controller : 'HomeController'
+        //templateUrl : 'views/home.html'
+    }).state('country', {
+        url : '/country',
+        controller : 'CountryController',
+        templateUrl : 'views/country.html',
+        params: {stateObj: null}
+    }).state('social', {
+        url : '/social',
         controller : 'SocialController',
         templateUrl : 'views/social.html'
-    }).when('/support', {
+    }).state('support', {
+        url : '/support',
         controller : 'SupportController',
         templateUrl : 'views/support.html'
-    }).when('/marketing', {
+    }).state('marketing', {
+        url : '/marketing',
         controller : 'MarketingController',
         templateUrl : 'views/marketing.html'
-    }).when('/analytics', {
+    }).state('analytics', {
+        url : '/analytics',
         controller : 'AnalyticsController',
         templateUrl : 'views/analytics.html'
-    }).when('/mobility', {
-            controller : 'MobilityController',
-            templateUrl : 'views/mobility.html'
-    }).otherwise({
-        redirectTo : '/'
-    });
-});
+    }).state('mobility', {
+        url : '/mobility',
+        controller : 'MobilityController',
+        templateUrl : 'views/mobility.html'
+    })
+}]);

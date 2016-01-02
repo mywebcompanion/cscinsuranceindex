@@ -1,10 +1,37 @@
 body {
-  background-color: #EBEBEB; }
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+  body .text-header {
+    margin: 5% 0% 0% 10%;
+    margin-bottom: 0px;
+    font-weight: 700;
+    font-size: 49px; }
+  body .text-sub-header {
+    margin-left: 5%; }
   body .navrow {
     height: 50px;
-    background-color: #09395C; }
+    background: linear-gradient(to right, #7b4397 0%, #09395C 59%, #dc2430 87%); }
     body .navrow .navbar {
-      background-color: #09395C; }
+      background: linear-gradient(to right, #7b4397 0%, #09395C 59%, #dc2430 87%); }
+  body .insurance-search {
+    margin-top: 20px;
+    height: 50px;
+    border-radius: 0px; }
+  body .btn-insurance-search {
+    margin-top: 20px;
+    height: 50px;
+    border-radius: 0px;
+    width: 70px; }
+  body .country-controller {
+    margin: 30px; }
+  body .btn-blocks {
+    width: 100%; }
+    body .btn-blocks .btn-default {
+      padding: 12px 12px;
+      width: 100%;
+      margin-top: 40px;
+      border-radius: 0px; }
   body #main-info-table {
     margin-top: 10px; }
     body #main-info-table table {
@@ -21,8 +48,7 @@ body {
     margin-top: 10px; }
   body .navbar-header .navbar-brand {
     color: #fff !important;
-    font-size: 28px;
-    background-color: #09395C; }
+    font-size: 28px; }
     body .navbar-header .navbar-brand .nav-heading {
       padding: 10px !important;
       text-align: center; }
@@ -88,23 +114,6 @@ body {
   body #main-info-table .table tr:nth-child(odd) {
     background-color: #ffffff; }
 
-section .footer {
-  background-color: #09395C;
-  color: #fff;
-  height: 50px;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  padding: 15px; }
-section .home-controller .custom-popup-wrapper > .dropdown-menu {
-  position: static;
-  float: none;
-  display: block;
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  box-shadow: none; }
-
 .copyrights-text {
   text-align: center;
   margin-top: 20px; }
@@ -117,9 +126,36 @@ section .home-controller .custom-popup-wrapper > .dropdown-menu {
   background-color: #EF2525; }
 
 .chart-area {
-  background-color: #EBEBEB; }
+  border: 1px solid #ccc; }
 
-#main-chart {
-  padding-top: 20px; }
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+* html #wrapper {
+  height: 100%; }
+
+#wrapper {
+  min-height: 100%;
+  position: relative; }
+
+#content {
+  padding-bottom: 30px;
+  /* ATTENTION! padding-bottom should be equal to the footer height (this keeps the footer from overlapping the content) */ }
+
+#footer {
+  position: absolute;
+  width: 100%;
+  clear: both;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  /* ATTENTION! The following elements below
+  can be set to whatever your heart desires */
+  height: 30px;
+  /* REMEMBER height = padding-bottom */
+  background: linear-gradient(to right, #7b4397 0%, #09395C 59%, #dc2430 87%);
+  color: #fff; }
 
 /*# sourceMappingURL=styles.css.map */

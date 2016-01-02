@@ -4,8 +4,13 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "bootstrap": "^3.3.6",
-    "express": "^4.13.3"
+    "config": "^1.17.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.3.4",
+    "q": "^1.4.1",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {},
   "scripts": {

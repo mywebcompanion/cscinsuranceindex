@@ -3,13 +3,21 @@
  */
 
 
-InsuranceIndex.controller('MainController', function($scope,StaticResourceFactory){
+InsuranceIndex.controller('MainController', function($scope,$rootScope,StaticResourceFactory,UIMaster){
+
     var promise = StaticResourceFactory.getStaticResource("json/menu.json");
     promise.success( function(data){
         $scope.menu = data;
     });
+
     promise.error (function(err){
             console.log("For now i dont care :-) . " + err);
     });
-    console.log("Setting to scope menu" + $scope.menu);
+
+    $rootScope.menuVisibility = UIMaster.MenuVisibility;
+    $rootScope.insuranceHeading = UIMaster.insuranceHeading
+    $scope.update = UIMaster.getValues();
+
+    $scope.$watch("update", function(newVal) {
+    });
 });

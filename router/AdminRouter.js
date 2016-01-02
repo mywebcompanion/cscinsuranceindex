@@ -1,0 +1,59 @@
+/**
+ * Created by ARUN on 23/12/2015.
+ */
+
+var express = require('express');
+var AdminRouter = express.Router();
+var AdminService = require("../services/AdminService")();
+var ConfigRouter = require('./ConfigRouter');
+var _ = require('underscore');
+
+var path = require('path');
+
+///admin/save/companyinfo
+
+AdminRouter.use('/config',ConfigRouter);
+
+AdminRouter.get('/', function(req,res,next){
+    res.sendFile(path.resolve(__dirname + '/../public/admin.html'));
+});
+
+AdminRouter.get('/metricsdata', function(req,res,next){
+    AdminService.getMetricsData(res);
+
+});
+
+AdminRouter.post('/save/companyinfo', function(req,res,next){
+    var resp = AdminService.saveCompanyInfo(req.body);
+    resp.then(function(){
+        console.log("Hey sending status as . 201");
+        res.status(201).send('Saved company  information');
+    }, function(){
+        res.status(500).send("Error saving company info");
+    });
+});
+
+AdminRouter.post('/save/metricinfo', function(req,res,next){
+    var resp = AdminService.saveMetricInfo(req.body);
+    resp.then(function(){
+        res.status(201).send('Saved Metrics');
+    }, function(){
+        console.log("Error saving metric info");
+        res.status(500).send("Failed to save rating");
+    });
+
+});
+
+AdminRouter.post('/save/rating', function(req,res,next){
+    var resp = AdminService.saveRating(req.body);
+    resp.then(function(){
+        console.log("Hey sending status as . 201");
+        res.status(201).send('Rated company');
+    }, function(){
+        console.log("Error saving rating");
+        res.status(500).send("Failed to save rating");
+    });
+});
+
+
+module.exports = AdminRouter;

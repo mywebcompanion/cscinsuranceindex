@@ -1,43 +1,71 @@
 /**
- * Created by ARUN on 9/12/2015.
+ * Created by ARUN on 21/12/2015.
  */
 
-InsuranceIndex.controller('HomeController', function($scope, CharConfig, CountryStatsFactory, StaticResourceFactory) {
-    console.log("Entering Home Controller");
+InsuranceIndex.controller('HomeController', function($scope,UIMaster,$rootScope,$state) {
 
-    $scope.chartConfig = CharConfig.getDefaultConfig();
-    $scope.selected = undefined;
-    $scope.countryList = ['Malaysia','HongKong','Singapore','India','Japan','Indonesia'];
+    // http://jsfiddle.net/nw5ndzrt/
+    $scope.btn = {
 
-    var renderChart = function(country){
-        var promise = CountryStatsFactory.getCountryData(country);
-        promise.success( function(data){
-            $scope.chartConfig.series = $scope.chartConfig.series.splice(0,1);
-            $scope.chartConfig.series = $scope.chartConfig.series.concat(data);
-            $scope.chartConfig.title.text =   "Insurance Index" + " - " + country;
-            $('#main-chart').highcharts($scope.chartConfig);
-        });
-        promise.error (function(err){
-            console.log("For now i dont care :-) . " + err);
-        });
+        malaysia : {
+            state : false
+        },
+        singapore : {
+            state : false
+        },
+        hongkong : {
+            state : false
+        },
+        japan : {
+            state : false
+        }
     };
 
-    renderChart("Singapore");
+    $scope.insuranceCompanyList = ['AIA'];
 
-    $scope.$watch('selected', function(){
-            for(var i=0; i<$scope.countryList.length; ++i){
-                if($scope.countryList[i] === $scope.selected){
-                    renderChart($scope.selected);
+    $scope.selectedCountries = [];
+
+    $scope.selectCountry = function(event,country) {
+        alert("twice!");
+        this.btn[country.toLowerCase()].state = !this.btn[country.toLowerCase()].state;
+        var btnSelected = false;
+        var index = $scope.selectedCountries.indexOf(country.toLowerCase());
+        if (index === -1) {
+            $scope.selectedCountries.push(country.toLowerCase());
+            alert("newly selected countries" + $scope.selectedCountries);
+            $rootScope.insuranceHeading = false;
+            $rootScope.MenuVisibility = true;
+            $rootScope.showCountryChart = true;
+            $state.go('country', {
+                stateObj: {
+                    country: $scope.selectedCountries
                 }
-            }
-    });
+            },{
+                reload: true
+            });
+        }
+        else {
+            $scope.selectedCountries.splice(index, 1);
+            alert("selected countries" + $scope.selectedCountries);
+            if ($scope.selectedCountries.length > 0) {
+                $state.go('country', {
+                    stateObj: {
+                        country: $scope.selectedCountries
+                    }
 
-    var promise = StaticResourceFactory.getStaticResource("json/main-table.json");
-    promise.success(function(data){
-        $scope.params = data[0];
-    });
-    promise.error(function(err){
-        console.log("For now i dont care :-) . " + err);
-    });
+                }, {
+                    reload: true
+                });
+            }
+            else {
+                $scope.selectedCountries = [];
+                $rootScope.insuranceHeading = true;
+                $rootScope.MenuVisibility = false;
+                $rootScope.showCountryChart = false;
+                $state.go('home');
+            }
+        }
+    };
+
 
 });
