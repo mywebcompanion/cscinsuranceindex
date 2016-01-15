@@ -1,14 +1,15 @@
 <form name="company-info-form" class="form-horizontal" >
     <h1> Add New Company Information </h1>
-    <div flash-message="3000" ></div>
+
     <ng-form ng-repeat="company in companyInfo" name="companyInfo">
 
-        <div class="row admin-form-field form-group">
+        <div class="admin-form-field form-group">
 
             <!--<label class=" required-flag" ng-show="company.required">*</label>-->
             <input type="text" class="company-form form-control input-lg" name="data-input" ng-model="company.data" placeholder="{{company.description}}" {{company.required}}>
-
         </div>
+
     </ng-form>
 </form>
-<button class="btn btn-info btn-lg btn-add-company" type="submit" ng-click="submit()">Add Company</button>
+<div flash-message="3000" ></div>
+<button class="btn btn-info btn-lg btn-admin-panel" type="submit" ng-click="submit()">Add Company</button>

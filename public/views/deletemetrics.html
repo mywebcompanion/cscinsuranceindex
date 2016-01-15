@@ -1,0 +1,11 @@
+<ul class="metrics-box">
+    <h3>Want to delete metric?</h3>
+    <div flash-message="3000" ></div>
+    <li class="metric-list" ng-repeat="metric in metriclist">
+        <b>Name :</b><span>{{metric.name}}</span>
+        <b>Category :</b><span>{{metric.category}}</span>
+        <a class="deleteitem" href="#" ng-click="deleteMetric(metric.name)">
+            <span class="glyphicon glyphicon-remove remove-icon"></span>
+        </a>
+    </li>
+</ul>

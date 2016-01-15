@@ -25,8 +25,42 @@ var AdminService = function(){
 
     };
 
+    var saveBenchMark = function(benchmark, res){
+
+        var promise1 = MetricsDataModel.find({
+            metrics : {$elemMatch : {type : "Value"}}, market: benchmark.market
+        }).exec();
+        var promise2 = promise1.then(function(data){
+
+            _.each(data,function(metricdata){
+                metricdata.metrics = _.map(metricdata.metrics,function(metric){
+                    if(benchmark[metric.name]){
+                        metric.benchmarkvalue = benchmark[metric.name];
+                    }
+                    else{
+                        metric.benchmarkvalue =  metric.value;
+                    }
+                });
+                return MetricsDataModel.findOneAndUpdate({_id : metricdata._id},{metrics : metricdata.metrics},function(err,data) {
+                    if (err) {
+                        console.log("Error updating data" + err);
+                    }
+                    else {
+                        console.log("Updated data successfully " + JSON.stringify(data));
+                    }
+                }).exec();
+
+            });
+
+
+
+                //metrics : {$elemMatch : {type : "Value"}}, market: benchmark.market},refData, { multi: true }
+            //);
+        });
+        return Q.all(promise1, promise2);
+    };
+
     var saveMetricInfo = function(metricInfo){
-        console.log(metricInfo);
         var metric= new MetricModel(metricInfo);
         return metric.save(function(err,data){
             if(err){
@@ -35,6 +69,34 @@ var AdminService = function(){
             }
             return true;
         });
+    };
+
+    var deleteMetricInfo = function(metricInfo){
+        console.log("Going to remove metrics" + JSON.stringify(metricInfo));
+        return MetricModel.findOne({_id : metricInfo[0]._id},function(err,model){
+
+            model.remove(function(err){
+                if(err){
+                    console.log("Error deleting metric information : " + err);
+                    return false;
+                }
+                return true;
+            });
+
+        }).exec();
+    };
+
+    var deleteCompanyInfo = function(companyinfo){
+        console.log("Going to remove company" +JSON.stringify(companyinfo));
+        return CompanyModel.find({_id : companyinfo[0]._id},function(err,data){
+                console.log(JSON.stringify(data));
+                if(err){
+                    console.log("Error deleting company information : " + err);
+                    return false;
+                }
+                console.log("Deleted company information successfully ");
+                return true;
+        }).remove().exec(); //REV
     };
 
     var saveRating = function(rating){
@@ -96,12 +158,60 @@ var AdminService = function(){
         });
     };
 
+    var getAllMetrics = function(res){
+        var promise1 = MetricModel.find({}).exec();
+        promise1.then(function(data){
+            console.log("Successfullly fetched metrics data");
+            res.status('200').json(data);
+
+        }, function(err){
+            console.log("failed to fetch metrics data" + err);
+            res.status('500').send('failed to fetch metrics data');
+
+        });
+    };
+    var getValueMetrics = function(res){
+        var promise1 = MetricModel.find({type:"Value"}).exec();
+        promise1.then(function(data){
+            console.log("Successfullly fetched metrics data");
+            res.status('200').json(data);
+
+        }, function(err){
+            console.log("failed to fetch metrics data" + err);
+            res.status('500').send('failed to fetch metrics data');
+
+        });
+    };
+
+    var getAllCountriesInfo = function(res){
+        var promise1 = CompanyModel.find({}).exec();
+        promise1.then(function(data){
+            console.log("Successfullly fetched companies data");
+            res.status('200').json(data);
+
+        }, function(err){
+            console.log("failed to fetch companies data" + err);
+            res.status('500').send('failed to fetch companies data');
+
+        });
+    };
+
+    var getCountryStats = function(market, res){
+        var cstats = MetricsDataModel.find({market: market}).exec();
+    };
+
 
     return {
         saveCompanyInfo : saveCompanyInfo,
         saveMetricInfo : saveMetricInfo,
+        saveBenchMark : saveBenchMark,
+        deleteMetricInfo : deleteMetricInfo,
+        deleteCompanyInfo : deleteCompanyInfo,
         getMetricsData : getMetricsData,
-        saveRating : saveRating
+        saveRating : saveRating,
+        getAllMetrics : getAllMetrics,
+        getValueMetrics : getValueMetrics,
+        getAllCountriesInfo : getAllCountriesInfo
     };
 
 };

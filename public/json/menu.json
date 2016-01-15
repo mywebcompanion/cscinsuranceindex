@@ -1,45 +1,35 @@
+
 [
     {
-        "name" : "Overview",
-        "icon" : "glyphicon-home",
+        "name" : "Analytics",
+        "icon" : "glyphicon-signal",
         "url": "overview"
     },
     {
-        "name" : "Social Media",
-        "icon" : "glyphicon-user",
+        "name" : "CMS",
+        "icon" : "glyphicon-pencil",
         "url": "social"
     },
     {
-        "name" : "Support",
-        "icon" : "glyphicon-comment",
-        "url": "support"
+        "name" : "Email & chat",
+        "icon" : "glyphicon-envelope",
+        "url": "email"
 
     },
     {
-        "name" : "Marketing",
-        "icon" : "glyphicon-bullhorn",
-        "url": "marketing"
-
-    },
-    {
-        "name" : "Analytics",
-        "icon" : "glyphicon-filter",
-        "url": "analytics"
-    },
-    {
-        "name" : "Mobility",
+        "name" : "Mobile & UX",
         "icon" : "glyphicon-phone",
         "url": "mobility"
-    },
-    {
-        "name": "Recommendations",
-        "icon" : "glyphicon glyphicon-star-empty",
-        "url" : "recommendation"
-    },
-    {
-        "name": "CSC vListen",
-        "icon" : "glyphicon glyphicon-stats",
-        "url" : "vlisten"
-    }
 
+    },
+    {
+        "name" : "SEO & ads",
+        "icon" : "glyphicon-search",
+        "url": "seo"
+    },
+    {
+        "name" : "social",
+        "icon" : "glyphicon-thumbs-up",
+        "url": "social"
+    }
 ]

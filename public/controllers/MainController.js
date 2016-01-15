@@ -18,6 +18,7 @@ InsuranceIndex.controller('MainController', function($scope,$rootScope,StaticRes
     $rootScope.insuranceHeading = UIMaster.insuranceHeading
     $scope.update = UIMaster.getValues();
 
-    $scope.$watch("update", function(newVal) {
+    $scope.$watch("menuVisibility", function(newVal, oldVal) {
+        UIMaster.menuVisibility = newVal;
     });
 });

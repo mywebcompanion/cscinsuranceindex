@@ -8,7 +8,10 @@ var Schema = mongoose.Schema;
 var MetricSchema = new Schema({
     name : String,
     type : String,
-    category : String
+    category : String,
+    benchmarkvalue : Number,
+    rateorder : String,
+    weightage : Number
 });
 
 var MetricModel = mongoose.model('metric',MetricSchema);

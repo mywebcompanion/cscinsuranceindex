@@ -1,0 +1,14 @@
+<ul class="metrics-box">
+    <h3>Benchmark the metrics</h3>
+
+    <select ng-model="benchModel.market" class="metric-option input-lg form-control"  ng-options="country as country for country in countryList">
+        <option  value="" disabled selected style="display: none;">
+            <span class="select-placeholder">Select the Country</span>
+        </option>
+    </select>
+    <div flash-message="3000" ></div>
+    <li ng-repeat="metric in metriclist">
+        <input type="text" ng-model="benchModel[metric.name]" class="form-control input-lg metric-name" name="metric-name" placeholder="{{metric.name}}">
+    </li>
+    <button class="btn btn-info btn-lg btn-admin-panel" type="submit" ng-click="submit()"> Am done with Benchmarking! </button>
+</ul>

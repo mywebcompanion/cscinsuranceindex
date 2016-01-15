@@ -1,0 +1,11 @@
+<ul class="metrics-box">
+    <h3>Want to delete your company ?</h3>
+    <div flash-message="3000" ></div>
+    <li class="metric-list" ng-repeat="company in companylist">
+        <b>Name :</b><span>{{company.companyname}}</span>
+        <b>Country :</b><span>{{company.countryname}}</span>
+        <a class="deleteitem" href="#" ng-click="deletecompany(company.companyname, company.countryname)">
+            <span class="glyphicon glyphicon-remove remove-icon"></span>
+        </a>
+    </li>
+</ul>

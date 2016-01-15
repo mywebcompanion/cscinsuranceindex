@@ -1,0 +1,68 @@
+<ul class="categ-stats">
+    <li ng-repeat = "(key, value) in categJSON['singapore']['AIA']" >
+        <div class="row" ng-class-odd="'category-odd-row'" ng-class-even="'category-even-row'">
+            <div class="col-md-1 categ-col-menu">
+            </div>
+            <div class="col-md-7 categ-col-1">
+                <h1>{{key | uppercase}}</h1>
+                <ul>
+                    <li ng-repeat="rating in value.RateMetric">
+                        <span class="star-label">{{rating.name}} :</span>&nbsp;
+                        <span star-rating rating-value="rating.value" max="5" ></span>
+                    </li>
+                </ul>
+                <ul>
+                    <li ng-repeat="boolean in value.BooleanMetric | LoopFilter">
+                        <span class="star-label">{{boolean.name}} :</span>&nbsp;
+                        <span ng-if="boolean.value === 'true'">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </span>
+                        <span ng-if="boolean.value === 'false'">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </span>&nbsp;&nbsp;
+                        <span class="star-label presence-col-2">{{value.BooleanMetric[($index * 2+1)].name}} :</span>&nbsp;
+                        <span ng-if="value.BooleanMetric[($index * 2+1)].value === 'true'">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </span>
+                        <span  ng-if="value.BooleanMetric[($index * 2+1)].value === 'false'">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </li>
+                </ul>
+                <ul>
+                    <li ng-repeat ="metric in value.ValueMetric | LoopFilter" ng-init="prepareConfig(metric,value.ValueMetric[($index * 2+1)])">
+                        <span class="star-label">{{metric.name}} :</span>
+                        <span ng-if="metric.rank === 'high'">
+                            <div easypiechart options="easypieoptions" percent="percent"><span class="text-easypie-percent">{{percent}}</span></div>
+<!--
+                            <highchart class="highcharts-config" config="config1"></highchart>
+-->
+                        </span>
+                        <span ng-if="metric.rank === 'low'">
+                            <!-- TBD -->
+                        </span>
+                        <span class="star-label presence-col-2">{{value.ValueMetric[($index * 2+1)].name}} :</span>
+                        <span ng-if="ValueMetric[($index * 2+1)].rank === 'high'">
+                            <div easypiechart options="easypieoptions" percent="60"><span class="text-easypie-percent">{{percent}}</span></div>
+<!--
+                            <highchart class="highcharts-config" config="config2"></highchart>
+-->
+                        </span>
+                        <span ng-if="value.ValueMetric[($index * 2+1)].rank === 'low'">
+                            <!-- TBD -->
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 categ-col-2">
+                <h1>SCORE : {{value.Score}}</h1>
+                <h3>RECOMMENDATION:</h3>
+                <ul>
+                    <li ng-repeat="reco in value.Recommendations">
+                        {{reco}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+</ul>

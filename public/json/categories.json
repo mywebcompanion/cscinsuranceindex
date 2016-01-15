@@ -1,0 +1,24 @@
+{
+
+
+[
+}
+  {
+    "company" : "AIA",
+    "country" : "singapore",
+    "name":"UX",
+    "score" : 78.7,
+    "Recommendations" : [
+      "Site loading time can be improved",
+      "Javascript files can be compressed",
+      "static contents can be loaded through CDN"
+    ],
+    "Metric" : [
+      {
+        "name" : "facebook presence",
+        "type" : "boolean",
+        ""
+      }
+    ]
+  }
+]

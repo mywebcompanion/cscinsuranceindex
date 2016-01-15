@@ -1,93 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>CSC Insurance Index</title>
-
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
     <!-- Bootstrap core CSS -->
-    <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+
     <!-- Custom CSS -->
-    <link href="styles/styles.css" rel="stylesheet">
-    <!-- Bootstrap core JavaScript
-================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <link href="styles/home.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
     <script src="http://code.highcharts.com/highcharts.src.js"></script>
-    <script src="libs/angular/angular.min.js"></script>
-    <script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
-    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
-    <script src="libs/highcharts-ng/dist/highcharts-ng.min.js"></script>
-    <script src="app.js"></script>
-    <script src="services/GlobalValues.js"></script>
-    <script src="services/StaticResourceFactory.js"></script>
-    <script src="services/ChartConfig.js"></script>
-    <script src="services/CountryStatsFactory.js"></script>
-    <script src="controllers/HomeController.js"></script>
-    <script src="controllers/CountryController.js"></script>
-    <script src="controllers/SocialController.js"></script>
-    <script src="controllers/SupportController.js"></script>
-    <script src="controllers/MarketingController.js"></script>
-    <script src="controllers/AnalyticsController.js"></script>
-    <script src="controllers/MobilityController.js"></script>
-    <script src="controllers/MainController.js"></script>
-    <script src="//npmcdn.com/angular-formly"></script>
-
-
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+                d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+                _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+            $.src="//v2.zopim.com/?3b6o4q2s0Vbg4LwylyEFSx7qwmx9P0JD";z.t=+new Date;$.
+                    type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    </script>
+    <!--End of Zopim Live Chat Script-->
+    <!--<script src="//fast.eager.io/gaZUicnw_0.js"></script>-->
 </head>
 <body ng-app="InsuranceIndex">
 <div id="wrapper">
     <div id="content">
         <div class="container-fluid container-full">
-            <div class="row navrow">
-                <div class="col-md-12">
-                    <nav class="navbar navbar-inverse navbar-fixed-top">
-                        <div class="container">
-                            <div class="navbar-header">
-                                <img class="csc-logo" src="images/logo-CSC.gif">
-
-                                <a class="navbar-brand" href="#">
-                                    <span class="nav-heading"> Insurance Index - Omnichannel Experience </span>
-                                </a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <div class="row" ng-controller="MainController">
-
-                <div class="insurance-heading" ng-show="insuranceHeading">
-                    <h1 class="text-header">Know your Company's Digital Insurance Index!</h1>
-                    <h2 class="text-sub-header">Benchmark your insurance company against your competition . Select Market/Company to analyse </h2>
-                </div>
-
-                <div class="col-md-1 menuarea" ng-show="menuVisibility">
-                    <ul class="menu-list">
-                        <li class="list-item" ng-repeat="item in menu">
-                            <span class="glyphicon {{item.icon}}" aria-hidden="true"></span> &nbsp;
-                            <span class="item-name"><a href="#/{{item.url}}">{{item.name}}</a></span>
-                        </li>
-
-                    </ul>
+            <div class="row index-menu">
+                <div class="col-md-1">
+                    <img class="csc-logo" src="images/logo-CSC.gif">
                 </div>
                 <div class="col-md-11">
-                    <div ng-controller="HomeController">
-                        <div ng-include="'views/home.html'"></div>
+                    <a href="#">
+                        <h3>Digital Insurance Index </h3>
+                    </a>
+                    <button class="contact-btn btn">CONTACT US</button>
+            </div>
+            </div>
+            <div class="row">
+                <span class="carousal-area col-md-12">
+                    <h1 class="csc-message">Small Changes Can </br> Reap Great Rewards !</h1>
+                    <img class="carousal-graph" src="images/web_marketing.png">
+                </span>
+
+
+            </div>
+            <div class="row subscribe-bar">
+                <div class="col-md-3">
+                    <button class="subscribe-btn btn">Subscribe</button>
+                </div>
+                <div class="col-md-9">
+                    <span class="fun-fact"> FUN FACT : Insurance investing 5% of IT budget in Digital</span></br>
+                    <span class="fun-fact-acq">Increase Customer acquisition by +30%</span>
+                </div>
+
+
+            </div>
+            <div class="row csc-exhibit">
+                <div class="col-md-4 nopadding">
+                    <div class="csc-exhibit-item">
+                        <a href="/home">
+                            <h3>Digital Index</h3>
+                            <img src="images/Digitalindex.png">
+                            <h5>Check how your Rank with DI2</h5>
+                        </a>
                     </div>
-                    <div ui-view></div>
+                </div>
+                <div class="col-md-4 nopadding">
+                    <div class="csc-exhibit-item">
+                        <h3>V-Listen</h3>
+                        <img src="images/v-listen.png">
+                        <h5>Benchmark Your Social Footprint</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 nopadding">
+                    <div class="csc-exhibit-item">
+                        <h3>Big Data & Analytics</h3>
+                        <img src="images/big-data-analytics.png">
+                        <h5>Measure What really Matters</h5>
+                    </div>
                 </div>
             </div>
-
-        </div><!-- /.container -->
+            <div class="row"></div>
+        </div>
     </div>
     <section>
         <div id="footer">
@@ -97,5 +94,7 @@
         </div>
     </section>
 </div>
+
+
 </body>
 </html>

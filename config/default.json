@@ -5,7 +5,7 @@
 {
 
   "Application" : {
-    "port" : 8090
+    "port" : 8091
   },
   // Please note that the below Admin company details should have key that follows javascript variable naming convention
   "Admin" : {

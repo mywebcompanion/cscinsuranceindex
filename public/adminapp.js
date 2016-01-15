@@ -12,21 +12,64 @@ AdminApp.config(function($logProvider,$stateProvider,$urlRouterProvider){
         templateUrl : 'views/adminhome.html'
     });
 
-    $stateProvider.state('admin.company',{
-        url : 'company',
+    $stateProvider.state('admin.addcompany',{
+        url : 'addcompany',
         controller : 'AdminController',
         templateUrl : 'views/companyadmin.html'
+    });
+    $stateProvider.state('admin.deletecompany',{
+        url : 'deletecompany',
+        controller : 'DeleteCompanyController',
+        templateUrl : 'views/deletecompany.html',
+        resolve:   {
+            loadcompanies : function($http){
+                return $http.get('/admin/companyinfo').then(function(res){
+                    return res.data;
+                });
+            }
+        }
+    });
+    $stateProvider.state('admin.editcompany',{
+        url : 'editcompany',
+        controller : 'EditCompanyController',
+        templateUrl : 'views/editcompany.html',
+        resolve:   {
+            editcompanies : function($http){
+                return $http.get('/admin/companyinfo').then(function(res){
+                    return res.data;
+                });
+            }
+        }
     });
 
     $stateProvider.state('admin.addmetrics',{
         url : 'addmetrics',
-        controller : 'MetricsController',
+        controller : 'AddMetricsController',
         templateUrl : 'views/addmetrics.html'
     });
     $stateProvider.state('admin.deletemetrics',{
         url : 'deletemetrics',
-        controller : 'MetricsController',
-        templateUrl : 'views/deletemetrics.html'
+        controller : 'DeleteMetricsController',
+        templateUrl : 'views/deletemetrics.html',
+        resolve:   {
+            loadMetrics : function($http){
+                return $http.get('/admin/getAllMetrics').then(function(res){
+                    return res.data;
+                });
+            }
+        }
+    });
+    $stateProvider.state('admin.addbenchmark',{
+        url : 'addbenchmark',
+        controller : 'AddBenchMarkController',
+        templateUrl : 'views/addbenchmark.html',
+        resolve:   {
+            loadMetrics : function($http){
+                return $http.get('/admin/getValueMetrics').then(function(res){
+                    return res.data;
+                });
+            }
+        }
     });
     $stateProvider.state('admin.rating',{
         url : 'rating',

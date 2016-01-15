@@ -49,6 +49,7 @@ AdminApp.controller('RatingController',function(Flash, $scope,$http,$state, $fil
             var message = '<strong> Sorry!</strong>  Your rating failed to save. Please try again';
             Flash.create('danger', message, 'custom-class');
             $state.go('admin.rating',{}, { reload: true });
+
         });
     };
 });

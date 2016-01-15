@@ -4,6 +4,7 @@
 
 var express = require('express');
 var config = require('config');
+var cors = require('cors')
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
@@ -15,14 +16,23 @@ if(config.has('Application.port')){
 }
 
 
-mongoose.connect('mongodb://localhost/cscindex');
+
+
 
 var app = express();
+mongoose.connect('mongodb://localhost/cscindex');
+
+
+
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(bodyParser.json());
-var MainRouter = require("./router/MainRouter");
 app.use(express.static(__dirname +'/public'));
+app.use(cors());
 
+
+
+
+var MainRouter = require("./router/MainRouter");
 app.use('/',MainRouter);
 
 app.on('uncaughtException', function (err) {

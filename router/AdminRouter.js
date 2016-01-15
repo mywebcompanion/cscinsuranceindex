@@ -18,9 +18,19 @@ AdminRouter.get('/', function(req,res,next){
     res.sendFile(path.resolve(__dirname + '/../public/admin.html'));
 });
 
+AdminRouter.get('/getAllMetrics', function(req,res,next){
+    AdminService.getAllMetrics(res);
+});
+AdminRouter.get('/getValueMetrics', function(req,res,next){
+    AdminService.getValueMetrics(res);
+});
+
+AdminRouter.get('/companyinfo', function(req,res,next){
+    AdminService.getAllCountriesInfo(res);
+});
+
 AdminRouter.get('/metricsdata', function(req,res,next){
     AdminService.getMetricsData(res);
-
 });
 
 AdminRouter.post('/save/companyinfo', function(req,res,next){
@@ -41,6 +51,17 @@ AdminRouter.post('/save/metricinfo', function(req,res,next){
         console.log("Error saving metric info");
         res.status(500).send("Failed to save rating");
     });
+});
+AdminRouter.post('/save/benchmark', function(req,res,next){
+    var resp = AdminService.saveBenchMark(req.body);
+    console.log(JSON.stringify(req.body));
+    resp.then(function(){
+        console.log("Sending 201 back to client");
+        res.status(201).send('Saved Metrics');
+    }, function(){
+        console.log("Error saving metric info");
+        res.status(500).send("Failed to save rating");
+    });
 
 });
 
@@ -55,5 +76,26 @@ AdminRouter.post('/save/rating', function(req,res,next){
     });
 });
 
+AdminRouter.post('/delete/metricinfo', function(req,res,next){
+    var resp = AdminService.deleteMetricInfo(req.body);
+    resp.then(function(){
+        console.log("Hey sending status as . 201");
+        res.status(201).send('Deleted Metrics');
+    }, function(){
+        console.log("Error deleting metrics");
+        res.status(500).send("Failed to delete metrics");
+    });
+});
+
+AdminRouter.post('/delete/companyinfo', function(req,res,next){
+    var resp = AdminService.deleteCompanyInfo(req.body);
+    resp.then(function(){
+        console.log("Hey sending status as . 201");
+        res.status(201).send('Deleted Company');
+    }, function(){
+        console.log("Error deleting company info");
+        res.status(500).send("Failed to delete company info");
+    });
+});
 
 module.exports = AdminRouter;

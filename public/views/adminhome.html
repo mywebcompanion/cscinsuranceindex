@@ -5,16 +5,20 @@
         <div class="admin-menu-area">
             <ul class="admin-menu-list">
                 <li class="admin-menu-item-heading"><b>Company Admin </b></li>
-                <a ui-sref="admin.company">
+                <a ui-sref="admin.addcompany">
                     <li class="admin-menu-item"><span class="glyphicon glyphicon-plus"></span>&nbsp; Add Company Info</li>
                 </a>
                 <li class="admin-menu-item"><span class="glyphicon glyphicon-pencil"></span>&nbsp; Edit Company Info</li>
-                <li class="admin-menu-item"><span class="glyphicon glyphicon-remove"></span>&nbsp; Delete Company</li>
+                <a ui-sref="admin.deletecompany">
+                    <li class="admin-menu-item"><span class="glyphicon glyphicon-remove"></span>&nbsp; Delete Company</li>
+                </a>
                 <li class="admin-menu-item-heading"><b>Metrics Admin</b></li>
                 <a ui-sref="admin.addmetrics"> <li class="admin-menu-item"><span class="glyphicon glyphicon-plus"></span>&nbsp; Add Metrics</li></a>
-                <a ui-sref="admin.addmetrics"> <li class="admin-menu-item"><span class="glyphicon glyphicon-remove"></span>&nbsp; Delete Metrics</li></a>
+                <a ui-sref="admin.deletemetrics"> <li class="admin-menu-item"><span class="glyphicon glyphicon-remove"></span>&nbsp; Delete Metrics</li></a>
 
                 <a ui-sref="admin.rating"> <li class="admin-menu-item"><span class="glyphicon glyphicon-stats"></span>&nbsp; Rate Metrics</li></a>
+                <li class="admin-menu-item-heading"><b>Country Admin</b></li>
+                <a ui-sref="admin.addbenchmark"> <li class="admin-menu-item"><span class="glyphicon glyphicon-check"></span>&nbsp; Add Benchmark</li></a>
 
             </ul>
         </div>

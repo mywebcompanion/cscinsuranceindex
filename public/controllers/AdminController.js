@@ -21,8 +21,12 @@ AdminApp.controller('AdminController', function($scope,$rootScope,$state,AdminFa
         promise.success(function(resp){
             console.log("Company Info saved successfully");
             var message = '<strong> Great!</strong>  Company details saved successfully.';
+            _.each($scope.companyInfo, function(company){
+                company.data = "";
+            });
             Flash.create('success', message, 'custom-class');
             $state.go('admin.company',{}, { reload: true });
+
         });
     }
 

@@ -8,7 +8,7 @@
 
 <h4> What's the weightage of the metric? {{metric.weightage}}</h4>
 
-<div ui-slider min="0" max="10" class="ui-slider-range" ng-model="metric.weightage"></div>
+<div ui-slider min="0" max="10" class="ui-slider-range rating-slider" ng-model="metric.weightage"></div>
 
 
 
@@ -17,11 +17,21 @@
           <span class="select-placeholder">Select how your metric is represented?</span>
      </option>
 </select>
+
+<input type="text" ng-show="metric.type.toLowerCase() === 'value'" ng-model="metric.benchmarkvalue" class="form-control input-lg metric-name" name="metric-benchmark" placeholder="Enter the Benchmark value">
+
 <select ng-model="metric.category" class="metric-option input-lg form-control"  ng-options="categ for categ in categories">
      <option value="" disabled selected style="display: none;">
            <span class="select-placeholder">Which category does your metric belong to? </span>
      </option>
 </select>
-<button class="btn btn-info btn-lg btn-add-metric" type="submit" ng-click="submit()">Add Metric</button>
+
+<span><h4> Hey, ! Higher the value is better (or) lower the better? </h4></span>
+<label>
+    <input type="radio" name="rateorder checkbox-info" ng-model="metric.rateorder" value="high">
+    &nbsp;Higher
+</label>
+<label> <input type="radio" ng-model="metric.rateorder" value="low" name="rateorder" >&nbsp;Lower </label></br></br>
+<button class="btn btn-info btn-lg btn-admin-panel" type="submit" ng-click="submit()">Add Metric</button>
 
 

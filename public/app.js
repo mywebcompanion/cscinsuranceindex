@@ -2,12 +2,16 @@
  * Created by ARUN on 9/12/2015.
  */
 
-var InsuranceIndex = angular.module('InsuranceIndex',['highcharts-ng','ngAnimate', 'ui.bootstrap','ui.router']);
+var InsuranceIndex = angular.module('InsuranceIndex',['highcharts-ng','ngAnimate', 'ui.bootstrap','ui.router','ng-mfb','easypiechart']);
 InsuranceIndex.config(['$logProvider','$stateProvider','$urlRouterProvider',function($logProvider, $stateProvider, $urlRouterProvider){
-    $stateProvider.state('home', {
+    $stateProvider.state('index', {
+        url : '/',
+        controller : 'IndexController',
+        templateUrl : 'views/index.html'
+    }).state('home', {
         url : '/home',
-        controller : 'HomeController'
-        //templateUrl : 'views/home.html'
+        controller : 'CMenuController',
+        templateUrl : 'views/countrymenu.html'
     }).state('country', {
         url : '/country',
         controller : 'CountryController',
@@ -33,5 +37,10 @@ InsuranceIndex.config(['$logProvider','$stateProvider','$urlRouterProvider',func
         url : '/mobility',
         controller : 'MobilityController',
         templateUrl : 'views/mobility.html'
-    })
+    }).state('liststats',{
+        url : '/insuranceindex',
+        controller : 'StatsController',
+        templateUrl : 'views/stats.html'
+
+    });
 }]);
