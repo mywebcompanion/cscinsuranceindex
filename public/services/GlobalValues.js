@@ -6,10 +6,12 @@
 InsuranceIndex.service("UIMaster",function(){
     this.MenuVisibility = false;
     this.insuranceHeading = true;
+    this.showCountryChart = false;
     this.getValues = function(){
         return{
             MenuVisibility : this.MenuVisibility,
-            insuranceHeading : this.insuranceHeading
+            insuranceHeading : this.insuranceHeading,
+            showCountryChart : this.showCountryChart
         }
     };
     this.gaugeOptions = {

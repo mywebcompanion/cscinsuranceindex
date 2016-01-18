@@ -1129,14 +1129,14 @@ body {
   padding: 0;
   height: 100%; }
   body .text-header {
-    font-size: 70px;
+    font-size: 40px;
     font-weight: 600;
-    letter-spacing: -4px;
-    line-height: 100px;
+    letter-spacing: -2px;
+    line-height: 60px;
     text-align: center;
     text-transform: uppercase; }
   body .text-sub-header {
-    margin-left: 8.33%; }
+    margin-left: 5.33%; }
   body .navrow {
     height: 50px;
     background: linear-gradient(to right, #6B301A 0%, #6B305F 59%, #6B305A 87%); }
@@ -1415,6 +1415,14 @@ ul.rating {
   left: 60px;
   top: -50px; }
 
+.btn-country-options {
+  margin-left: 20px; }
+
+.dropdown-menu {
+  width: -moz-calc(100% - 28px);
+  width: -webkit-calc(100% - 28px);
+  width: calc(100% - 1px); }
+
 .admin-form-field {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -1559,5 +1567,9 @@ input[type="text"] {
   align-content: center;
   clear: both;
   margin-top: 20px; }
+
+.text-recommendations {
+  margin-bottom: 20px;
+  width: 60%; }
 
 /*# sourceMappingURL=adminstyles.css.map */

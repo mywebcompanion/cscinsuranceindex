@@ -8,6 +8,7 @@ var Schema = mongoose.Schema;
 var MetricsDataSchema = new Schema({
     companyName : String,
     market : String,
+    recommendations : Object,
     metrics : [Schema.Types.Mixed]
 
 });

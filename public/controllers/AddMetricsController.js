@@ -6,14 +6,13 @@
  */
 // Type of metric : Rating, value, Boolean
 
-AdminApp.controller('AddMetricsController', function($scope,AdminFactory,Flash,$state) {
+AdminApp.controller('AddMetricsController', function($scope,AdminFactory,Flash,$state, CategoryService) {
 
     $scope.metricTypes = ['Rating','Value','Boolean'];
-    $scope.categories = ['Analytics','CMS','Email & chat','Mobile & UX','SEO & ads','social'];
     $scope.metric = {
 
     };
-
+    $scope.categories = CategoryService.getCategories();
     $scope.submit = function(){
             $scope.metric.weightage ? $scope.metric.weightage *=10 : 100;
             var promise = AdminFactory.saveMetric($scope.metric);

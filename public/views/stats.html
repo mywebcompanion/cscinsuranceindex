@@ -6,7 +6,7 @@
             <div class="col-md-7 categ-col-1">
                 <h1>{{key | uppercase}}</h1>
                 <ul>
-                    <li ng-repeat="rating in value.RateMetric">
+                    <li ng-repeat="rating in value.RatingMetric">
                         <span class="star-label">{{rating.name}} :</span>&nbsp;
                         <span star-rating rating-value="rating.value" max="5" ></span>
                     </li>
@@ -14,10 +14,10 @@
                 <ul>
                     <li ng-repeat="boolean in value.BooleanMetric | LoopFilter">
                         <span class="star-label">{{boolean.name}} :</span>&nbsp;
-                        <span ng-if="boolean.value === 'true'">
+                        <span ng-if="boolean.value === 'yes'">
                             <span class="glyphicon glyphicon-ok"></span>
                         </span>
-                        <span ng-if="boolean.value === 'false'">
+                        <span ng-if="boolean.value === 'no'">
                             <span class="glyphicon glyphicon-remove"></span>
                         </span>&nbsp;&nbsp;
                         <span class="star-label presence-col-2">{{value.BooleanMetric[($index * 2+1)].name}} :</span>&nbsp;

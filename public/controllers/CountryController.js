@@ -10,6 +10,7 @@ InsuranceIndex.controller('CountryController', function($scope,$window, ChartCon
 
     var renderChart = function(country){
         var promise = CountryStatsFactory.getCountryData(country);
+
         promise.success( function(data){
             $scope.chartConfig.series = $scope.chartConfig.series.splice(0,1);
             $scope.chartConfig.series = $scope.chartConfig.series.concat(data);
@@ -21,9 +22,7 @@ InsuranceIndex.controller('CountryController', function($scope,$window, ChartCon
         });
     };
     if($rootScope.showCountryChart) {
-        angular.forEach($stateParams.stateObj.country, function(country){
-            renderChart(country);
-        });
+        renderChart($stateParams.stateObj.country);
     }
 
     $scope.$watch('selected', function(){
@@ -32,7 +31,7 @@ InsuranceIndex.controller('CountryController', function($scope,$window, ChartCon
                     renderChart($scope.selected);
                     $(window).resize(function() {
                         height = chart.height
-                        width = $("#chartRow").width() / 2
+                        width = $("#chartRow").width() / 2;
                         chart.setSize(width, height, doAnimation = true);
                     });
                 }

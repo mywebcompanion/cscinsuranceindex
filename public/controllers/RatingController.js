@@ -6,13 +6,23 @@
  */
 // Type of metric : Rating, value, Boolean
 
-AdminApp.controller('RatingController',function(Flash, $scope,$http,$state, $filter, loadMarketPromise, AdminFactory, AdminFactory) {
+AdminApp.controller('RatingController',function(Flash, $scope,$http,$state, $filter, loadMarketPromise, AdminFactory, CategoryService) {
 
+    var formRecommendations = function(recommendations){
+        angular.forEach($scope.categories, function(categ){
+            if(recommendations[categ]) {
+                var categArray = recommendations[categ].split(",");
+                recommendations[categ] = categArray;
+            }
+        });
+    };
     $scope.metric = {};
+    $scope.metric.recommendations = {};
     $scope.metricsData =  loadMarketPromise;
     $scope.loader = {
         loading: false
     };
+    $scope.categories = CategoryService.getCategories();
     // Slider options with event handlers
     $scope.slider = {
         'options': {
@@ -22,10 +32,11 @@ AdminApp.controller('RatingController',function(Flash, $scope,$http,$state, $fil
     };
 
     $scope.submit = function(){
-
+        formRecommendations($scope.metric.recommendations);
         angular.forEach($scope.metricsData, function(data){
             if((data.companyName === $scope.metric.company) && (data.market === $scope.metric.market)){
                 delete data.$$hashKey;
+
                 angular.forEach(data.metrics, function(mdata){
                     delete mdata.$$hashKey;
                     if($scope.metric.metric[mdata.name]){
@@ -35,6 +46,7 @@ AdminApp.controller('RatingController',function(Flash, $scope,$http,$state, $fil
             }
         });
         var filteredData = $filter('filter')($scope.metricsData, {companyName:$scope.metric.company, market:$scope.metric.market });
+        filteredData[0].recommendations = $scope.metric.recommendations;
         var promise = AdminFactory.saveMetricsRating(filteredData);
         //$scope.loader.loading = true ;
         promise.success(function(data){

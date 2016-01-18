@@ -39,6 +39,11 @@
             </div>
         </div>
     </div>
+<div class="form-group">
+    <span ng-show="metric.market" ng-repeat="categ in categories">
+        <textarea ng-model="metric.recommendations[categ]" placeholder="Enter recommendations for {{categ}}" class="form-control text-recommendations" rows="7"></textarea>
+    </span>
+</div>
 
 
 

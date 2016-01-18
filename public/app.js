@@ -9,11 +9,9 @@ InsuranceIndex.config(['$logProvider','$stateProvider','$urlRouterProvider',func
         controller : 'IndexController',
         templateUrl : 'views/index.html'
     }).state('home', {
-        url : '/home',
         controller : 'CMenuController',
         templateUrl : 'views/countrymenu.html'
     }).state('country', {
-        url : '/country',
         controller : 'CountryController',
         templateUrl : 'views/country.html',
         params: {stateObj: null}
@@ -38,9 +36,23 @@ InsuranceIndex.config(['$logProvider','$stateProvider','$urlRouterProvider',func
         controller : 'MobilityController',
         templateUrl : 'views/mobility.html'
     }).state('liststats',{
-        url : '/insuranceindex',
         controller : 'StatsController',
-        templateUrl : 'views/stats.html'
+        templateUrl : 'views/stats.html',
+        params: {
+            market : '',
+            company : ''
+        },
+        resolve : {
+            loadStats : function($http,$stateParams){
+                var response = $http.post('/home/stats',{market : $stateParams.market, company : $stateParams.company});
+                response.success(function(data){
+                    console.log(JSON.stringify(data));
+                });
+                return response;
 
+
+
+            }
+        }
     });
 }]);

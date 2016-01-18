@@ -35,18 +35,21 @@ var AdminService = function(){
             _.each(data,function(metricdata){
                 metricdata.metrics = _.map(metricdata.metrics,function(metric){
                     if(benchmark[metric.name]){
-                        metric.benchmarkvalue = benchmark[metric.name];
+                         metric.benchmarkvalue = benchmark[metric.name];
+                         return metric;
                     }
                     else{
-                        metric.benchmarkvalue =  metric.value;
+                         metric.benchmarkvalue =  metric.value;
+                         return metric;
                     }
                 });
+                console.log( "Metrics is" + metricdata.metrics);
                 return MetricsDataModel.findOneAndUpdate({_id : metricdata._id},{metrics : metricdata.metrics},function(err,data) {
                     if (err) {
                         console.log("Error updating data" + err);
                     }
                     else {
-                        console.log("Updated data successfully " + JSON.stringify(data));
+                        console.log("Updated data successfully ");
                     }
                 }).exec();
 
@@ -100,6 +103,7 @@ var AdminService = function(){
     };
 
     var saveRating = function(rating){
+        console.log("Rating is " + JSON.stringify(rating[0]));
         var mrating = new MetricsDataModel(rating[0]);
         return mrating.save(function(err,data){
             if(err){
@@ -145,6 +149,8 @@ var AdminService = function(){
                     metric.type = obj.type;
                     metric.category = obj.category;
                     metric.value = "";
+                    metric.weightage = obj.weightage;
+                    metric.rateorder = obj.rateorder;
                     var cdata = _.findWhere(MetricsData, {companyinfoid : company._id});
 
                     if(cdata && cdata[metric.name]){

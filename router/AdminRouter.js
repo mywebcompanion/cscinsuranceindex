@@ -25,6 +25,10 @@ AdminRouter.get('/getValueMetrics', function(req,res,next){
     AdminService.getValueMetrics(res);
 });
 
+AdminRouter.get('/insuranceindex', function(req,res,next){
+    AdminService.getInsuranceIndex(res);
+});
+
 AdminRouter.get('/companyinfo', function(req,res,next){
     AdminService.getAllCountriesInfo(res);
 });
@@ -66,6 +70,7 @@ AdminRouter.post('/save/benchmark', function(req,res,next){
 });
 
 AdminRouter.post('/save/rating', function(req,res,next){
+    console.log(JSON.stringify(req.body));
     var resp = AdminService.saveRating(req.body);
     resp.then(function(){
         console.log("Hey sending status as . 201");

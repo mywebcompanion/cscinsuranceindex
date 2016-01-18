@@ -24,15 +24,15 @@ body{
     padding: 0;
     height: 100%;
     .text-header{
-      font-size: 70px;
+      font-size: 40px;
       font-weight: 600;
-      letter-spacing: -4px;
-      line-height: 100px;
+      letter-spacing: -2px;
+      line-height: 60px;
       text-align: center;
       text-transform: uppercase;
     }
     .text-sub-header{
-      margin-left:8.33%;
+      margin-left:5.33%;
     }
     .navrow {
       height:50px;
@@ -405,3 +405,13 @@ ul.rating {
 }
 
 
+.btn-country-options{
+  margin-left:20px;
+}
+
+//This is to extend width of typeahead
+.dropdown-menu{
+  width: -moz-calc(100% - 28px);
+  width: -webkit-calc(100% - 28px);
+  width: calc(100% - 1px);
+}

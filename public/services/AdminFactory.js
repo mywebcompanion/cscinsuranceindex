@@ -33,6 +33,7 @@ var AdminFactory = AdminApp.factory('AdminFactory', function($http){
     };
 
     var saveMetricsRating = function(metricData){
+        alert("Posting " + metricData);
         return $http.post('/admin/save/rating', JSON.stringify(metricData));
     };
 
