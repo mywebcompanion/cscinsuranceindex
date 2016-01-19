@@ -10,7 +10,14 @@ InsuranceIndex.factory('CountryStatsFactory', function($http,StaticResourceFacto
         }
         return promise = StaticResourceFactory.getStaticResource("json/" + countryname.toLowerCase() + "stats.json");
     };
+
+    var getAllCompanies = function(){
+        var promise = $http.get('/home/getAllCompanies');
+        return promise;
+    };
+
     return{
-        getCountryData : getCountryData
+        getCountryData : getCountryData,
+        getAllCompanies : getAllCompanies
     };
 });

@@ -23,6 +23,10 @@ MainRouter.post('/home/stats', function(req,res,next){
 
 MainRouter.use('/admin', AdminRouter);
 
+MainRouter.get('/home/getAllCompanies',function(req,res,next){
+    MainService.getAllCompanies(req,res);
+});
+
 module.exports = MainRouter;
 
 

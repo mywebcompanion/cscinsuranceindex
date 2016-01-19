@@ -22,8 +22,16 @@ var MainService = function(){
 
     };
 
+    var getAllCompanies = function(req,res){
+        var promise = CompanyModel.find().exec();
+        promise.then(function(data){
+            res.json(data);
+        });
+    };
+
     return {
-        getStats: getStats
+        getStats: getStats,
+        getAllCompanies: getAllCompanies
     }
 
 };
