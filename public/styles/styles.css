@@ -1129,14 +1129,14 @@ body {
   padding: 0;
   height: 100%; }
   body .text-header {
-    font-size: 40px;
-    font-weight: 600;
-    letter-spacing: -2px;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: -1px;
     line-height: 60px;
     text-align: center;
     text-transform: uppercase; }
   body .text-sub-header {
-    margin-left: 5.33%; }
+    margin-left: 15.33%; }
   body .navrow {
     height: 50px;
     background: linear-gradient(to right, #6B301A 0%, #6B305F 59%, #6B305A 87%); }
@@ -1144,11 +1144,12 @@ body {
       background: linear-gradient(to right, #6B301A 0%, #6B305F 59%, #6B305A 87%); }
   body .insurance-search {
     margin-top: 20px;
-    height: 50px;
-    border-radius: 0px; }
+    height: 80px;
+    border-radius: 0px;
+    font-size: 30px; }
   body .btn-insurance-search {
     margin-top: 20px;
-    height: 50px;
+    height: 80px;
     border-radius: 0px;
     width: 70px; }
   body .country-controller {
@@ -1330,7 +1331,7 @@ html {
   margin-bottom: 32px !important; }
 
 .categ-stats > li:first-child {
-  margin-top: 20px; }
+  margin-top: 40px; }
 
 .categ-stats > li:last-child {
   margin-bottom: 30px; }
@@ -1359,19 +1360,31 @@ html {
 
 .category-odd-row {
   background-color: #EF2525;
+  background: -webkit-linear-gradient(red, #f06d06);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(red, #f06d06);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(red, #f06d06);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#e53935, #e35d5b);
+  /* Standard syntax (must be last) */
   color: #fff;
-  height: 700px;
+  box-shadow: 0px 10px 5px #888888;
   padding: 10px 0px 10px 0px; }
-  .category-odd-row .categ-col-1 {
-    height: 100%; }
+  .category-odd-row ul, .category-odd-row li {
+    padding: 0px;
+    margin: 0px; }
 
 .category-even-row {
-  height: 700px;
   background-color: #fff;
   color: #000;
   padding: 10px 0px 10px 0px; }
-  .category-even-row .categ-col-1 {
-    height: 100%; }
+  .category-even-row ul, .category-even-row li {
+    padding: 0px;
+    margin: 0px; }
+
+.col-wrap {
+  overflow: hidden; }
 
 .rating {
   color: #a9a9a9;
@@ -1388,7 +1401,7 @@ ul.rating {
   text-align: center;
   font-weight: bold;
   cursor: pointer;
-  font-size: 50px; }
+  font-size: 20px; }
 
 .rating .filled {
   color: #fff600; }
@@ -1413,7 +1426,8 @@ ul.rating {
 .text-easypie-percent {
   position: relative;
   left: 60px;
-  top: -50px; }
+  top: -50px;
+  font-size: 30px; }
 
 .btn-country-options {
   margin-left: 20px; }
@@ -1421,6 +1435,53 @@ ul.rating {
 .dropdown-menu {
   width: -moz-calc(100% - 28px);
   width: -webkit-calc(100% - 28px);
-  width: calc(100% - 1px); }
+  width: calc(100% - 1px);
+  font-size: 30px; }
+
+.btn-country {
+  background-color: #fff;
+  border: 2px solid #6B305F;
+  color: #000;
+  height: 100px;
+  font-size: 35px;
+  width: 200px; }
+
+.btn-country.active, .btn-country:active {
+  background-color: #6B305F;
+  color: #fff;
+  border: 0px;
+  height: 100px;
+  font-size: 35px;
+  width: 200px; }
+
+.btn-country:hover {
+  background-color: #6B305F;
+  color: #fff;
+  height: 100px;
+  font-size: 35px;
+  width: 200px; }
+
+.box-shadow:after {
+  content: "";
+  width: 150px;
+  height: 1px;
+  margin-top: 88px;
+  margin-left: -75px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  -webkit-box-shadow: 0px 0px 8px 2px #000000;
+  -moz-box-shadow: 0px 0px 8px 2px #000000;
+  box-shadow: 0px 0px 8px 2px #000000; }
+
+#stats-area {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.container-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 40px; }
 
 /*# sourceMappingURL=styles.css.map */

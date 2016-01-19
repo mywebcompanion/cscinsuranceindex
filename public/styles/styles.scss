@@ -24,15 +24,15 @@ body{
     padding: 0;
     height: 100%;
     .text-header{
-      font-size: 40px;
-      font-weight: 600;
-      letter-spacing: -2px;
+      font-size: 45px;
+      font-weight: 400;
+      letter-spacing: -1px;
       line-height: 60px;
       text-align: center;
       text-transform: uppercase;
     }
     .text-sub-header{
-      margin-left:5.33%;
+      margin-left:15.33%;
     }
     .navrow {
       height:50px;
@@ -47,12 +47,13 @@ body{
 
   .insurance-search{
     margin-top:20px;
-    height:50px;
+    height:80px;
     border-radius:0px;
+    font-size:30px;
   }
   .btn-insurance-search{
     margin-top:20px;
-    height:50px;
+    height:80px;
     border-radius:0px;
     width:70px;
   }
@@ -66,6 +67,9 @@ body{
         width:100%;
         margin-top:40px;
         border-radius:0px;
+      }
+      .btn-country{
+
       }
     }
 
@@ -299,7 +303,7 @@ html {
 }
 
 .categ-stats >  li:first-child{
-  margin-top :20px;
+  margin-top :40px;
 }
 .categ-stats >  li:last-child{
   margin-bottom:30px;
@@ -336,24 +340,37 @@ html {
 
 .category-odd-row{
   background-color:#EF2525;
+  background: -webkit-linear-gradient(red, #f06d06); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(red, #f06d06); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(red, #f06d06); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#e53935,#e35d5b) ; /* Standard syntax (must be last) */
   color:#fff;
-  height:700px;
+  box-shadow: 0px 10px 5px #888888;
+  //height:700px;
   padding: 10px 0px 10px 0px;
   .categ-col-1{
     //border-right : 1px solid #fff;
-    height:100%;
+  }
+  ul, li{
+    padding:0px;
+    margin:0px;
   }
 }
 .category-even-row{
-  height:700px;
   background-color:#fff;
   color:#000;
+  //height:700px;
   padding: 10px 0px 10px 0px;
   .categ-col-1{
     //border-right : 1px solid #000;
-    height:100%;
   }
-
+  ul, li{
+    padding:0px;
+    margin:0px;
+  }
+}
+.col-wrap{
+  overflow: hidden;
 }
 
 .rating {
@@ -371,7 +388,7 @@ ul.rating {
   text-align: center;
   font-weight: bold;
   cursor: pointer;
-  font-size:50px;
+  font-size:20px;
 }
 .rating .filled {
   color: #fff600;
@@ -400,8 +417,9 @@ ul.rating {
 
 .text-easypie-percent{
   position:relative;
-  left:60px;
+  left:80px;
   top:-50px;
+  font-size:30px;
 }
 
 
@@ -414,4 +432,56 @@ ul.rating {
   width: -moz-calc(100% - 28px);
   width: -webkit-calc(100% - 28px);
   width: calc(100% - 1px);
+  font-size:30px;
+}
+
+.btn-country{
+  background-color:#fff;
+  border:2px solid $theme-color-4;
+  color:#000;
+  height:100px;
+  font-size:35px;
+  width:200px;
+}
+
+.btn-country.active, .btn-country:active{
+  background-color:$theme-color-4;
+  color:#fff;
+  border : 0px;
+  height:100px;
+  font-size:35px;
+  width:200px;
+}
+.btn-country:hover{
+  background-color:$theme-color-4;
+  color:#fff;
+  height:100px;
+  font-size:35px;
+  width:200px;
+}
+
+.box-shadow:after {
+  content: "";
+  width: 150px;
+  height: 1px;
+  margin-top: 88px;
+  margin-left: -75px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  -webkit-box-shadow: 0px 0px 8px 2px #000000;
+  -moz-box-shadow: 0px 0px 8px 2px #000000;
+  box-shadow: 0px 0px 8px 2px #000000;
+}
+
+#stats-area{
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+.container-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom:40px;
 }

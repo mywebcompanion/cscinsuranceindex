@@ -2,7 +2,7 @@
  * Created by ARUN on 21/12/2015.
  */
 
-InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope,$state, $location) {
+InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope,$state, $location, $anchorScroll) {
 
     // http://jsfiddle.net/nw5ndzrt/
     $scope.selectedCountry = "";
