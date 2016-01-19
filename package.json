@@ -27,8 +27,7 @@
       "npm" : "2.14.2"
   },
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install",
-    // stripped for snippet...
+    "postinstall": "./node_modules/bower/bin/bower install"
   }
 
 }
