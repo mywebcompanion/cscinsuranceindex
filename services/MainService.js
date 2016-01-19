@@ -7,7 +7,7 @@ var CompanyModel = require('../model/CompanyModel');
 var MetricModel = require('../model/MetricModel');
 var MetricsDataModel = require('../model/MetricsDataModel');
 var JSONAdapter = require('../utils/JSONAdapter');
-var Q = require('Q');
+var Q = require('q');
 
 var MainService = function(){
 
