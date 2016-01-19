@@ -6,7 +6,7 @@ var _ = require('underscore');
 var CompanyModel = require('../model/CompanyModel');
 var MetricModel = require('../model/MetricModel');
 var MetricsDataModel = require('../model/MetricsDataModel');
-var Q = require('Q');
+var Q = require('q');
 
 
 var AdminService = function(){
