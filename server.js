@@ -12,7 +12,7 @@ var mongoose = require('mongoose');
 var port = 8000;
 
 if(config.has('Application.port')){
-    port = config.Application.port;
+    port = process.env.PORT || 8080;
 }
 
 
@@ -20,7 +20,9 @@ if(config.has('Application.port')){
 
 
 var app = express();
-mongoose.connect('mongodb://localhost/cscindex');
+//mongoose.connect('mongodb://localhost/cscindex');
+mongoose.connect('mongodb://csc:csc@ds047325.mongolab.com:47325/cscinsuranceindex');
+
 
 
 
