@@ -21,6 +21,10 @@ MainRouter.post('/home/stats', function(req,res,next){
     MainService.getStats(req,res);
 });
 
+MainRouter.post('/home/countrystats', function(req,res,next){
+    MainService.getAllStats(req,res);
+});
+
 MainRouter.use('/admin', AdminRouter);
 
 MainRouter.get('/home/getAllCompanies',function(req,res,next){

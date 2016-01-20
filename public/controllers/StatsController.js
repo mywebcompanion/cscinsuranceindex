@@ -5,8 +5,9 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
     UIMaster.menuVisibility = true;
     UIMaster.insuranceHeading = true;
     $scope.percent = 70;
-    //$scope.categJSON = loadStats.data;
-    $scope.categJSON = {
+    $scope.categJSON = loadStats.data;
+    console.log(JSON.stringify(loadStats.data));
+   /* $scope.categJSON = {
         "singapore" : {
             "AIA" : {
                 "Analytics & Conversion" : {
@@ -245,7 +246,7 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
             }
         }
     };
-
+*/
     $location.hash('stats-area');
     $scope.market = $stateParams.market;
     $scope.company = $stateParams.company;

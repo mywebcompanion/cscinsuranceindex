@@ -22,6 +22,17 @@ var MainService = function(){
 
     };
 
+    var getAllStats = function(req,res){
+        var market = req.body.market.trim();
+        var company = req.body.company.trim();
+        var promise = MetricsDataModel.find({ market : market}).exec();
+        promise.then(function(data){
+            var output = JSONAdapter.metricDataAdapter(data);
+            res.json(output);
+        });
+
+    };
+
     var getAllCompanies = function(req,res){
         var promise = CompanyModel.find().exec();
         promise.then(function(data){
@@ -31,6 +42,7 @@ var MainService = function(){
 
     return {
         getStats: getStats,
+        getAllStats : getAllStats,
         getAllCompanies: getAllCompanies
     }
 

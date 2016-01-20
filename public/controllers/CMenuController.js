@@ -20,8 +20,8 @@ InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope
             state : false
         }
     };
-    $scope.insuranceCompany ="";
-    $scope.insuranceCompanyList = ['AIA','NTUS','AXA','Aviva','Great Eastern','Tokio Marine','Swiss Life','Allianz'];
+
+
     $scope.renderCategory = function(insCompany){
         $scope.activecompany = "";
         angular.forEach($scope.insuranceCompanyList, function(company){
@@ -72,7 +72,7 @@ InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope
         promise.success(function(response){
             var companies =[];
             for (company in response) {
-                if (response[company].countryname === $scope.selectedCountry) {
+                if (response[company].countryname.toUpperCase() === $scope.selectedCountry.toUpperCase()) {
                     companies.push(response[company].companyname);
                 }
             }
