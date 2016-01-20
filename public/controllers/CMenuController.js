@@ -2,7 +2,9 @@
  * Created by ARUN on 21/12/2015.
  */
 
-InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope,$state, $location, $anchorScroll) {
+
+InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope,$state,$location,CountryStatsFactory) {
+
 
     // http://jsfiddle.net/nw5ndzrt/
     $scope.selectedCountry = "";
@@ -65,7 +67,16 @@ InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope
             this.btn[country].state = !this.btn[country].state;
             $rootScope.showCountryChart = false;
         }
-
-
+        $scope.insuranceCompanyList = "";
+        var promise = CountryStatsFactory.getAllCompanies();
+        promise.success(function(response){
+            var companies =[];
+            for (company in response) {
+                if (response[company].countryname === $scope.selectedCountry) {
+                    companies.push(response[company].companyname);
+                }
+            }
+            $scope.insuranceCompanyList = companies;
+        });
     }
 });
