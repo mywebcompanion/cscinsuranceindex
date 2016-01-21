@@ -19,18 +19,17 @@ var MainService = function(){
             var output = JSONAdapter.metricDataAdapter(data);
             res.json(output);
         });
-
     };
 
     var getAllStats = function(req,res){
-        var market = req.body.market.trim();
-        var company = req.body.company.trim();
-        var promise = MetricsDataModel.find({ market : market}).exec();
+        var market = req.body.market.toLowerCase().trim();
+        var regex = new RegExp([ market].join(""), "i");
+        var promise = MetricsDataModel.find({market: regex}).exec();
         promise.then(function(data){
-            var output = JSONAdapter.metricDataAdapter(data);
+            var countryMetrics = JSONAdapter.metricDataAdapter(data);
+            var output = JSONAdapter.metricDataGraphAdapter(countryMetrics[market]);
             res.json(output);
         });
-
     };
 
     var getAllCompanies = function(req,res){

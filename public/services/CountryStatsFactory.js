@@ -4,11 +4,11 @@
 
 InsuranceIndex.factory('CountryStatsFactory', function($http,StaticResourceFactory){
 
-    var getCountryData = function(countryname){
-        if(countryname.toLowerCase() === "default"){
-            countryname = "singapore";
+    var getCountryData = function(market){
+        if(market.toLowerCase() === "default"){
+            market = "singapore";
         }
-        return promise = StaticResourceFactory.getStaticResource("json/" + countryname.toLowerCase() + "stats.json");
+        return promise = $http.post('home/countrystats',{"market":market});// StaticResourceFactory.getStaticResource("json/" + market.toLowerCase() + "stats.json");
     };
 
     var getAllCompanies = function(){

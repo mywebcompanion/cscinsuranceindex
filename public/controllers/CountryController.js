@@ -18,7 +18,7 @@ InsuranceIndex.controller('CountryController', function($scope,$window, ChartCon
             var chart = $('#main-chart').highcharts($scope.chartConfig);
         });
         promise.error (function(err){
-            console.log("For now i dont care :-) . " + err);
+            console.log("For now :-) . " + err);
         });
     };
     if($rootScope.showCountryChart) {
