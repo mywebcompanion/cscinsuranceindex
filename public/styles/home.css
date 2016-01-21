@@ -1,6 +1,5 @@
 body {
-  padding-bottom: 50px;
-  font-family: 'Lato', sans-serif; }
+  padding-bottom: 50px; }
 
 .carousal-area {
   background: linear-gradient(to right, #F17641 10%, #E55A33);
@@ -8,7 +7,7 @@ body {
 
 #footer {
   height: 30px;
-  background: #6B301A;
+  background: #4C7628;
   color: #fff;
   margin-top: 50px;
   width: 100%;
@@ -19,7 +18,7 @@ body {
 
 .index-menu {
   height: 50px;
-  background: #6B301A; }
+  background: #4C7628; }
   .index-menu h3 {
     display: inline-block;
     color: #FFF;
@@ -79,7 +78,7 @@ body {
 .contact-btn {
   float: right;
   display: inline;
-  background-color: #E55A33;
+  background-color: #DF685C;
   border-radius: 0px;
   color: #fff;
   margin-top: 10px; }
@@ -130,5 +129,18 @@ a {
 
 a:hover {
   text-decoration: none; }
+
+.img-responsive {
+  width: 150px;
+  height: 150px;
+  align: center; }
+
+.purchase {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.logo-csc {
+  width: 50px;
+  height: 30px; }
 
 /*# sourceMappingURL=home.css.map */
