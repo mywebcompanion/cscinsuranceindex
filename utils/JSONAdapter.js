@@ -27,6 +27,7 @@ JSONAdapter.metricDataAdapter = function(input) {
             }
             metricTypeObj["name"] = metricsObj.name;
             metricTypeObj["value"] = metricsObj.value;
+            metricTypeObj["rateorder"] = metricsObj.rateorder;
             metricTypeObj["weightage"] = 100;
             if (metricType[metricsObj.type] === metricType["Value"]) {
                 metricTypeObj["benchmarkvalue"] = metricsObj.benchmarkvalue;

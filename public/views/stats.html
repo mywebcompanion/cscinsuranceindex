@@ -14,15 +14,16 @@
             <div class="col-md-7 categ-col-1">
                 <h1>{{key | uppercase}}</h1>
                 <ul>
-                    <li ng-repeat="rating in value.RatingMetric | LoopFilter">
+                    <li ng-repeat="rating in value.RatingMetric ">
                         <span class="star-label">{{rating.name}} :</span>&nbsp;
                         <span star-rating rating-value="rating.value" max="5" ></span>&nbsp;
-                        <span class="star-label presence-col-2">{{value.RatingMetric[($index *2 +1)].name}} : </span> &nbsp;
-                        <span star-rating rating-value="rating.value" max="5" >{{value.RatingMetric[($index *2 +1)].value</span>
+                      <!--  <span class="star-label presence-col-2">{{value.RatingMetric[($index *2 +1)].name}} : </span> &nbsp;
+                        <span star-rating rating-value="rating.value" max="5" >{{value.RatingMetric[($index *2 +1)].value</span>-->
                     </li>
+                    </br>
                 </ul>
                 <ul>
-                    <li ng-repeat="boolean in value.BooleanMetric | LoopFilter">
+                    <li ng-repeat="boolean in value.BooleanMetric ">
                         <span class="star-label">{{boolean.name}} :</span>&nbsp;
                         <span ng-if="boolean.value === 'yes'">
                             <span class="glyphicon glyphicon-ok"></span>
@@ -30,37 +31,38 @@
                         <span ng-if="boolean.value === 'no'">
                             <span class="glyphicon glyphicon-remove"></span>
                         </span>&nbsp;&nbsp;
-                        <span class="star-label presence-col-2">{{value.BooleanMetric[($index * 2+1)].name}} :</span>&nbsp;
+                       <!-- <span class="star-label presence-col-2">{{value.BooleanMetric[($index * 2+1)].name}} :</span>&nbsp;
                         <span ng-if="value.BooleanMetric[($index * 2+1)].value === 'yes'">
                             <span class="glyphicon glyphicon-ok"></span>
                         </span>
                         <span  ng-if="value.BooleanMetric[($index * 2+1)].value === 'no'">
                             <span class="glyphicon glyphicon-remove"></span>
-                        </span>
+                        </span>-->
                         </br>
                     </li>
                 </ul>
                 <ul>
-                    <li ng-repeat ="metric in value.ValueMetric | LoopFilter" ng-init="prepareConfig(metric,value.ValueMetric[($index * 2+1)])">
-                        <span class="star-label">{{metric.name}} :</span>
-                        <span ng-if="metric.rank === 'high'">
-                            <span easypiechart options="easypieoptions" percent="percent"><span class="text-easypie-percent">{{percent}}</span></span>
+                    <li class="valuemetric" ng-repeat ="metric in value.ValueMetric" ng-init="prepareConfig(metric,value.ValueMetric[($index * 2+1)])">
+
+                        <span ng-if="metric.rateorder === 'high'">
+                            <span class="star-label">{{metric.name}} :</span>
+                            <span easypiechart ng-init="percent=metric.value" options="easypieoptions" percent="percent"><span class="text-easypie-percent">{{percent}}</span></span>
                         </span>
-                        <span ng-if="metric.rank === 'low'">
+                        <span ng-if="metric.rateorder === 'low'">
                             <!-- TBD -->
                         </span>
-                        <span class="star-label presence-col-2">{{value.ValueMetric[($index * 2+1)].name}} :</span>
-                        <span ng-if="value.ValueMetric[($index * 2+1)].rank === 'high'">
+                        <!--<span ng-if="value.ValueMetric[($index * 2+1)].rateorder === 'high'">
+                            <span class="star-label presence-col-2">{{value.ValueMetric[($index * 2+1)].name}} :</span>
                             <span easypiechart options="easypieoptions" percent="percent"><span class="text-easypie-percent">{{percent}}</span></span>
-<!--
+&lt;!&ndash;
                             <highchart class="highcharts-config" config="config2"></highchart>
--->
+&ndash;&gt;
                         </span>
-                        <span ng-if="value.ValueMetric[($index * 2+1)].rank === 'low'">
-                            <!-- TBD -->
-                        </span>
-                        </br>
+                        <span ng-if="value.ValueMetric[($index * 2+1)].rateorder === 'low'">
+                            &lt;!&ndash; TBD &ndash;&gt;
+                        </span>-->
                     </li>
+                    </br>
                 </ul>
             </div>
             <div class="col-md-4 categ-col-2">

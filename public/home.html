@@ -22,6 +22,9 @@
 
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="theme/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="theme/plugins/ladda-buttons/css/custom-lada-btn.css">
+    <link rel="stylesheet" href="theme/css/plugins/hover-effect/css/custom-hover-effects.css">
+
     <link rel="stylesheet" href="theme/plugins/font-awesome/css/font-awesome.css">
 
     <!-- CSS Theme -->
@@ -103,43 +106,6 @@
 
                         <div class="row tag-box tag-box-v5" >
 
-                            <!-- Service Blcoks -->
-                            <div class="row margin-bottom-10">
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="service-block service-block-u">
-                                        <i class="icon-2x color-light fa fa-thumbs-o-up"></i>
-                                        <h2 class="heading-md">Omnichannel Experience</h2>
-                                        <p>CSC Digital Insurance Index helps you to understand 360 degree of your customer interaction with your digital apps</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="service-block service-block-blue">
-                                        <i class="icon-2x color-light icon-line icon-trophy"></i>
-                                        <h2 class="heading-md">Analytics & Conversion</h2>
-                                        <p>Know how to integrate data from all sources into a unified Analytics platform and acquire new customers.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="service-block service-block-dark">
-                                        <i class="icon-2x color-light fa fa-bell-o"></i>
-                                        <h2 class="heading-md">Social & CRM </h2>
-                                        <p>Automate & Integrate your insurance apps with social channels. Get feedback & Improve insurance plans.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="service-block service-block-red">
-                                        <i class="icon-2x color-light icon-line icon-fire"></i>
-                                        <h2 class="heading-md">SEO & Ads</h2>
-                                        <p>Measure your ad spend through smart analytics and increase ad click through conversion rates. </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Service Blcoks -->
-
-
-
-
                             <div class="col-md-12">
                                 <h1 class="text-header">Know your Company's Digital Insurance Index!</h1></br>
                                 <span>Benchmark your insurance company against your competition . Select Market below to analyse</span>
@@ -170,7 +136,41 @@
                         <span ng-include="'countrymenu.html'"></span>
                     </div>
 
-
+                    <div ng-controller="MainController" ng-show="insuranceHeading" class="service-row">
+                        <!-- Service Blocks -->
+                        <div class="row margin-bottom-10">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-block service-block-u">
+                                    <i class="icon-2x color-light fa fa-thumbs-o-up"></i>
+                                    <h2 class="heading-md">Omnichannel Experience</h2>
+                                    <p>CSC Digital Insurance Index helps you to understand 360 degree of your customer interaction with your digital apps</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-block service-block-blue">
+                                    <i class="icon-2x color-light icon-line icon-trophy"></i>
+                                    <h2 class="heading-md">Analytics & Conversion</h2>
+                                    <p>Know how to integrate data from all sources into a unified Analytics platform and acquire new customers.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-block service-block-dark">
+                                    <i class="icon-2x color-light fa fa-bell-o"></i>
+                                    <h2 class="heading-md">Social & CRM </h2>
+                                    <p>Automate & Integrate your insurance apps with social channels. Get feedback & Improve insurance plans.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-block service-block-red">
+                                    <i class="icon-2x color-light icon-line icon-fire"></i>
+                                    <h2 class="heading-md">SEO & Ads</h2>
+                                    <p>Monitor & Measure your ad spend through smart analytics and increase ads click-through and conversion rates. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Service Blcoks -->
+                    </div>
                         <!--<ul>
                             <li class="menu-select" ng-repeat="item in menu">
                                 <span class="glyphicon {{item.icon}}" aria-hidden="true"></span> &nbsp;
