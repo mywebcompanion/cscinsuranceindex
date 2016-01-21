@@ -19,6 +19,7 @@ body{
     //background-image: url("../images/insurance.jpg");
     //background-repeat : no-repeat;
     //background-size : 100%;
+
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
@@ -182,6 +183,7 @@ body{
     inline:inline-block;
     margin : 10px 0px 2px 0px;
     float:left;
+    padding-left:10px;
   }
   #main-info-table{
     .table{
@@ -337,7 +339,9 @@ html {
     padding:0px;
   }
 }
-
+.valuemetric{
+  margin-bottom:30px;
+}
 .category-odd-row{
   background-color:#EF2525;
   background: -webkit-linear-gradient(red, #f06d06); /* For Safari 5.1 to 6.0 */
@@ -419,7 +423,7 @@ ul.rating {
   position:relative;
   left:80px;
   top:-50px;
-  font-size:30px;
+  font-size:15px;
 }
 
 
@@ -484,4 +488,7 @@ ul.rating {
   display: flex;
   flex-wrap: wrap;
   padding-bottom:40px;
+}
+.service-block{
+  font-family: "Times New Roman", serif;
 }
