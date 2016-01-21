@@ -1,11 +1,11 @@
 
 $color-theme-1 : linear-gradient(to right,#F17641 10%,#E55A33);
 //$color-theme-1 : linear-gradient(to right, #6B301A 0%,#6B305F 59%,#6B305A 87%);
-$color-theme-2 :  #6B301A;
+$color-theme-2 :  #4C7628;
 
 body{
   padding-bottom: 50px;
-  font-family: 'Lato', sans-serif;
+  //font-family: 'Lato', sans-serif;
 }
 
 .carousal-area{
@@ -102,7 +102,7 @@ body{
 .contact-btn{
   float:right;
   display:inline;
-  background-color:#E55A33;
+  background-color:#DF685C;
   border-radius:0px;
   color:#fff;
   margin-top:10px;
@@ -157,4 +157,17 @@ a{
 }
 a:hover{
   text-decoration: none;
+}
+.img-responsive{
+  width:150px;
+  height:150px;
+  align:center;
+}
+.purchase{
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.logo-csc{
+  width:50px;
+  height:30px;
 }
