@@ -112,27 +112,27 @@ JSONAdapter.metricDataGraphAdapter = function(input) {
             social.data.push([company,0]);
         }
         if(metrics.hasOwnProperty(cms.name)){
-            cms.data.push(Math.round(metrics[cms.name].score) / 10);
+            cms.data.push(Math.round(metrics[cms.name].score) / 100);
         } else{
             cms.data.push(0);
         }
         if(metrics.hasOwnProperty(seo.name)){
-            seo.data.push(Math.round(metrics[seo.name].score) / 10);
+            seo.data.push(Math.round(metrics[seo.name].score) / 100);
         } else{
             seo.data.push(0);
         }
         if(metrics.hasOwnProperty(emailChat.name)){
-            emailChat.data.push(Math.round(metrics[emailChat.name].score) / 10);
+            emailChat.data.push(Math.round(metrics[emailChat.name].score) / 100);
         } else{
             emailChat.data.push(0);
         }
         if(metrics.hasOwnProperty(mobileUx.name)){
-            mobileUx.data.push(Math.round(metrics[mobileUx.name].score) / 10);
+            mobileUx.data.push(Math.round(metrics[mobileUx.name].score) / 100);
         } else{
             mobileUx.data.push(0);
         }
         if(metrics.hasOwnProperty(analytics.name)){
-            analytics.data.push(Math.round(metrics[analytics.name].score) / 10);
+            analytics.data.push(Math.round(metrics[analytics.name].score) / 100);
         } else{
             analytics.data.push(0);
         }
