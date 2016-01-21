@@ -5,7 +5,13 @@ $color-theme-2 :  #4C7628;
 
 body{
   padding-bottom: 50px;
+  padding-left:0px;
+  padding-right:0px;
   //font-family: 'Lato', sans-serif;
+}
+.container-full{
+  padding-right:0px;
+  padding-left:0px;
 }
 
 .carousal-area{
@@ -40,10 +46,10 @@ body{
   }
 }
 .csc-logo{
-  height:30px;
   width:50px;
+  height:30px;
   inline:inline-block;
-  margin : 10px 0px 2px 0px;
+  margin : 10px 0px 2px 10px;
 }
 
 .csc-message-s1{
@@ -106,6 +112,7 @@ body{
   border-radius:0px;
   color:#fff;
   margin-top:10px;
+  paggin-right:10px;
 
 }
 .csc-exhibit{
