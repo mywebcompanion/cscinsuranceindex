@@ -9,10 +9,18 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 
     <!-- Custom CSS -->
-    <link href="styles/home.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
     <script src="http://code.highcharts.com/highcharts.src.js"></script>
+    <link rel="stylesheet" href="theme/css/footers/footer-default.css">
+    <link rel="stylesheet" href="theme/css/style.css">
+    <link rel="stylesheet" href="theme/css/theme-colors/default.css">
+    <link rel="stylesheet" href="theme/plugins/fancybox/source/jquery.fancybox.css">
+    <link rel="stylesheet" href="theme/plugins/flexslider/flexslider.css">
+    <link rel="stylesheet" href="theme/plugins/parallax-slider/css/parallax-slider.css">
+
+    <link href="styles/home.css" rel="stylesheet">
+
     <!--Start of Zopim Live Chat Script-->
     <script type="text/javascript">
         window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
@@ -25,9 +33,39 @@
     <!--<script src="//fast.eager.io/gaZUicnw_0.js"></script>-->
 </head>
 <body ng-app="InsuranceIndex">
-<div id="wrapper">
+<div id="wrapper" class="wrapper">
     <div id="content">
         <div class="container-fluid container-full">
+
+            <div class="header-v1 header-sticky">
+                <!-- Topbar -->
+                <div class="topbar-v1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-inline top-v1-contacts">
+                                    <li>
+                                        <i class="fa fa-envelope"></i> Email: <a href="mailto:idir.hillai@csc.com">idir.hillai@csc.com</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-phone"></i> Hotline: +65 8268 1713
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6">
+                                <ul class="list-inline top-v1-data">
+                                    <li><a href="#"><i class="fa fa-home"></i></a></li>
+                                    <li><a href="/home"><i class="fa fa-bar-chart"></i></a></li>
+                                    <li><a href="/home">Quicklinks</a></li>
+                                    <li><a href="#">Login</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Topbar -->
+            </div>
             <div class="row index-menu">
                 <div class="col-md-1">
                     <img class="csc-logo" src="images/logo-CSC.gif">
@@ -37,54 +75,105 @@
                         <h3>Digital Insurance Index </h3>
                     </a>
                     <button class="contact-btn btn">CONTACT US</button>
+                </div>
             </div>
-            </div>
-            <div class="row carousal-area">
+                <!--=== Slider ===-->
+            <div class="slider-inner">
+                <div id="da-slider" class="da-slider">
+                    <div class="da-slide">
+                        <h2><i>SMALL CHANGES</i> <br /> <i>CAN REAP GREAT REWARDS </i> <br /> <i>- ENGAGE CSC</i></h2>
+                        <p><i>CSC Digital Insurance Index</i> <br /> <i>CSC V-listen</i> <br /> <i>Big Data & Analytics </i></p>
+                        <div class="da-img">
+                            <iframe width="530" height="300" src="https://www.youtube.com/embed/xGb999MqsZ8" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="da-slide">
+                        <h2><i>LEVERAGE CSC's</i> <br /> <i>DIGITAL EXPERTISE </i> <br /> <i>IN INSURANCE</i></h2>
+                        <p><i>Leader in Digital Insurance</i> <br /> <i>And Big Data Analytics</i></p>
+
+                    </div>
+                    <div class="da-slide">
+                        <h2><i>INTEGRATE OUR DIGITAL TOOLS</i> <br /> <i> FOR A TRUE</i> <br /> <i> OMNICHANNEL EXPERIENCE</i></h2>
+                        <p><i>CSC Digital Insurance Index</i> <br /> <i>CSC Vlisten</i> <br /> <i>Big Data & Analytics </i></p>
+                    </div>
+                    <div class="da-arrows">
+                        <span class="da-arrows-prev"></span>
+                        <span class="da-arrows-next"></span>
+                    </div>
+                </div>
+            </div><!--/slider-->
+
+           <!-- <div class="row carousal-area">
                 <span class="col-md-5">
                     <h1 class="csc-message">Small Changes Can </br> Reap Great Rewards !</h1>
                 </span>
                 <span class="col-md-7">
                     <img class="carousal-graph" src="images/graph-21.png">
                 </span>
-            </div>
-            <div class="row subscribe-bar">
-                <div class="col-md-3">
-                    <button class="subscribe-btn btn">Subscribe</button>
-                </div>
-                <div class="col-md-9">
-                    <span class="fun-fact"> FUN FACT : Insurance investing 5% of IT budget in Digital</span></br>
-                    <span class="fun-fact-acq">Increase Customer acquisition by +30%</span>
-                </div>
+            </div>-->
 
+            <!--=== Purchase Block ===-->
+            <div class="purchase">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 animated fadeInLeft">
+                            <span>FUN FACT : Insurance investing 5% of IT budget in Digital, Increase Customer acquisition by +30%</span>
+                            <p>Engage CSC's expertise in Digital space to turn your digital presence to digital omnichannel experience. Get a 360 degree view of your data and customer experience. Subscribe to know more about our offerings and services.</p>
 
-            </div>
-            <div class="row csc-exhibit">
-                <div class="col-md-4 nopadding">
-                    <div class="csc-exhibit-item">
-                        <a href="/home">
-                            <h3>Digital Index</h3>
-                            <img src="images/Digitalindex.png">
-                            <h5>Check how your Rank with DI2</h5>
+                        </div>
+                        <div class="col-md-3 btn-buy animated fadeInRight">
+                            <a href="#" class="btn-u btn-u-lg"><i class="fa fa-cloud-download"></i> Subscribe Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/row-->
+            <!-- End Purchase Block -->
+            <div class="row row-centered">
+                <div class="col-md-4 text-center">
+                    <div class="thumbnails thumbnail-style">
+                        <a class="fancybox-button zoomer" data-rel="fancybox-button" title="CSC Di2" href="/home">
+                                <span class="overlay-zoom">
+                                    <img class="img-responsive center-block" src="images/Digitalindex.png" alt="" />
+                                </span>
                         </a>
+                        <div class="caption">
+                            <h3><a class="hover-effect" href="/home">Di2 - Digital Insurance Index</a></h3>
+                            <p>Check how you rank with Di2.  </p>
+                            <p><a href="/home" class="btn-u btn-u-xs">Explore <i class="fa fa-angle-right margin-left-5"></i></a></p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 nopadding">
-                    <div class="csc-exhibit-item">
-                        <h3>V-Listen</h3>
-                        <img src="images/v-listen.png">
-                        <h5>Benchmark Your Social Footprint</h5>
+                <div class="col-md-4 text-center">
+                    <div class="thumbnails thumbnail-style">
+                        <a class="fancybox-button zoomer" data-rel="fancybox-button" title="CSC V-Listen" href="">
+                                <span class="overlay-zoom">
+                                    <img class="img-responsive center-block" src="images/v-listen.png" alt="" />
+                                </span>
+                        </a>
+                        <div class="caption">
+                            <h3><a class="hover-effect" href="#">V-Listen</a></h3>
+                            <p>Benchmark your Social foot Print</p>
+                            <p><a href="#" class="btn-u btn-u-xs">Explore <i class="fa fa-angle-right margin-left-5"></i></a></p>
+
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 nopadding">
-                    <div class="csc-exhibit-item">
-                        <h3>Big Data & Analytics</h3>
-                        <img src="images/big-data-analytics.png">
-                        <h5>Measure What really Matters</h5>
+                <div class="col-md-4 text-center">
+                    <div class="thumbnails thumbnail-style">
+                        <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Big Data & Analytics" href="#">
+                                <span class="overlay-zoom">
+                                    <img class="img-responsive center-block" src="images/big-data-analytics.png" alt="Big Data & Analytics" />
+                                </span>
+                        </a>
+                        <div class="caption">
+                            <h3><a class="hover-effect" href="#">Big Data & Analytics</a></h3>
+                            <p>Measure what that really Matters</p>
+                            <p><a href="#" class="btn-u btn-u-xs">Explore <i class="fa fa-angle-right margin-left-5"></i></a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row"></div>
-        </div>
+            </div><!--/row-->
+            <!-- End Thumbnails v3 -->
     </div>
     <!--<section>
         <div id="footer">
@@ -94,6 +183,135 @@
         </div>
     </section>-->
 </div>
+<!--=== Footer Version 1 ===-->
+<!--=== Footer v1 Section (Default) ===-->
+<section>
+
+    <!-- Default Footer -->
+    <div class="footer-default">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 md-margin-bottom-40">
+                        <!-- About -->
+                        <div class="headline"><h2>About</h2></div>
+                        <p class="margin-bottom-25 md-margin-bottom-40">CSC Digital Insurance tools helps you to measure and take meaning actions towards better omnichannel & user experience.</p>
+                        <!-- End About -->
+
+                        <!-- Monthly Newsletter -->
+                        <div class="headline"><h2>Monthly Newsletter</h2></div>
+                        <p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
+                        <form class="footer-subsribe">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Email Address">
+                                    <span class="input-group-btn">
+                                        <button class="btn-u" type="button">Subscribe</button>
+                                    </span>
+                            </div>
+                        </form>
+                        <!-- End Monthly Newsletter -->
+                    </div><!--/col-md-4-->
+
+                    <div class="col-md-4 md-margin-bottom-40">
+                        <!-- Recent Blogs -->
+                        <div class="posts">
+                            <div class="headline"><h2>Recent Blog Entries</h2></div>
+                            <dl class="dl-horizontal">
+                                <dt><a href="#"><img src="theme/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
+                                <dd>
+                                    <p><a href="#">How CSC's di2.io helps insurance companies measure and improve their digital presence</a></p>
+                                </dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt><a href="#"><img src="theme/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
+                                <dd>
+                                    <p><a href="#">Digital Insurance and Omnichannel Experience</a></p>
+                                </dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt><a href="#"><img src="theme/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
+                                <dd>
+                                    <p><a href="#">Measure data that matters.</a></p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <!-- End Recent Blogs -->
+                    </div><!--/col-md-4-->
+
+                    <div class="col-md-4">
+                        <!-- Contact Us -->
+                        <div class="headline"><h2>Contact Us</h2></div>
+                        <address class="md-margin-bottom-40">
+                            Computer Sciences Corporation <br />
+                            Biz Hub East, Singapore <br />
+                            Phone: +65 8268 1713 <br />
+                            Fax: +65 8268 1713 <br />
+                            Email: <a href="mailto:idir,hillai@csc.com" class="">idir.hillai@csc.com</a>
+                        </address>
+                        <!-- End Contact Us -->
+
+                        <!-- Social Links -->
+                        <div class="headline"><h2>Stay Connected</h2></div>
+                        <ul class="social-icons">
+                            <li><a href="#" data-original-title="Feed" class="social_rss"></a></li>
+                            <li><a href="#" data-original-title="Facebook" class="social_facebook"></a></li>
+                            <li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
+                            <li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
+                            <li><a href="#" data-original-title="Pinterest" class="social_pintrest"></a></li>
+                            <li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
+                            <li><a href="#" data-original-title="Vimeo" class="social_vimeo"></a></li>
+                        </ul>
+                        <!-- End Social Links -->
+                    </div><!--/col-md-4-->
+                </div>
+            </div>
+        </div><!--/footer-->
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            2016 &copy; Computer Sciences Corporation. ALL Rights Reserved.
+                            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="index.html">
+                            <img class="pull-right logo-csc" id="logo-footer" src="images/logo-CSC.gif" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div><!--/copyright-->
+    </div>
+    <!-- End Default Footer -->
+</section>
+</div><!--/copyright-->
+<!--=== End Footer Version 1 ===-->
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="theme/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="theme/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="theme/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="theme/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="theme/plugins/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="theme/plugins/parallax-slider/js/modernizr.js"></script>
+<script type="text/javascript" src="theme/plugins/parallax-slider/js/jquery.cslider.js"></script>
+<!-- JS Customization -->
+<script type="text/javascript" src="theme/js/custom.js"></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src="theme/js/app.js"></script>
+<script type="text/javascript" src="theme/js/plugins/parallax-slider.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        App.initSliders();
+        ParallaxSlider.initParallaxSlider();
+    });
+</script>
+
 
 
 </body>
