@@ -15,6 +15,21 @@
     <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- CSS Global Compulsory-->
+    <link rel="stylesheet" href="theme/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="theme/css/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="theme/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="theme/plugins/font-awesome/css/font-awesome.css">
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="theme/css/theme-colors/default.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="theme/css/custom.css">
+
     <!-- Custom CSS -->
     <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     <link href="styles/styles.css" rel="stylesheet">
@@ -64,6 +79,7 @@
             <div class="row navrow">
                 <div class="col-md-12">
                     <nav class="navbar navbar-inverse navbar-fixed-top">
+
                         <div class="container">
                             <div class="navbar-header">
 
@@ -79,12 +95,57 @@
                     </nav>
                 </div>
             </div>
+
             <div class="row" ng-controller="MainController">
 
                 <div class="col-md-12 stats-area">
                     <div class="insurance-heading" ng-show="insuranceHeading">
-                        <h1 class="text-header">Know your Company's Digital Insurance Index!</h1>
-                        <h3 class="text-sub-header">Benchmark your insurance company against your competition . Select Market to analyse </h3>
+
+                        <div class="row tag-box tag-box-v5" >
+
+                            <!-- Service Blcoks -->
+                            <div class="row margin-bottom-10">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="service-block service-block-u">
+                                        <i class="icon-2x color-light fa fa-thumbs-o-up"></i>
+                                        <h2 class="heading-md">Omnichannel Experience</h2>
+                                        <p>CSC Digital Insurance Index helps you to understand 360 degree of your customer interaction with your digital apps</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="service-block service-block-blue">
+                                        <i class="icon-2x color-light icon-line icon-trophy"></i>
+                                        <h2 class="heading-md">Analytics & Conversion</h2>
+                                        <p>Know how to integrate data from all sources into a unified Analytics platform and acquire new customers.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="service-block service-block-dark">
+                                        <i class="icon-2x color-light fa fa-bell-o"></i>
+                                        <h2 class="heading-md">Social & CRM </h2>
+                                        <p>Automate & Integrate your insurance apps with social channels. Get feedback & Improve insurance plans.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="service-block service-block-red">
+                                        <i class="icon-2x color-light icon-line icon-fire"></i>
+                                        <h2 class="heading-md">SEO & Ads</h2>
+                                        <p>Measure your ad spend through smart analytics and increase ad click through conversion rates. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Service Blcoks -->
+
+
+
+
+                            <div class="col-md-12">
+                                <h1 class="text-header">Know your Company's Digital Insurance Index!</h1></br>
+                                <span>Benchmark your insurance company against your competition . Select Market below to analyse</span>
+                            </div>
+                        </div>
+
                     </div>
 
                     <span class="menuarea" ng-hide="insuranceHeading">
