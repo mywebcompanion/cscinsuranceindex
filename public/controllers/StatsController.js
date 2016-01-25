@@ -2,13 +2,32 @@
  * Created by ARUN on 11/1/2016.
  */
 InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfig, $rootScope,$state, $stateParams, loadStats, $location, $anchorScroll ) {
+
+    var calcOverAllScore = function(data){
+            var overallScore = 0;
+        console.log(data[$scope.stats.market][$scope.stats.company]);
+        angular.forEach(data[$scope.stats.market][$scope.stats.company],function(value, key){
+            if(value)
+                overallScore +=  value.score;
+        });
+        return overallScore;
+    };
+
+    $scope.stats = {};
+
+
+
     UIMaster.menuVisibility = true;
     UIMaster.insuranceHeading = true;
     $scope.percent = 70;
     $scope.categJSON = loadStats.data;
+    $scope.stats.market = $stateParams.market;
+    $scope.stats.company = $stateParams.company;
+    $scope.stats.overallScore = calcOverAllScore(loadStats.data);
     console.log(JSON.stringify(loadStats.data));
    /* $scope.categJSON = {
         "singapore" : {
+            "AIA" : {
             "AIA" : {
                 "Analytics & Conversion" : {
                     "Score" : 43,
@@ -248,39 +267,25 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
     };
 */
     $location.hash('stats-area');
-    $scope.market = $stateParams.market;
-    $scope.company = $stateParams.company;
+
     $anchorScroll();
 
-        $scope.prepareConfig = function(metric1, metric2){
-            var config1 = new ChartConfig.getGaugeConfig();
-            var config2 = new ChartConfig.getGaugeConfig();
-            config1.series[0] = {
-                name : metric1.name,
-                data : [metric1.value]
-            };
-            config2.series[0] = {
-                name : metric2.name,
-                data : [metric2.value]
-            };
-
-            config1.yAxis = {
-                max : metric1.benchmarkvalue,
-                title : {
-                    text: metric1.name
-                }
-            };
-            config2.yAxis = {
-                max : metric2.benchmarkvalue,
-                title : {
-                    text: metric2.name
-                }
-            };
-            $scope.config1 = new ChartConfig.testGauge();
-            $scope.config2 = new ChartConfig.testGauge();
-          /*  $scope.config1 = config1;
-            $scope.config2 = config2;*/
-        };
+    var myCircle = Circles.create({
+        id:                  'circles-1',
+        radius:              60,
+        value:               43,
+        maxValue:            100,
+        width:               10,
+        text:                function(value){return value + '%';},
+        colors:              ['#D3B6C6', '#4B253A'],
+        duration:            400,
+        wrpClass:            'circles-wrp',
+        textClass:           'circles-text',
+        valueStrokeClass:    'circles-valueStroke',
+        maxValueStrokeClass: 'circles-maxValueStroke',
+        styleWrapper:        true,
+        styleText:           true
+    });
 
     $scope.easypieoptions = {
         animate:{

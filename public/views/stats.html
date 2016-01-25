@@ -6,67 +6,98 @@
         </div>
         <div class="col-md-4"></div>
     </div>-->
+<div class="row score-row col-wrap">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-11 score-summary">
+        <div class="row">
+            <div class="col col-xs-6">
+                <img src="../images/Company.png">
+                <h1>{{stats.company | uppercase}},{{stats.market | uppercase}}</h1>
+            </div>
+            <div class="col col-xs-6">
+                <img src="../images/overall-score.png">
+                <h1>Di2 SCORE: <!--{{stats.overallScore}}--> 62.3</h1>
+            </div>
+        </div>
+
+
+    </div>
+</div>
 <ul class="categ-stats" id="categ-stats">
-    <li ng-repeat = "(key, value) in categJSON['singapore']['AIA']" >
-        <div id="categ-{{$index}}" class="row box-shadow row-eq-height container-row" ng-class-odd="'category-odd-row'" ng-class-even="'category-even-row'">
+    <li ng-repeat = "(key, value) in categJSON[stats.market][stats.company]">
+        <div id="categ-{{$index}}" class="row row-eq-height container-row" ng-class-odd="'category-odd-row'" ng-class-even="'category-even-row'">
             <div class="col col-md-1 categ-col-menu">
             </div>
-            <div class="col-md-7 categ-col-1">
-                <h1>{{key | uppercase}}</h1>
-                <ul>
-                    <li ng-repeat="rating in value.RatingMetric ">
-                        <span class="star-label">{{rating.name}} :</span>&nbsp;
-                        <span star-rating rating-value="rating.value" max="5" ></span>&nbsp;
-                      <!--  <span class="star-label presence-col-2">{{value.RatingMetric[($index *2 +1)].name}} : </span> &nbsp;
-                        <span star-rating rating-value="rating.value" max="5" >{{value.RatingMetric[($index *2 +1)].value</span>-->
-                    </li>
-                    </br>
-                </ul>
-                <ul>
-                    <li ng-repeat="boolean in value.BooleanMetric ">
-                        <span class="star-label">{{boolean.name}} :</span>&nbsp;
+            <div class="col col-md-7 categ-col-1">
+                <div class="row">
+                    <div class="col-xs-12 categ-header">
+                        <h1>{{key | uppercase}}</h1>
+                    </div>
+                </div>
+                <div class="row col-wrap">
+                    <div class="col-xs-12">
+                            <ul>
+                                <li ng-repeat="rating in value.RatingMetric ">
+                                    <span class="star-label">{{rating.name}} :</span>&nbsp;
+                                    <span star-rating rating-value="rating.value" max="5" ></span>&nbsp;
+                                    <!--  <span class="star-label presence-col-2">{{value.RatingMetric[($index *2 +1)].name}} : </span> &nbsp;
+                                      <span star-rating rating-value="rating.value" max="5" >{{value.RatingMetric[($index *2 +1)].value</span>-->
+                                </li>
+                                </br>
+                            </ul>
+                            <ul>
+                                <li ng-repeat="boolean in value.BooleanMetric ">
+                                    <span class="star-label">{{boolean.name}} :</span>&nbsp;
                         <span ng-if="boolean.value === 'yes'">
                             <span class="glyphicon glyphicon-ok"></span>
                         </span>
                         <span ng-if="boolean.value === 'no'">
                             <span class="glyphicon glyphicon-remove"></span>
                         </span>&nbsp;&nbsp;
-                       <!-- <span class="star-label presence-col-2">{{value.BooleanMetric[($index * 2+1)].name}} :</span>&nbsp;
-                        <span ng-if="value.BooleanMetric[($index * 2+1)].value === 'yes'">
-                            <span class="glyphicon glyphicon-ok"></span>
-                        </span>
-                        <span  ng-if="value.BooleanMetric[($index * 2+1)].value === 'no'">
-                            <span class="glyphicon glyphicon-remove"></span>
-                        </span>-->
-                        </br>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="valuemetric" ng-repeat ="metric in value.ValueMetric" ng-init="prepareConfig(metric,value.ValueMetric[($index * 2+1)])">
+                                    <!-- <span class="star-label presence-col-2">{{value.BooleanMetric[($index * 2+1)].name}} :</span>&nbsp;
+                                     <span ng-if="value.BooleanMetric[($index * 2+1)].value === 'yes'">
+                                         <span class="glyphicon glyphicon-ok"></span>
+                                     </span>
+                                     <span  ng-if="value.BooleanMetric[($index * 2+1)].value === 'no'">
+                                         <span class="glyphicon glyphicon-remove"></span>
+                                     </span>-->
+                                    </br>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="valuemetric" ng-repeat ="metric in value.ValueMetric" ng-init="prepareConfig(metric,value.ValueMetric[($index * 2+1)])">
 
                         <span ng-if="metric.rateorder === 'high'">
-                            <span class="star-label">{{metric.name}} :</span>
+                            <span class="star-label">{{metric.name}} : {{metric.value}}</span>
+<!--
                             <span easypiechart ng-init="percent=metric.value" options="easypieoptions" percent="percent"><span class="text-easypie-percent">{{percent}}</span></span>
+-->
                         </span>
                         <span ng-if="metric.rateorder === 'low'">
                             <!-- TBD -->
                         </span>
-                        <!--<span ng-if="value.ValueMetric[($index * 2+1)].rateorder === 'high'">
-                            <span class="star-label presence-col-2">{{value.ValueMetric[($index * 2+1)].name}} :</span>
-                            <span easypiechart options="easypieoptions" percent="percent"><span class="text-easypie-percent">{{percent}}</span></span>
-&lt;!&ndash;
-                            <highchart class="highcharts-config" config="config2"></highchart>
-&ndash;&gt;
-                        </span>
-                        <span ng-if="value.ValueMetric[($index * 2+1)].rateorder === 'low'">
-                            &lt;!&ndash; TBD &ndash;&gt;
-                        </span>-->
-                    </li>
-                    </br>
-                </ul>
+                                    <!--<span ng-if="value.ValueMetric[($index * 2+1)].rateorder === 'high'">
+                                        <span class="star-label presence-col-2">{{value.ValueMetric[($index * 2+1)].name}} :</span>
+                                        <span easypiechart options="easypieoptions" percent="percent"><span class="text-easypie-percent">{{percent}}</span></span>
+            &lt;!&ndash;
+                                        <highchart class="highcharts-config" config="config2"></highchart>
+            &ndash;&gt;
+                                    </span>
+                                    <span ng-if="value.ValueMetric[($index * 2+1)].rateorder === 'low'">
+                                        &lt;!&ndash; TBD &ndash;&gt;
+                                    </span>-->
+                                </li>
+                                </br>
+                            </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 categ-col-2">
-                <h1>SCORE : {{value.Score}}</h1>
+            <div class="col col-md-4 categ-col-2">
+                <div class="row categ-header">
+                    <div class="col-xs-12" >
+                        <h1>SCORE : {{value.score}}</h1>
+                    </div>
+                </div>
                 <h3>RECOMMENDATION:</h3>
                 <ul>
                     <li ng-repeat="reco in value.Recommendations">

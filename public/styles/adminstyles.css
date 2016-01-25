@@ -1135,13 +1135,17 @@ body {
     line-height: 60px;
     text-align: center;
     text-transform: uppercase; }
+  body .categ-header {
+    background-color: #4C7628; }
+    body .categ-header h1 {
+      color: #fff !important; }
   body .text-sub-header {
     margin-left: 15.33%; }
   body .navrow {
     height: 50px;
-    background: linear-gradient(to right, #6B301A 0%, #6B305F 59%, #6B305A 87%); }
+    background: #4C7628; }
     body .navrow .navbar {
-      background: linear-gradient(to right, #6B301A 0%, #6B305F 59%, #6B305A 87%); }
+      background: #4C7628; }
   body .insurance-search {
     margin-top: 20px;
     height: 80px;
@@ -1280,7 +1284,7 @@ html {
 
 #footer {
   height: 30px;
-  background: linear-gradient(to right, #6B301A 0%, #6B305F 59%, #6B305A 87%);
+  background: #4C7628;
   color: #fff;
   margin: 0px;
   width: 100%;
@@ -1363,29 +1367,55 @@ html {
   margin-bottom: 30px; }
 
 .category-odd-row {
-  background-color: #EF2525;
-  background: -webkit-linear-gradient(red, #f06d06);
+  /* background-color:#EF2525;
+   background: -webkit-linear-gradient(red, #f06d06); */
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(red, #f06d06);
+                                                                                /*
+background: -o-linear-gradient(red, #f06d06); */
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(red, #f06d06);
+                                                                            /*
+background: -moz-linear-gradient(red, #f06d06); */
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#6B305F, #AA076B);
+                                                                             /*
+background: $theme-color-gradient-1 ; */
   /* Standard syntax (must be last) */
   color: #fff !important;
-  box-shadow: 0px 10px 5px #888888;
-  padding: 10px 0px 10px 0px; }
+  min-height: 200px;
+  max-height: 5000px;
+  overflow: hidden;
+  padding: 10px 0px 10px 0px;
+  margin-bottom: 10px; }
+  .category-odd-row .col {
+    min-height: 200px;
+    max-height: 5000px;
+    overflow: hidden; }
   .category-odd-row ul, .category-odd-row li {
     padding: 0px;
     margin: 0px; }
+  .category-odd-row ul {
+    min-height: 50px;
+    max-height: 1000px; }
 
 .category-even-row {
   background-color: #fff;
+  min-height: 200px;
+  max-height: 5000px;
+  overflow: hidden;
   color: #000;
-  padding: 10px 0px 10px 0px; }
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 10px; }
   .category-even-row ul, .category-even-row li {
     padding: 0px;
-    margin: 0px; }
+    margin: 0px;
+    min-height: 50px;
+    max-height: 200px; }
+  .category-even-row ul {
+    min-height: 50px;
+    max-height: 1000px; }
+  .category-even-row .col {
+    min-height: 400px;
+    max-height: 5000px;
+    overflow: hidden; }
 
 .col-wrap {
   overflow: hidden; }
@@ -1420,8 +1450,7 @@ ul.rating {
 
 .categ-col-1 ul li {
   margin: 0px;
-  padding: 0px;
-  height: 90px; }
+  padding: 0px; }
 
 .highcharts-config {
   width: 300px;
@@ -1444,14 +1473,14 @@ ul.rating {
 
 .btn-country {
   background-color: #fff;
-  border: 2px solid #6B305F;
+  border: 2px solid #4C7628;
   color: #000;
   height: 100px;
   font-size: 35px;
   width: 200px; }
 
 .btn-country.active, .btn-country:active {
-  background-color: #6B305F;
+  background-color: #4C7628;
   color: #fff;
   border: 0px;
   height: 100px;
@@ -1459,7 +1488,7 @@ ul.rating {
   width: 200px; }
 
 .btn-country:hover {
-  background-color: #6B305F;
+  background-color: #4C7628;
   color: #fff;
   height: 100px;
   font-size: 35px;
@@ -1484,6 +1513,9 @@ ul.rating {
   padding-bottom: 30px; }
 
 .container-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 40px; }
@@ -1493,6 +1525,36 @@ ul.rating {
 
 .service-row {
   margin-top: 80px; }
+
+.score-row {
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  border-bottom: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px; }
+
+.score-summary {
+  padding-top: 20px;
+  height: 130px;
+  background-color: #4C7628; }
+  .score-summary h1 {
+    font-size: 40px;
+    font-family: 'Lato', sans-serif;
+    color: #fff !important;
+    display: inline-block;
+    vertical-align: middle;
+    align-content: center; }
+  .score-summary .company-icon {
+    width: 100px;
+    height: 100px;
+    float: left;
+    display: inline-block; }
+
+.col .well {
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+  background-color: #fff;
+  border: 0px; }
 
 .admin-form-field {
   margin-top: 10px;
@@ -1627,7 +1689,7 @@ input[type="text"] {
 
 #footer {
   height: 30px;
-  background: linear-gradient(to right, #6B301A 0%, #6B305F 59%, #6B305A 87%);
+  background: #4C7628;
   color: #fff;
   margin: 0px;
   width: 100%;
