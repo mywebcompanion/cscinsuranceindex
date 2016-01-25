@@ -4,7 +4,7 @@
 
 var express = require('express');
 var config = require('config');
-var cors = require('cors')
+var cors = require('cors');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
@@ -20,8 +20,8 @@ if(config.has('Application.port')){
 
 
 var app = express();
-//mongoose.connect('mongodb://localhost/cscindex');
-mongoose.connect('mongodb://csc:csc@ds047325.mongolab.com:47325/cscinsuranceindex');
+mongoose.connect('mongodb://localhost/cscindex');
+//mongoose.connect('mongodb://csc:csc@ds047325.mongolab.com:47325/cscinsuranceindex');
 
 
 

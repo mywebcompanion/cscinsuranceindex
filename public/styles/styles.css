@@ -1372,7 +1372,7 @@ html {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(#6B305F, #AA076B);
   /* Standard syntax (must be last) */
-  color: #fff;
+  color: #fff !important;
   box-shadow: 0px 10px 5px #888888;
   padding: 10px 0px 10px 0px; }
   .category-odd-row ul, .category-odd-row li {
