@@ -8,12 +8,15 @@ var prettyjson = require('prettyjson');
 var JSONAdapter = {};
 
 JSONAdapter.metricDataAdapter = function(input) {
+    if (!(input instanceof Array))
+    {
+        input = [input]
+    }
     var output = {};
     var metricType = {"Value": "ValueMetric", "Boolean": "BooleanMetric", "Rating": "RatingMetric"};
     _.each(input, function (object) {
         var metrics = {};
         var market = object.market.toLowerCase();
-
         if (!output[market]) {
             output[market] = {};
         }
@@ -57,7 +60,8 @@ JSONAdapter.metricDataAdapter = function(input) {
                     switch (type) {
                         case "ValueMetric":
                             for (i = 0; i < value.length; i++) {
-                                if(value[i].hasOwnProperty('benchmarkvalue')) {
+                                if((value[i].hasOwnProperty('benchmarkvalue')) &&
+                                    (parseInt(value[i].value) <= parseInt(value[i].benchmarkvalue))) {
                                     score += value[i].value / value[i].benchmarkvalue * value[i].weightage;
                                 } else{
                                     score += value[i].weightage;
@@ -113,27 +117,27 @@ JSONAdapter.metricDataGraphAdapter = function(input) {
             social.data.push([company,0]);
         }
         if(metrics.hasOwnProperty(cms.name)){
-            cms.data.push(Math.round(metrics[cms.name].score) / 100);
+            cms.data.push(Math.round(metrics[cms.name].score) / 10);
         } else{
             cms.data.push(0);
         }
         if(metrics.hasOwnProperty(seo.name)){
-            seo.data.push(Math.round(metrics[seo.name].score) / 100);
+            seo.data.push(Math.round(metrics[seo.name].score) / 10);
         } else{
             seo.data.push(0);
         }
         if(metrics.hasOwnProperty(emailChat.name)){
-            emailChat.data.push(Math.round(metrics[emailChat.name].score) / 100);
+            emailChat.data.push(Math.round(metrics[emailChat.name].score) / 10);
         } else{
             emailChat.data.push(0);
         }
         if(metrics.hasOwnProperty(mobileUx.name)){
-            mobileUx.data.push(Math.round(metrics[mobileUx.name].score) / 100);
+            mobileUx.data.push(Math.round(metrics[mobileUx.name].score) / 10);
         } else{
             mobileUx.data.push(0);
         }
         if(metrics.hasOwnProperty(analytics.name)){
-            analytics.data.push(Math.round(metrics[analytics.name].score) / 100);
+            analytics.data.push(Math.round(metrics[analytics.name].score) / 10);
         } else{
             analytics.data.push(0);
         }
