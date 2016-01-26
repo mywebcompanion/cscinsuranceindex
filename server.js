@@ -17,8 +17,6 @@ if(config.has('Application.port')){
 
 
 
-
-
 var app = express();
 mongoose.connect('mongodb://localhost/cscindex');
 //mongoose.connect('mongodb://csc:csc@ds047325.mongolab.com:47325/cscinsuranceindex');

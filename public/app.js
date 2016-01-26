@@ -49,9 +49,6 @@ InsuranceIndex.config(['$logProvider','$stateProvider','$urlRouterProvider',func
                     console.log(JSON.stringify(data));
                 });
                 return response;
-
-
-
             }
         }
     });

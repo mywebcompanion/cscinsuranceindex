@@ -39,10 +39,28 @@ var MainService = function(){
         });
     };
 
+    var getCompanyInfo = function(req,res){
+        var countryname = req.body.countryname.toLowerCase();
+        var companyname = req.body.companyname;
+        console.log("Inside getCompanyInfo" + countryname + companyname);
+        var promise = CompanyModel.find({companyname: companyname, countryname : countryname}).exec();
+        promise.then(function(data){
+            var info = {};
+            if(data){
+                info = data[0];
+                delete info._id;
+                delete info.__v;
+            }
+
+            res.json(info);
+        });
+    };
+
     return {
         getStats: getStats,
         getAllStats : getAllStats,
-        getAllCompanies: getAllCompanies
+        getAllCompanies: getAllCompanies,
+        getCompanyInfo: getCompanyInfo
     }
 
 };

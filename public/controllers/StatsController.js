@@ -1,7 +1,7 @@
 /**
  * Created by ARUN on 11/1/2016.
  */
-InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfig, $rootScope,$state, $stateParams, loadStats, $location, $anchorScroll ) {
+InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfig, $rootScope,$state, $stateParams, loadStats, $location, $anchorScroll, CompanyService ) {
 
     var calcOverAllScore = function(data){
             var overallScore = 0;
@@ -13,10 +13,24 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
         return overallScore;
     };
 
+    $scope.validKey = function(val){
+        var pattern = /^_.*$/;
+        return !pattern.test(val);
+    };
+
+    $scope.isValidUrl = function(value){
+        var pattern1 = new RegExp("www");
+        var pattern2= new RegExp("http");
+        var pattern3 = new RegExp("https");
+        var testVal = value.toLowerCase();
+        if(pattern1.test(testVal) || pattern2.test(testVal) || pattern3.test(testVal) ){
+            return true;
+        }
+        return false;
+
+    }
+
     $scope.stats = {};
-
-
-
     UIMaster.menuVisibility = true;
     UIMaster.insuranceHeading = true;
     $scope.percent = 70;
@@ -24,248 +38,9 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
     $scope.stats.market = $stateParams.market;
     $scope.stats.company = $stateParams.company;
     $scope.stats.overallScore = calcOverAllScore(loadStats.data);
-    console.log(JSON.stringify(loadStats.data));
-   /* $scope.categJSON = {
-        "singapore" : {
-            "AIA" : {
-            "AIA" : {
-                "Analytics & Conversion" : {
-                    "Score" : 43,
-                    "Recommendations" : [
-                        "User events are not captured",
-                        "Country Ranking can be improved"
-                    ],
-                    "ValueMetric" : [
-                        {
-                            "name" : "Monthly pageviews",
-                            "value" : 76432,
-                            "benchmarkvalue" : 200000,
-                            "rank" : "high"
-                        },
-                        {
-                            "name" : "Page Rank",
-                            "value" : 3,
-                            "Country Ranking" : 97,
-                            "rank" : "high"
-                        }
-                    ],
-                    "BooleanMetric" : [
-                        {
-                            "name" : "Google Analytics Integration",
-                            "value" : "true"
-                        },
-                        {
-                            "name" : "Event Tracking Integration",
-                            "value" : "false"
-                        }
-                    ],
-                    "RatingMetric" : [
-                        {
-                            "name" : "Analytics Rating",
-                            "value" : 3
-                        },
-                        {
-                            "name" : "Forum Rating",
-                            "value" : 4
-                        }
-                    ]
-                },
-                "Social Strategy" :{
-                    "Score" :73,
-                    "Recommendations" : [
-                        "No twitter presence",
-                        "Average response time in social media is more than 6 days"
-                    ],
-                    "ValueMetric" : [
-                        {
-                            "name" : "Facebook Followers",
-                            "value" : 76432,
-                            "benchmarkvalue" : 200000,
-                            "rank" : "high"
-                        },
-                        {
-                            "name" : "No of interactions",
-                            "value" : 21323,
-                            "Country Ranking" : 91227,
-                            "rank" : "high"
-                        }
-                    ],
-                    "BooleanMetric" : [
-                        {
-                            "name" : "Facebook Page",
-                            "value" : "true"
-                        },
-                        {
-                            "name" : "Twitter Handle",
-                            "value" : "false"
-                        },
-                        {
-                            "name" : "Youtube channel",
-                            "value" : "false"
-                        }
-                    ],
-                    "RatingMetric" : [
-                        {
-                            "name" : "Resolution Rate",
-                            "value" : 3
-                        },
-                        {
-                            "name" : "Social Content",
-                            "value" : 4
-                        }
-                    ]
-                },
-                "Email & chat" :{
-                    "Score" : 59,
-                    "Recommendations" : [
-                        "No twitter presence"
-                    ],
-                    "ValueMetric" : [
-                        {
-                            "name" : "avg chat time",
-                            "value" : 323,
-                            "benchmarkvalue" : 320,
-                            "rank" : "high"
-                        },
-                        {
-                            "name" : "avg forum reply time",
-                            "value" : 3,
-                            "Country Ranking" : 97,
-                            "rank" : "high"
-                        }
-                    ],
-                    "BooleanMetric" : [
-                        {
-                            "name" : "Google Analytics Integration",
-                            "value" : "true"
-                        },
-                        {
-                            "name" : "Event Tracking Integration",
-                            "value" : "false"
-                        }
-                    ],
-                    "RatingMetric" : [
-                        {
-                            "name" : "Analytics Rating",
-                            "value" : 3
-                        }
-                    ]
-                },
-                "Mobile & UX" :{
-                    "Score" :55,
-                    "Recommendations" : [
-                        "No twitter presence",
-                        "Average response time in social media is more than 6 days"
-                    ],
-                    "ValueMetric" : [
-                        {
-                            "name" : "Monthly pageviews",
-                            "value" : 76432,
-                            "benchmarkvalue" : 200000,
-                            "rank" : "high"
-                        },
-                        {
-                            "name" : "Page Rank",
-                            "value" : 3,
-                            "Country Ranking" : 97,
-                            "rank" : "high"
-                        }
-                    ],
-                    "BooleanMetric" : [
-                        {
-                            "name" : "Google Analytics Integration",
-                            "value" : "true"
-                        },
-                        {
-                            "name" : "Event Tracking Integration",
-                            "value" : "false"
-                        }
-                    ],
-                    "RatingMetric" : [
-                        {
-                            "name" : "Analytics Rating",
-                            "value" : 3
-                        }
-                    ]
-                },
-                "SEO & ads" :{
-                    "Score" :80,
-                    "Recommendations" : [
-                        "No twitter presence",
-                        "Average response time in social media is more than 6 days"
-                    ],
-                    "ValueMetric" : [
-                        {
-                            "name" : "Monthly pageviews",
-                            "value" : 76432,
-                            "benchmarkvalue" : 200000,
-                            "rank" : "high"
-                        },
-                        {
-                            "name" : "Page Rank",
-                            "value" : 3,
-                            "Country Ranking" : 97,
-                            "rank" : "high"
-                        }
-                    ],
-                    "BooleanMetric" : [
-                        {
-                            "name" : "Google Analytics Integration",
-                            "value" : "true"
-                        },
-                        {
-                            "name" : "Event Tracking Integration",
-                            "value" : "false"
-                        }
-                    ],
-                    "RatingMetric" : [
-                        {
-                            "name" : "Analytics Rating",
-                            "value" : 3
-                        }
-                    ]
-                },
-                "CMS" :{
-                    "Score" :73,
-                    "Recommendations" : [
-                        "No twitter presence",
-                        "Average response time in social media is more than 6 days"
-                    ],
-                    "ValueMetric" : [
-                        {
-                            "name" : "Monthly pageviews",
-                            "value" : 76432,
-                            "benchmarkvalue" : 200000,
-                            "rank" : "high"
-                        },
-                        {
-                            "name" : "Page Rank",
-                            "value" : 3,
-                            "Country Ranking" : 97,
-                            "rank" : "high"
-                        }
-                    ],
-                    "BooleanMetric" : [
-                        {
-                            "name" : "Google Analytics Integration",
-                            "value" : "true"
-                        },
-                        {
-                            "name" : "Event Tracking Integration",
-                            "value" : "false"
-                        }
-                    ],
-                    "RatingMetric" : [
-                        {
-                            "name" : "Analytics Rating",
-                            "value" : 3
-                        }
-                    ]
-                }
-            }
-        }
-    };
-*/
+    CompanyService.loadCompanyInfo($stateParams.company, $stateParams.market).success(function(data){
+        $scope.stats.companyInfo = data;
+    });
     $location.hash('stats-area');
 
     $anchorScroll();
