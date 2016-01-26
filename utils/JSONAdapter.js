@@ -57,6 +57,7 @@ var JSONAdapter = {};
                 var ratingScore = 0;
                 _.each(category, function (value, type) {
                     var score = 0;
+                    var weightage = 0;
                     switch (type) {
                         case "ValueMetric":
                             for (i = 0; i < value.length; i++) {
@@ -66,26 +67,28 @@ var JSONAdapter = {};
                                 } else{
                                     score += value[i].weightage;
                                 }
+                                weightage += value[i].weightage;
                             }
                             if(value.length > 0)
-                                valueScore = score/value.length;
+                                valueScore = score/weightage * 100;
                             break;
                         case "BooleanMetric":
                             for(i = 0; i < value.length; i++){
-                                if(value[i].value)
-                                    score += 100;
+                                if(value[i].value === "yes")
+                                    score += 1;
                                 else
                                     score += 0;
                             }
                             if(value.length > 0)
-                                booleanScore = score/value.length;
+                                booleanScore = score/value.length * 100;
                             break;
                         case "RatingMetric":
                             for(i = 0; i < value.length; i++){
-                                score += value[i].value * value[i].weightage /100;
+                                score += value[i].value * value[i].weightage / 100;
+                                weightage += value[i].weightage;
                             }
                             if(value.length > 0)
-                                ratingScore = score / value.length;
+                                ratingScore = score / weightage * 100;
                             break;
                     }
                 });
