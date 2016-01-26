@@ -7,7 +7,10 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
         if(!data){
             return 0;
         }
-        data[$scope.stats.market] ? data[$scope.stats.market] : data[$scope.stats.market.toLowerCase()];
+        console.log("Market" + [$scope.stats.market]);
+        if(!data[$scope.stats.market]){
+            $scope.stats.market = $scope.stats.market.toLowerCase();
+        }
         var overallScore = 0;
         console.log(data[$scope.stats.market][$scope.stats.company]);
         angular.forEach(data[$scope.stats.market][$scope.stats.company],function(value, key){
