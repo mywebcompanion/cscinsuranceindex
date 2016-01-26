@@ -31,7 +31,6 @@ MainRouter.get('/home/getAllCompanies',function(req,res,next){
     MainService.getAllCompanies(req,res);
 });
 MainRouter.post('/home/getCompanyInfo',function(req,res,next){
-    console.log("Inside getcompanyinfo");
     MainService.getCompanyInfo(req,res);
 });
 
