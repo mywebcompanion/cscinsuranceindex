@@ -4,8 +4,11 @@
 InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfig, $rootScope,$state, $stateParams, loadStats, $location, $anchorScroll, CompanyService ) {
 
     var calcOverAllScore = function(data){
-            var overallScore = 0;
-        console.log(data[$scope.stats.market][$scope.stats.company]);
+        if(!data){
+            return 0;
+        }
+        var overallScore = 0;
+        var marketData = data[$scope.stats.market] ? data[$scope.stats.market] : data[$scope.stats.market].charAt(0).toUpperCase() + data[$scope.stats.market].slice(1);
         angular.forEach(data[$scope.stats.market][$scope.stats.company],function(value, key){
             if(value)
                 overallScore +=  value.score;
