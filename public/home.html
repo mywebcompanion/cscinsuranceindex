@@ -115,24 +115,6 @@
 
                     </div>
 
-                    <span class="menuarea" ng-hide="insuranceHeading">
-                        <ul class="mfb-component--bl mfb-slidein mfb-slidein" data-mfb-toggle="hover">
-                            <li class="mfb-component__wrap">
-                                <a data-mfb-label="Category Menu" class="mfb-component__button--main">
-                                    <i class="mfb-component__main-icon--resting glyphicon glyphicon-menu-hamburger"></i>
-                                    <i class="mfb-component__main-icon--active glyphicon glyphicon-plus"></i>
-                                </a>
-                                <ul class="mfb-component__list">
-                                    <li ng-repeat="item in menu">
-                                        <a href="#categ-{{$index}}" data-mfb-label="{{item.name}}" class="mfb-component__button--child">
-                                            <i class="mfb-component__child-icon glyphicon {{item.icon}}"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </span>
-
                     <div ng-controller="CMenuController">
                         <span ng-include="'countrymenu.html'"></span>
                     </div>

@@ -22,12 +22,24 @@
 
 
     </div>
+
 </div>
-<ul class="categ-stats" id="categ-stats">
+<div class="row">
+    <div class="col col-md-1 categ-col-menu">
+         <span class="menuarea" ng-hide="insuranceHeading">
+             <ul>
+                 <li ng-repeat="item in menu">
+                     <a href="#categ-{{$index}}" data-mfb-label="{{item.name}}" class="mfb-component__button--child">
+                         <i class="mfb-component__child-icon glyphicon {{item.icon}}"></i>
+                     </a>
+                 </li>
+             </ul>
+         </span>
+    </div>
+<ul class="categ-stats col-xs-11" id="categ-stats">
     <li ng-repeat = "(key, value) in categJSON[stats.market][stats.company]">
         <div id="categ-{{$index}}" class="row row-eq-height container-row" ng-class-odd="'category-odd-row'" ng-class-even="'category-even-row'">
-            <div class="col col-md-1 categ-col-menu">
-            </div>
+
             <div class="col col-md-7 categ-col-1">
                 <div class="row">
                     <div class="col-xs-12 categ-header">
@@ -108,4 +120,5 @@
         </div>
     </li>
 </ul>
+</div>
 </div>

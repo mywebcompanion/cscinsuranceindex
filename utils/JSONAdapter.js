@@ -92,6 +92,7 @@ JSONAdapter.metricDataAdapter = function(input) {
                 category["score"] = (valueScore + booleanScore + ratingScore) / 3;
                 numberOfCategories += 1;
                 categoriesScore += category["score"];
+
             });
             if(numberOfCategories >0)
                 company["score"] = categoriesScore/numberOfCategories;

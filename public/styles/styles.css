@@ -1171,6 +1171,9 @@ body {
       border: solid 1px #09395C; }
   body .menuarea {
     padding: 0px;
+    position: fixed;
+    top: 100px;
+    left: 0px;
     margin-left: 0px;
     width: 8%; }
     body .menuarea ul {
@@ -1555,5 +1558,8 @@ ul.rating {
   padding-bottom: 99999px;
   background-color: #fff;
   border: 0px; }
+
+.mfb-component__button--main, .mfb-component__button--child {
+  background-color: #4C7628; }
 
 /*# sourceMappingURL=styles.css.map */
