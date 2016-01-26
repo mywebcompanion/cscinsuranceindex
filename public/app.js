@@ -44,6 +44,7 @@ InsuranceIndex.config(['$logProvider','$stateProvider','$urlRouterProvider',func
         },
         resolve : {
             loadStats : function($http,$stateParams){
+                $stateParams.market = $stateParams.market.charAt(0).toUpperCase() + $stateParams.market.slice(1);
                 var response = $http.post('/home/stats',{market : $stateParams.market, company : $stateParams.company});
                 response.success(function(data){
                     console.log(JSON.stringify(data));
