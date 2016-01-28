@@ -2,30 +2,30 @@
     <li ng-repeat="rating in value.RatingMetric | LoopFilter ">
         <div class="row">
             <div class="col-xs-6">
-                <div class="panel panel-box">
+                <span class="panel panel-box">
                     <div class="metric-top-area">
                         <i class="fa fa-facebook"></i>
                     </div>
                     <div class="panel-info">
-                        <span>{{rating.name}}</span>
+                        <span><b>{{rating.name}}</b></span>
                     </div>
                     <div class="metric-bottom-area">
-                        <span class="value-metric"> <span star-rating rating-value="rating.value" max="5" ></span>&nbsp;</span>
+                        <span class="rating-metric"> <span star-rating rating-value="rating.value" max="5" ></span>&nbsp;</span>
                     </div>
-                </div>
+                </span>
             </div>
             <div class="col-xs-6">
-                <div class="panel panel-box">
+                <span class="panel panel-box">
                     <div class="metric-top-area">
-                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-camera"></i>
                     </div>
                     <div class="panel-info">
-                        <span>{{value.RatingMetric[($index *2 +1)].name}}</span>
+                        <span><b>{{value.RatingMetric[($index *2 +1)].name}}</b></span>
                     </div>
                     <div class="metric-bottom-area">
                         <span star-rating rating-value="rating.value" max="5" >{{value.RatingMetric[($index *2 +1)].value}}</span>
                     </div>
-                </div>
+                </span>
             </div>
         </div>
     </li>

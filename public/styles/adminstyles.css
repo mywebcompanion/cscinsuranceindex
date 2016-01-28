@@ -1135,13 +1135,18 @@ body {
     line-height: 60px;
     text-align: center;
     text-transform: uppercase; }
+  body .categ-header {
+    background-color: #5F5F5F;
+    padding: 10px 0px 0px 10px; }
+    body .categ-header h2 {
+      color: #fff !important; }
   body .text-sub-header {
     margin-left: 15.33%; }
   body .navrow {
     height: 50px;
-    background: #000000; }
+    background: #5F5F5F; }
     body .navrow .navbar {
-      background: #000000; }
+      background: #5F5F5F; }
   body .navbar-inverse {
     border-bottom: 3px solid #fff; }
   body .insurance-search {
@@ -1311,16 +1316,17 @@ html {
   z-index: 999; }
   .company-drop-down button {
     background-color: black;
+    opacity: 0.5;
     content-align: center;
     width: 400px; }
   .company-drop-down .dropdown-menu {
     font-size: 15px;
     width: 400px;
-    padding-left: 5px; }
+    padding-left: 20px; }
 
 .companyinfo-even-row {
-  background-color: #000000;
-  color: #fff; }
+  background-color: #f9f9f9;
+  color: #000; }
 
 .menu-select {
   list-style: none;
@@ -1376,7 +1382,7 @@ html {
     color: #0F0;
     font-size: 30px; }
   .categ-stats .glyphicon-remove {
-    color: #f7aa04;
+    color: #F00000;
     font-size: 30px; }
   .categ-stats .ng-scope {
     padding: 0px;
@@ -1405,7 +1411,7 @@ background: $theme-color-gradient-1 ; */
   max-height: 5000px;
   overflow: hidden;
   background: #EFEFEF;
-  padding: 10px 0px 10px 0px;
+  padding: 0px 0px 10px 0px;
   margin-bottom: 10px; }
   .category-odd-row .col {
     min-height: 200px;
@@ -1427,7 +1433,7 @@ background: $theme-color-gradient-1 ; */
   min-height: 200px;
   max-height: 5000px;
   overflow: hidden;
-  padding: 20px 0px 20px 0px;
+  padding: 0px 0px 20px 0px;
   margin-bottom: 10px; }
   .category-even-row .panel {
     margin-bottom: 20px;
@@ -1470,7 +1476,7 @@ ul.rating {
   font-size: 20px; }
 
 .rating .filled {
-  color: #fff600; }
+  color: #ff8c00 !important; }
 
 .star-label {
   font-size: 15px;
@@ -1505,14 +1511,14 @@ ul.rating {
 
 .btn-country {
   background-color: #fff;
-  border: 2px solid #E74C3C;
+  border: 2px solid #5F5F5F;
   color: #000;
   height: 100px;
   font-size: 35px;
   width: 200px; }
 
 .btn-country.active, .btn-country:active {
-  background-color: #E74C3C;
+  background-color: #5F5F5F;
   color: #fff;
   border: 0px;
   height: 100px;
@@ -1520,7 +1526,7 @@ ul.rating {
   width: 200px; }
 
 .btn-country:hover {
-  background-color: #E74C3C;
+  background-color: #5F5F5F;
   color: #fff;
   height: 100px;
   font-size: 35px;
@@ -1582,6 +1588,12 @@ ul.rating {
     height: 100px;
     float: left;
     display: inline-block; }
+  .score-summary .fa-bank {
+    font-size: 60px;
+    color: #5F5F5F; }
+  .score-summary .fa-certificate {
+    font-size: 60px;
+    color: #5F5F5F; }
 
 .col .well {
   margin-bottom: -99999px;
@@ -1590,10 +1602,13 @@ ul.rating {
   border: 0px; }
 
 .mfb-component__button--main, .mfb-component__button--child {
-  background-color: #000000; }
+  background-color: #5F5F5F; }
 
 .container {
   border: 0px; }
+
+.metric-list {
+  padding-top: 40px !important; }
 
 .metric-top-area {
   height: 80px;
@@ -1601,8 +1616,14 @@ ul.rating {
   background-color: #fff;
   font-size: 40px;
   color: #000; }
-  .metric-top-area .fa {
-    color: orange; }
+  .metric-top-area .fa-facebook {
+    color: #2a00ff; }
+  .metric-top-area .fa-camera {
+    color: #ff0050; }
+  .metric-top-area .fa-globe {
+    color: purple; }
+  .metric-top-area .fa-rss {
+    color: #ff8c00; }
 
 .metric-bottom-area {
   height: 80px;
@@ -1610,24 +1631,28 @@ ul.rating {
   background-color: #f9f9f9;
   border-top: 1px solid #dfdfdf;
   font-size: 25px;
-  color: #000;
-  margin-bottom: 50px; }
+  color: #000; }
   .metric-bottom-area .element {
     position: relative;
     top: 20%;
     transform: translateY(-50%); }
 
+.metric-display-row {
+  height: 160px;
+  margin-bottom: 50px; }
+
 .panel-box {
   position: relative;
-  border-radius: 2px !important;
   display: table;
   table-layout: fixed;
   width: 350px;
-  text-align: center;
-  border: none; }
+  text-align: center; }
 
 .panel {
   margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  border-color: #e2edeb;
   background-color: #EFEFEF; }
 
 .panel-info {

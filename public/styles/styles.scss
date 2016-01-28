@@ -2,7 +2,7 @@
 //$main-color: #6B305F;
 $number-of-child-buttons : 10;
 $theme-color-green : #000000; //#4C7628;camera o
-$theme-color-red : #E74C3C; //#4C7628;camera o
+$theme-color-red : #5F5F5F; //#4C7628;camera o
 $theme-color-gradient-red : #EFEFEF; //#4C7628;camera o
 
 @import "../libs/ngmenu/mfb/src/mfb.scss";
@@ -17,7 +17,7 @@ $theme-color-4 : #6B305F;
 
 $navbar-heading-color : #fff !important;
 $navbar-heading-font-size : 28px ;
-$menu-color : #000;
+$menu-color : #704E4E;
 
 body{
     //background-image: url("../images/insurance.jpg");
@@ -40,8 +40,12 @@ body{
       //h1{
       //  color:#fff !important;
       //}
-      //background-color: $theme-color-green;
-      //padding:10px 0px 10px 10px;
+      background-color: $theme-color-red;
+      padding:10px 0px 0px 10px;
+      h2{
+        color:#fff !important;
+      }
+
     }
 
     .text-sub-header{
@@ -50,11 +54,11 @@ body{
     .navrow {
       height:50px;
       //background-color: $theme-color-1;
-      background: $theme-color-green;
+      background: $theme-color-red;
 
       .navbar{
         //background-color: $theme-color-1;
-        background: $theme-color-green;
+        background: $theme-color-red;
       }
     }
   .navbar-inverse{
@@ -291,19 +295,20 @@ html {
   z-index:999;
   button{
     background-color:black;
+    opacity: 0.5;
     content-align:center;
     width:400px;
   }
   .dropdown-menu{
       font-size:15px;
       width:400px;
-     padding-left:5px;
+     padding-left:20px;
   }
 
 }
 .companyinfo-even-row{
-  background-color:$theme-color-green;
-  color:#fff;
+  background-color:#f9f9f9;
+  color:#000;
 }
 
 .menu-select{
@@ -369,7 +374,7 @@ html {
     font-size:30px;
   }
   .glyphicon-remove{
-    color:#f7aa04;
+    color:#F00000;
     font-size:30px;
   }
   .ng-scope{
@@ -401,7 +406,7 @@ html {
     overflow: hidden;
   }
   //height:700px;
-  padding: 10px 0px 10px 0px;
+  padding: 0px 0px 10px 0px;
   margin-bottom:10px;
 
   .categ-col-1{
@@ -434,7 +439,7 @@ html {
   overflow: hidden;
 
   //height:700px;
-  padding: 20px 0px 20px 0px;
+  padding: 0px 0px 20px 0px;
   margin-bottom:10px;
   .categ-col-1{
     //border-right : 1px solid #000;
@@ -483,7 +488,7 @@ ul.rating {
   font-size:20px;
 }
 .rating .filled {
-  color: #fff600;
+  color: #ff8c00 !important;
 }
 .star-label{
   font-size:15px;
@@ -615,6 +620,14 @@ ul.rating {
     float:left;
     display:inline-block;
   }
+  .fa-bank{
+    font-size:60px;
+    color: $theme-color-red;
+  }
+  .fa-certificate{
+    font-size:60px;
+    color: $theme-color-red;
+  }
 }
 
 .col-wrap{
@@ -629,16 +642,28 @@ ul.rating {
 }
 
 .mfb-component__button--main, .mfb-component__button--child {
-  background-color: $theme-color-green;
+  background-color: $theme-color-red;
 }
 
 .container{
   border:0px;
 }
+.metric-list{
+  padding-top:40px !important;
+}
 
 .metric-top-area{
-  .fa{
-    color:orange;
+  .fa-facebook{
+    color:#2a00ff;
+  }
+  .fa-camera{
+    color:#ff0050;
+  }
+  .fa-globe{
+    color:purple;
+  }
+  .fa-rss{
+    color:#ff8c00;
   }
   height:80px;
   width:350px;
@@ -653,24 +678,28 @@ ul.rating {
   border-top: 1px solid #dfdfdf;
   font-size:25px;
   color:#000;
-  margin-bottom:50px;
   .element {
     position: relative;
     top: 20%;
     transform: translateY(-50%);
   }
 }
+.metric-display-row{
+  height:160px;
+  margin-bottom:50px;
+}
 .panel-box {
   position: relative;
-  border-radius: 2px !important;
   display: table;
   table-layout: fixed;
   width: 350px;
   text-align: center;
-  border: none;
 }
 .panel {
   margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius : 2px;
+  border-color: #e2edeb;
   background-color: $theme-color-gradient-red;
 }
 .panel-info {

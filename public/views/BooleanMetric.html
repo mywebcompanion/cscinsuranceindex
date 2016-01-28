@@ -3,12 +3,12 @@
 
         <div class="row">
             <div class="col-xs-6">
-                <div class="panel panel-box">
+                <span class="panel panel-box">
                     <div class="metric-top-area">
-                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-users"></i>
                     </div>
                     <div class="panel-info">
-                        <span class="star-label">{{boolean.name}}</span>
+                        <span class="star-label"><b>{{boolean.name}}</b></span>
                     </div>
                     <div class="metric-bottom-area">
                          <span class="value-metric element">
@@ -20,15 +20,15 @@
                              </span>
                          </span>
                     </div>
-                </div>
+                </span>
             </div>
             <div class="col-xs-6">
-                <div class="panel panel-box">
+                <span class="panel panel-box">
                     <div class="metric-top-area">
-                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-rss"></i>
                     </div>
                     <div class="panel-info">
-                        <span class="star-label">{{value.BooleanMetric[($index * 2+1)].name}}</span>
+                        <span class="star-label"><b>{{value.BooleanMetric[($index * 2+1)].name}}</b></span>
                     </div>
                     <div class="metric-bottom-area">
                          <span class="value-metric element">
@@ -40,7 +40,7 @@
                              </span>
                          </span>
                     </div>
-                </div>
+                </span>
             </div>
         </div>
     </li>
