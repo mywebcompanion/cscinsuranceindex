@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f417cb3-df5d-4fdc-9963-5ec65e0b2ea4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/overall-score.png" afterPath="$PROJECT_DIR$/public/images/overall-score.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/.sass-cache/5ce363be55cb267f2010bbb0442d715f811fc8da/styles.scssc" afterPath="$PROJECT_DIR$/public/styles/.sass-cache/5ce363be55cb267f2010bbb0442d715f811fc8da/styles.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/BooleanMetric.html" afterPath="$PROJECT_DIR$/public/views/BooleanMetric.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/OverallScore.html" afterPath="$PROJECT_DIR$/public/views/OverallScore.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/RatingMetric.html" afterPath="$PROJECT_DIR$/public/views/RatingMetric.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/ValueMetric.html" afterPath="$PROJECT_DIR$/public/views/ValueMetric.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/adminstyles.css.map" afterPath="$PROJECT_DIR$/public/styles/adminstyles.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/adminstyles.css" afterPath="$PROJECT_DIR$/public/styles/adminstyles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/stats.html" afterPath="$PROJECT_DIR$/public/views/stats.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/styles.css.map" afterPath="$PROJECT_DIR$/public/styles/styles.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/styles.css" afterPath="$PROJECT_DIR$/public/styles/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/styles.scss" afterPath="$PROJECT_DIR$/public/styles/styles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="csc-index.iws" />
@@ -78,6 +67,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.49493244" vertical-offset="47" max-vertical-offset="833">
+              <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ValueMetric.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/views/ValueMetric.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -118,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/styles/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4360536" vertical-offset="4810" max-vertical-offset="12376">
-              <caret line="304" column="20" selection-start-line="304" selection-start-column="20" selection-end-line="304" selection-end-column="20" />
+            <state vertical-scroll-proportion="-1.5925926" vertical-offset="4810" max-vertical-offset="12376">
+              <caret line="288" column="17" selection-start-line="288" selection-start-column="17" selection-end-line="288" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -189,7 +188,6 @@
         <option value="$PROJECT_DIR$/utils/JSONAdapter.js" />
         <option value="$PROJECT_DIR$/services/CompanyService.js" />
         <option value="$PROJECT_DIR$/public/services/CompanyService.js" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public/home.html" />
         <option value="$PROJECT_DIR$/public/app.js" />
         <option value="$PROJECT_DIR$/services/MainService.js" />
@@ -207,6 +205,7 @@
         <option value="$PROJECT_DIR$/public/views/OverallScore.html" />
         <option value="$PROJECT_DIR$/public/views/stats.html" />
         <option value="$PROJECT_DIR$/public/styles/styles.scss" />
+        <option value="$PROJECT_DIR$/server.js" />
       </list>
     </option>
   </component>
@@ -542,15 +541,15 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.8816964" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.88145417" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962631" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18440464" sideWeight="0.7021041" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18440464" sideWeight="0.7016129" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.022727273" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18440464" sideWeight="0.2978959" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.022727273" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18440464" sideWeight="0.29677418" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.11854584" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -804,14 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="833">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/services/CompanyService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11950791" vertical-offset="0" max-vertical-offset="569">
@@ -967,8 +958,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/styles/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4360536" vertical-offset="4810" max-vertical-offset="12376">
-          <caret line="304" column="20" selection-start-line="304" selection-start-column="20" selection-end-line="304" selection-end-column="20" />
+        <state vertical-scroll-proportion="-1.5925926" vertical-offset="4810" max-vertical-offset="12376">
+          <caret line="288" column="17" selection-start-line="288" selection-start-column="17" selection-end-line="288" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49493244" vertical-offset="47" max-vertical-offset="833">
+          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
           <folding />
         </state>
       </provider>
