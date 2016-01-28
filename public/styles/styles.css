@@ -1135,17 +1135,13 @@ body {
     line-height: 60px;
     text-align: center;
     text-transform: uppercase; }
-  body .categ-header {
-    background-color: #4C7628; }
-    body .categ-header h1 {
-      color: #fff !important; }
   body .text-sub-header {
     margin-left: 15.33%; }
   body .navrow {
     height: 50px;
-    background: #4C7628; }
+    background: #000000; }
     body .navrow .navbar {
-      background: #4C7628; }
+      background: #000000; }
   body .navbar-inverse {
     border-bottom: 3px solid #fff; }
   body .insurance-search {
@@ -1314,7 +1310,7 @@ html {
   color: #fff !important;
   z-index: 999; }
   .company-drop-down button {
-    background-color: red;
+    background-color: black;
     content-align: center;
     width: 400px; }
   .company-drop-down .dropdown-menu {
@@ -1323,7 +1319,7 @@ html {
     padding-left: 5px; }
 
 .companyinfo-even-row {
-  background-color: #4C7628;
+  background-color: #000000;
   color: #fff; }
 
 .menu-select {
@@ -1405,10 +1401,10 @@ background: -moz-linear-gradient(red, #f06d06); */
                                                                              /*
 background: $theme-color-gradient-1 ; */
   /* Standard syntax (must be last) */
-  color: #fff !important;
   min-height: 200px;
   max-height: 5000px;
   overflow: hidden;
+  background: linear-gradient(#dc2812 95%, #000000);
   padding: 10px 0px 10px 0px;
   margin-bottom: 10px; }
   .category-odd-row .col {
@@ -1417,31 +1413,38 @@ background: $theme-color-gradient-1 ; */
     overflow: hidden; }
   .category-odd-row ul, .category-odd-row li {
     padding: 0px;
-    margin: 0px; }
+    margin: 0px;
+    color: #fff !important; }
   .category-odd-row ul {
     min-height: 50px;
-    max-height: 1000px; }
+    max-height: 1000px;
+    color: #fff !important; }
+  .category-odd-row h1, .category-odd-row h2, .category-odd-row h3 {
+    color: #fff !important; }
 
 .category-even-row {
   background-color: #fff;
   min-height: 200px;
   max-height: 5000px;
   overflow: hidden;
-  color: #000;
   padding: 20px 0px 20px 0px;
   margin-bottom: 10px; }
   .category-even-row ul, .category-even-row li {
     padding: 0px;
     margin: 0px;
     min-height: 50px;
-    max-height: 200px; }
+    max-height: 200px;
+    color: #000 !important; }
   .category-even-row ul {
     min-height: 50px;
-    max-height: 1000px; }
+    max-height: 1000px;
+    color: #000 !important; }
   .category-even-row .col {
     min-height: 400px;
     max-height: 5000px;
     overflow: hidden; }
+  .category-even-row h1, .category-even-row h2, .category-even-row h3 {
+    color: #000 !important; }
 
 .col-wrap {
   overflow: hidden; }
@@ -1467,7 +1470,7 @@ ul.rating {
   color: #fff600; }
 
 .star-label {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 100;
   color: inherit; }
 
@@ -1499,14 +1502,14 @@ ul.rating {
 
 .btn-country {
   background-color: #fff;
-  border: 2px solid #4C7628;
+  border: 2px solid #E74C3C;
   color: #000;
   height: 100px;
   font-size: 35px;
   width: 200px; }
 
 .btn-country.active, .btn-country:active {
-  background-color: #4C7628;
+  background-color: #E74C3C;
   color: #fff;
   border: 0px;
   height: 100px;
@@ -1514,7 +1517,7 @@ ul.rating {
   width: 200px; }
 
 .btn-country:hover {
-  background-color: #4C7628;
+  background-color: #E74C3C;
   color: #fff;
   height: 100px;
   font-size: 35px;
@@ -1554,7 +1557,7 @@ ul.rating {
 
 .score-row {
   font-family: 'Lato', sans-serif;
-  background-color: #4C7628;
+  background-color: #fff;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -1563,11 +1566,11 @@ ul.rating {
 .score-summary {
   padding-top: 20px;
   height: 130px;
-  background-color: #4C7628; }
+  background-color: #fff; }
   .score-summary h1 {
     font-size: 40px;
     font-family: 'Lato', sans-serif;
-    color: #fff !important;
+    color: #000000 !important;
     display: inline-block;
     vertical-align: middle;
     align-content: center; }
@@ -1584,7 +1587,7 @@ ul.rating {
   border: 0px; }
 
 .mfb-component__button--main, .mfb-component__button--child {
-  background-color: #4C7628; }
+  background-color: #000000; }
 
 .container {
   border: 0px; }

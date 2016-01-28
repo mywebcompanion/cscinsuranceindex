@@ -8,6 +8,7 @@ InsuranceIndex.controller('CountryController', function($scope,$window, ChartCon
     $scope.selected = undefined;
     $scope.countryList = ['Malaysia','HongKong','Singapore','India','Japan','Indonesia'];
 
+
     var renderChart = function(country){
         var promise = CountryStatsFactory.getCountryData(country);
 

@@ -1,7 +1,9 @@
 
 //$main-color: #6B305F;
 $number-of-child-buttons : 10;
-$theme-color-green : #4C7628; //#4C7628;
+$theme-color-green : #000000; //#4C7628;camera o
+$theme-color-red : #E74C3C; //#4C7628;camera o
+$theme-color-gradient-red : linear-gradient(#dc2812 95%, #000000); //#4C7628;camera o
 
 @import "../libs/ngmenu/mfb/src/mfb.scss";
 $theme-color-1-bkp : #222222;
@@ -35,10 +37,11 @@ body{
       text-transform: uppercase;
     }
     .categ-header{
-      h1{
-        color:#fff !important;
-      }
-      background-color: $theme-color-green;
+      //h1{
+      //  color:#fff !important;
+      //}
+      //background-color: $theme-color-green;
+      //padding:10px 0px 10px 10px;
     }
 
     .text-sub-header{
@@ -47,11 +50,11 @@ body{
     .navrow {
       height:50px;
       //background-color: $theme-color-1;
-      background: $theme-color-gradient-1;
+      background: $theme-color-green;
 
       .navbar{
         //background-color: $theme-color-1;
-        background: $theme-color-gradient-1;
+        background: $theme-color-green;
       }
     }
   .navbar-inverse{
@@ -287,7 +290,7 @@ html {
   color:#fff !important;
   z-index:999;
   button{
-    background-color:red;
+    background-color:black;
     content-align:center;
     width:400px;
   }
@@ -387,10 +390,11 @@ html {
   background: -o-linear-gradient(red, #f06d06); *//* For Opera 11.1 to 12.0 *//*
   background: -moz-linear-gradient(red, #f06d06); *//* For Firefox 3.6 to 15 *//*
   background: $theme-color-gradient-1 ; *//* Standard syntax (must be last) */
-  color:#fff !important;
+
   min-height: 200px;
   max-height: 5000px;
   overflow: hidden;
+  background:$theme-color-gradient-red;
   .col{
     min-height: 200px;
     max-height: 5000px;
@@ -399,16 +403,22 @@ html {
   //height:700px;
   padding: 10px 0px 10px 0px;
   margin-bottom:10px;
+
   .categ-col-1{
     //border-right : 1px solid #fff;
   }
   ul, li{
     padding:0px;
     margin:0px;
+    color:#fff !important;
   }
   ul{
     min-height:50px;
     max-height:1000px;
+    color:#fff !important;
+  }
+  h1,h2,h3{
+    color:#fff !important;
   }
   //background: $theme-color-gradient-list;
 }
@@ -416,8 +426,9 @@ html {
   background-color:#fff;
   min-height: 200px;
   max-height: 5000px;
+
   overflow: hidden;
-  color:#000;
+
   //height:700px;
   padding: 20px 0px 20px 0px;
   margin-bottom:10px;
@@ -429,15 +440,20 @@ html {
     margin:0px;
     min-height:50px;
     max-height:200px;
+    color:#000 !important;
   }
   ul{
     min-height:50px;
     max-height:1000px;
+    color:#000 !important;
   }
   .col{
     min-height: 400px;
     max-height: 5000px;
     overflow: hidden;
+  }
+  h1,h2,h3{
+    color:#000 !important;
   }
   //background: $theme-color-gradient-list
 }
@@ -466,7 +482,7 @@ ul.rating {
   color: #fff600;
 }
 .star-label{
-  font-size:20px;
+  font-size:15px;
   font-weight:100;
   color:inherit;
 }
@@ -508,7 +524,7 @@ ul.rating {
 
 .btn-country{
   background-color:#fff;
-  border:2px solid $theme-color-green;
+  border:2px solid $theme-color-red;
   color:#000;
   height:100px;
   font-size:35px;
@@ -516,7 +532,7 @@ ul.rating {
 }
 
 .btn-country.active, .btn-country:active{
-  background-color:$theme-color-green;
+  background-color:$theme-color-red;
   color:#fff;
   border : 0px;
   height:100px;
@@ -524,7 +540,7 @@ ul.rating {
   width:200px;
 }
 .btn-country:hover{
-  background-color:$theme-color-green;
+  background-color:$theme-color-red;
   color:#fff;
   height:100px;
   font-size:35px;
@@ -567,7 +583,7 @@ ul.rating {
 }
 .score-row{
   font-family: 'Lato', sans-serif;
-  background-color:$theme-color-green;
+  background-color:#fff;
   width:100%;
   padding:0px;
   margin:0px;
@@ -580,11 +596,11 @@ ul.rating {
 .score-summary{
   padding-top:20px;
   height:130px;
-  background-color: $theme-color-green;
+  background-color: #fff;
   h1{
     font-size:40px;
     font-family: 'Lato', sans-serif;
-    color:#fff !important;
+    color:#000000 !important;
     display:inline-block;
     vertical-align:middle;
     align-content: center;

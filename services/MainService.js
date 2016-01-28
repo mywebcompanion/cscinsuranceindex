@@ -14,7 +14,9 @@ var MainService = function(){
     var getStats = function(req,res){
         var market = req.body.market.trim();
         var company = req.body.company.trim();
-        var promise = MetricsDataModel.find({ market : market, companyName : company }).exec();
+        var regexCompany = new RegExp([ company].join(""), "i");
+        var regexCountry = new RegExp([ market].join(""), "i");
+        var promise = MetricsDataModel.find({ market : regexCountry, companyName : regexCompany }).exec();
         promise.then(function(data){
             var output = JSONAdapter.metricDataAdapter(data);
             res.json(output);

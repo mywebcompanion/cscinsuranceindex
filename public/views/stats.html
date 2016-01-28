@@ -63,7 +63,7 @@
                 <div class="menu-toggle" id="categ-{{$index}}"></div>
                 <div class="row">
                     <div class="col-xs-12 categ-header">
-                        <h1>{{key | uppercase}}</h1>
+                        <h2>{{key | uppercase}}</h2>
                     </div>
                 </div>
                 <div class="row col-wrap">
@@ -127,10 +127,10 @@
             <div class="col col-md-5 categ-col-2">
                 <div class="row categ-header">
                     <div class="col-xs-12" >
-                        <h1>SCORE : {{value.score}}</h1>
+                        <h2>SCORE : {{value.score}}</h2>
                     </div>
                 </div>
-                <h3>RECOMMENDATION:</h3>
+                <h2>RECOMMENDATION:</h2>
                 <ul>
                     <li ng-repeat="reco in value.Recommendations">
                         {{reco}}
