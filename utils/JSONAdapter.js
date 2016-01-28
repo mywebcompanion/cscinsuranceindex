@@ -107,7 +107,7 @@ var JSONAdapter = {};
 
 JSONAdapter.metricDataGraphAdapter = function(input) {
     var output = [];
-    var social = {"name":"Social Media", "data": [], "color" : "#EF2525"};
+    var social = {"name":"social", "data": [], "color" : "#EF2525"};
     var cms = {"name":"CMS", "data": [], "color" : "#A51D13"};
     var emailChat = {"name":"Email & chat", "data": [], "color" : "#FEB300"};
     var analytics = {"name":"Analytics", "data": [], "color" : "#1A5F80"};
