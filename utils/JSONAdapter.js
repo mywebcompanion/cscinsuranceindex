@@ -32,7 +32,11 @@ var JSONAdapter = {};
             metricTypeObj["value"] = metricsObj.value;
             metricTypeObj["rateorder"] = metricsObj.rateorder;
             metricTypeObj["weightage"] = 100;
-            metricTypeObj["rateorder"] = metricsObj.rateorder;
+            if(metricTypeObj.hasOwnProperty("icon")){
+                metricTypeObj["icon"] = metricsObj.icon;
+            } else{
+                metricTypeObj["icon"] = "";
+            }
             if (metricType[metricsObj.type] === metricType["Value"] && metricsObj.hasOwnProperty("benchmarkvalue")) {
                 metricTypeObj["benchmarkvalue"] = metricsObj.benchmarkvalue;
             }

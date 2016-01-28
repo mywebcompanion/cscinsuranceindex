@@ -11,7 +11,8 @@ var MetricSchema = new Schema({
     category : String,
     benchmarkvalue : Number,
     rateorder : String,
-    weightage : Number
+    weightage : Number,
+    icon : String
 });
 
 var MetricModel = mongoose.model('metric',MetricSchema);

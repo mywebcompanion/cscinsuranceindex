@@ -3,38 +3,41 @@
     <div ng-include="'views/CompanyInfo.html'"></div>
     <div ng-include="'views/OverallScore.html'"></div>
 
+
     <div class="row">
         <div ng-include="'views/StatsMenu.html'"></div>
         <ul class="categ-stats col-xs-11" id="categ-stats">
             <li  ng-repeat = "(key, value) in categJSON[stats.market][stats.company]" id="categ-{{$index}}">
-                <div class="row row-eq-height container-row" ng-class-odd="'category-odd-row'" ng-class-even="'category-even-row'">
+                <div ng-if="!(key === 'score')">
+                    <div class="row row-eq-height container-row" ng-class-odd="'category-odd-row'" ng-class-even="'category-even-row'">
 
-                    <div class="col col-md-8 categ-col-1">
-                        <div class="row">
-                            <div class="col-xs-12 categ-header">
-                                <h2>{{key | uppercase}}</h2>
+                        <div class="col col-md-8 categ-col-1">
+                            <div class="row">
+                                <div class="col-xs-12 categ-header">
+                                    <h2>{{key | uppercase}}</h2>
+                                </div>
+                            </div>
+                            <div class="row col-wrap">
+                                <div class="col-xs-12">
+                                    <span ng-include="'views/RatingMetric.html'"></span>
+                                    <span ng-include="'views/BooleanMetric.html'"></span>
+                                    <span ng-include="'views/ValueMetric.html'"></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="row col-wrap">
-                            <div class="col-xs-12">
-                                <span ng-include="'views/RatingMetric.html'"></span>
-                                <span ng-include="'views/BooleanMetric.html'"></span>
-                                <span ng-include="'views/ValueMetric.html'"></span>
+                        <div class="col col-md-4 categ-col-2">
+                            <div class="row categ-header">
+                                <div class="col-xs-12" >
+                                    <h2>SCORE : {{value.score}}</h2>
+                                </div>
                             </div>
+                            <h2>RECOMMENDATION:</h2>
+                            <ul>
+                                <li ng-repeat="reco in value.Recommendations">
+                                    {{reco}}
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="col col-md-4 categ-col-2">
-                        <div class="row categ-header">
-                            <div class="col-xs-12" >
-                                <h2>SCORE : {{value.score}}</h2>
-                            </div>
-                        </div>
-                        <h2>RECOMMENDATION:</h2>
-                        <ul>
-                            <li ng-repeat="reco in value.Recommendations">
-                                {{reco}}
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </li>

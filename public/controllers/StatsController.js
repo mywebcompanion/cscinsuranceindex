@@ -3,24 +3,6 @@
  */
 InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfig, $rootScope,$state, $stateParams, loadStats, $location, $anchorScroll, CompanyService ) {
 
-    var calcOverAllScore = function(data){
-        if(!data){
-            return 0;
-        }
-        console.log("Market" + [$scope.stats.market]);
-        console.log(JSON.stringify(data));
-        if(!data[$scope.stats.market]){
-            $scope.stats.market = $scope.stats.market.toLowerCase();
-        }
-        var overallScore = 0;
-        console.log(data[$scope.stats.market][$scope.stats.company])
-        angular.forEach(data[$scope.stats.market][$scope.stats.company],function(value, key){
-            if(value)
-                overallScore +=  value.score;
-        });
-        return overallScore;
-    };
-
     $scope.validKey = function(val){
         var pattern = /^_.*$/;
         return !pattern.test(val);
@@ -36,7 +18,7 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
         }
         return false;
 
-    }
+    };
 
     $scope.stats = {};
     UIMaster.menuVisibility = true;
@@ -45,7 +27,7 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
     $scope.categJSON = loadStats.data;
     $scope.stats.market = $stateParams.market;
     $scope.stats.company = $stateParams.company;
-    $scope.stats.overallScore = calcOverAllScore(loadStats.data);
+    $scope.stats.overallScore = loadStats.data[$scope.stats.market][$scope.stats.company]["score"];
     CompanyService.loadCompanyInfo($stateParams.company, $stateParams.market).success(function(data){
         $scope.stats.companyInfo = data;
     });
@@ -81,5 +63,4 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
         lineWidth:3,
         lineCap:'circle'
     };
-
 });
