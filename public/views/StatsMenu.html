@@ -1,0 +1,11 @@
+<div class="col col-md-1 categ-col-menu">
+     <span class="menuarea" ng-hide="insuranceHeading">
+         <ul>
+             <li ng-repeat="item in menu">
+                 <a href="/home##categ-{{$index}}" data-mfb-label="{{item.name}}" class="mfb-component__button--child">
+                     <i class="mfb-component__child-icon glyphicon {{item.icon}}"></i>
+                 </a>
+             </li>
+         </ul>
+     </span>
+</div>

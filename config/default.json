@@ -2,10 +2,19 @@
  * Created by ARUN on 23/12/2015.
  */
 
+
+
 {
 
   "Application" : {
-    "port" : 8091
+    "port" : 8091,
+    "facebookauth" :{
+        "appid" : "891434684287465",
+        "apiversion" : "v2.5",
+        "secret" : "7414cc5307ef5cf20e5fe39386618968",
+        "callbackURL" : "http://localhost:8080/auth/facebook/callback"
+
+    }
   },
   // Please note that the below Admin company details should have key that follows javascript variable naming convention
   "Admin" : {

@@ -1,144 +1,43 @@
 <div id="stats-area">
-   <!-- <div id="country-score" class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-7 category-odd-row">
-            <h1>{{company}} - {{market}}</h1>
-        </div>
-        <div class="col-md-4"></div>
-    </div>-->
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="container company-drop-down">
-        <div class="dropdown">
-            <button class="btn dropdown-toggle  " type="button" data-toggle="dropdown"><i class="fa fa-heart"></i> {{stats.company}}, {{stats.market}}
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li ng-repeat="(key,value) in stats.companyInfo" ng-if="validKey(key)" ng-class-odd="'companyinfo-odd-row'" ng-class-even="'companyinfo-even-row'">
-                    <div class="row">
-                        <div class="col-xs-5"><b>{{key | uppercase}}</b></div>
-                        <div ng-if="isValidUrl(value)">
-                            <a href="{{value}}"><div class="col-xs-7">OPEN</div></a>
+
+    <div ng-include="'views/CompanyInfo.html'"></div>
+    <div ng-include="'views/OverallScore.html'"></div>
+
+    <div class="row">
+        <div ng-include="'views/StatsMenu.html'"></div>
+        <ul class="categ-stats col-xs-11" id="categ-stats">
+            <li  ng-repeat = "(key, value) in categJSON[stats.market][stats.company]" id="categ-{{$index}}">
+                <div class="row row-eq-height container-row" ng-class-odd="'category-odd-row'" ng-class-even="'category-even-row'">
+
+                    <div class="col col-md-8 categ-col-1">
+                        <div class="row">
+                            <div class="col-xs-12 categ-header">
+                                <h2>{{key | uppercase}}</h2>
+                            </div>
                         </div>
-                        <div ng-if="!isValidUrl(value)"><div class="col-xs-7">{{value}}</div></div>
+                        <div class="row col-wrap">
+                            <div class="col-xs-12">
+                                <span ng-include="'views/RatingMetric.html'"></span>
+                                <span ng-include="'views/BooleanMetric.html'"></span>
+                                <span ng-include="'views/ValueMetric.html'"></span>
+                            </div>
+                        </div>
                     </div>
-            </ul>
-        </div>
-    </div>
-    <!-- End Home -->
-<div class="row score-row col-wrap">
-    <div class="col-xs-1"></div>
-    <div class="col-xs-11 score-summary">
-        <div class="row">
-            <div class="col col-xs-6">
-                <img src="../images/Company.png">
-                <h1>{{stats.company | uppercase}},{{stats.market | uppercase}}</h1>
-            </div>
-            <div class="col col-xs-6">
-                <img src="../images/overall-score.png">
-                <h1>Di2 SCORE: {{stats.overallScore}}</h1>
-            </div>
-        </div>
-
-
-    </div>
-
-</div>
-<div class="row">
-    <div class="col col-md-1 categ-col-menu">
-         <span class="menuarea" ng-hide="insuranceHeading">
-             <ul>
-                 <li ng-repeat="item in menu">
-                     <a href="/home##categ-{{$index}}" data-mfb-label="{{item.name}}" class="mfb-component__button--child">
-                         <i class="mfb-component__child-icon glyphicon {{item.icon}}"></i>
-                     </a>
-                 </li>
-             </ul>
-         </span>
-    </div>
-
-    <ul class="categ-stats col-xs-11" id="categ-stats">
-    <li  ng-repeat = "(key, value) in categJSON[stats.market][stats.company]">
-        <div class="row row-eq-height container-row" ng-class-odd="'category-odd-row'" ng-class-even="'category-even-row'">
-
-            <div class="col col-md-7 categ-col-1" >
-                <div class="menu-toggle" id="categ-{{$index}}"></div>
-                <div class="row">
-                    <div class="col-xs-12 categ-header">
-                        <h2>{{key | uppercase}}</h2>
+                    <div class="col col-md-4 categ-col-2">
+                        <div class="row categ-header">
+                            <div class="col-xs-12" >
+                                <h2>SCORE : {{value.score}}</h2>
+                            </div>
+                        </div>
+                        <h2>RECOMMENDATION:</h2>
+                        <ul>
+                            <li ng-repeat="reco in value.Recommendations">
+                                {{reco}}
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row col-wrap">
-                    <div class="col-xs-12">
-                            <ul>
-                                <li ng-repeat="rating in value.RatingMetric ">
-                                    <span class="star-label"><i class="fa fa-facebook"> &nbsp;</i>{{rating.name}} :</span>&nbsp;
-                                    <span star-rating rating-value="rating.value" max="5" ></span>&nbsp;
-                                    <!--  <span class="star-label presence-col-2">{{value.RatingMetric[($index *2 +1)].name}} : </span> &nbsp;
-                                      <span star-rating rating-value="rating.value" max="5" >{{value.RatingMetric[($index *2 +1)].value</span>-->
-                                </li>
-                                </br>
-                            </ul>
-                            <ul>
-                                <li ng-repeat="boolean in value.BooleanMetric ">
-                                    <span class="star-label">{{boolean.name}} :</span>&nbsp;
-                        <span ng-if="boolean.value === 'yes'">
-                            <span class="glyphicon glyphicon-ok"></span>
-                        </span>
-                        <span ng-if="boolean.value === 'no'">
-                            <span class="glyphicon glyphicon-remove"></span>
-                        </span>&nbsp;&nbsp;
-                                    <!-- <span class="star-label presence-col-2">{{value.BooleanMetric[($index * 2+1)].name}} :</span>&nbsp;
-                                     <span ng-if="value.BooleanMetric[($index * 2+1)].value === 'yes'">
-                                         <span class="glyphicon glyphicon-ok"></span>
-                                     </span>
-                                     <span  ng-if="value.BooleanMetric[($index * 2+1)].value === 'no'">
-                                         <span class="glyphicon glyphicon-remove"></span>
-                                     </span>-->
-                                    </br>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li class="valuemetric" ng-repeat ="metric in value.ValueMetric" ng-init="prepareConfig(metric,value.ValueMetric[($index * 2+1)])">
-
-                        <span ng-if="metric.rateorder === 'high'">
-                            <span class="star-label">{{metric.name}} : {{metric.value}}</span>
-<!--
-                            <span easypiechart ng-init="percent=metric.value" options="easypieoptions" percent="percent"><span class="text-easypie-percent">{{percent}}</span></span>
--->
-                        </span>
-                        <span ng-if="metric.rateorder === 'low'">
-                            <!-- TBD -->
-                        </span>
-                                    <!--<span ng-if="value.ValueMetric[($index * 2+1)].rateorder === 'high'">
-                                        <span class="star-label presence-col-2">{{value.ValueMetric[($index * 2+1)].name}} :</span>
-                                        <span easypiechart options="easypieoptions" percent="percent"><span class="text-easypie-percent">{{percent}}</span></span>
-            &lt;!&ndash;
-                                        <highchart class="highcharts-config" config="config2"></highchart>
-            &ndash;&gt;
-                                    </span>
-                                    <span ng-if="value.ValueMetric[($index * 2+1)].rateorder === 'low'">
-                                        &lt;!&ndash; TBD &ndash;&gt;
-                                    </span>-->
-                                </li>
-                                </br>
-                            </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-md-5 categ-col-2">
-                <div class="row categ-header">
-                    <div class="col-xs-12" >
-                        <h2>SCORE : {{value.score}}</h2>
-                    </div>
-                </div>
-                <h2>RECOMMENDATION:</h2>
-                <ul>
-                    <li ng-repeat="reco in value.Recommendations">
-                        {{reco}}
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </li>
-</ul>
-</div>
+            </li>
+        </ul>
+    </div>
 </div>

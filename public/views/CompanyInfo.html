@@ -1,0 +1,17 @@
+<div class="container company-drop-down">
+    <div class="dropdown">
+        <button class="btn dropdown-toggle  " type="button" data-toggle="dropdown"><i class="fa fa-heart"></i> {{stats.company}}, {{stats.market}}
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li ng-repeat="(key,value) in stats.companyInfo" ng-if="validKey(key)" ng-class-odd="'companyinfo-odd-row'" ng-class-even="'companyinfo-even-row'">
+                <div class="row">
+                    <div class="col-xs-5"><b>{{key | uppercase}}</b></div>
+                    <div ng-if="isValidUrl(value)">
+                        <a href="{{value}}"><div class="col-xs-7">OPEN</div></a>
+                    </div>
+                    <div ng-if="!isValidUrl(value)"><div class="col-xs-7">{{value}}</div></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

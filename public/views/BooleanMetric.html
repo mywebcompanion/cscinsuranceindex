@@ -1,0 +1,47 @@
+<ul>
+    <li ng-repeat="boolean in value.BooleanMetric | LoopFilter">
+
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="panel panel-box">
+                    <div class="metric-top-area">
+                        <i class="fa fa-facebook"></i>
+                    </div>
+                    <div class="panel-info">
+                        <span class="star-label">{{boolean.name}}</span>
+                    </div>
+                    <div class="metric-bottom-area">
+                         <span class="value-metric element">
+                             <span ng-if="boolean.value === 'yes'">
+                                 <span class="glyphicon glyphicon-ok"></span>
+                             </span>
+                             <span  ng-if="boolean.value === 'no'">
+                                 <span class="glyphicon glyphicon-remove"></span>
+                             </span>
+                         </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="panel panel-box">
+                    <div class="metric-top-area">
+                        <i class="fa fa-facebook"></i>
+                    </div>
+                    <div class="panel-info">
+                        <span class="star-label">{{value.BooleanMetric[($index * 2+1)].name}}</span>
+                    </div>
+                    <div class="metric-bottom-area">
+                         <span class="value-metric element">
+                             <span ng-if="value.BooleanMetric[($index * 2+1)].value === 'yes'">
+                                 <span class="glyphicon glyphicon-ok"></span>
+                             </span>
+                             <span  ng-if="value.BooleanMetric[($index * 2+1)].value === 'no'">
+                                 <span class="glyphicon glyphicon-remove"></span>
+                             </span>
+                         </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

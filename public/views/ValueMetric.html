@@ -1,0 +1,38 @@
+<ul>
+    <li class="valuemetric" ng-repeat ="metric in value.ValueMetric | LoopFilter" ng-init="prepareConfig(metric,value.ValueMetric[($index * 2+1)])">
+
+            <span ng-if="metric.rateorder === 'high'">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="panel panel-box">
+                            <div class="metric-top-area">
+                                <i class="fa fa-facebook"></i>
+                            </div>
+                            <div class="panel-info">
+                                <span>{{metric.name}}</span>
+                            </div>
+                            <div class="metric-bottom-area">
+                                <span class="value-metric element"> <b>{{metric.value}}</b></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="panel panel-box">
+                            <div class="metric-top-area">
+                                <i class="fa fa-facebook"></i>
+                            </div>
+                            <div class="panel-info">
+                                <span>{{value.ValueMetric[($index * 2+1)].name}}</span>
+                            </div>
+                            <div class="metric-bottom-area">
+                                <span class="value-metric element"><b>{{value.ValueMetric[($index * 2+1)].value}}</b> </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <span ng-if="metric.rateorder === 'low'">
+                <!-- TBD -->
+            </span>
+    </li>
+</ul>
