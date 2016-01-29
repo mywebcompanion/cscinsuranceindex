@@ -1315,7 +1315,7 @@ html {
   color: #fff !important;
   z-index: 999; }
   .company-drop-down button {
-    background-color: black;
+    background-color: #00BDB3;
     opacity: 0.5;
     content-align: center;
     width: 400px; }
@@ -1518,7 +1518,7 @@ ul.rating {
   width: 200px; }
 
 .btn-country.active, .btn-country:active {
-  background-color: #5F5F5F;
+  background-color: #00BDB3;
   color: #fff;
   border: 0px;
   height: 100px;
@@ -1526,7 +1526,7 @@ ul.rating {
   width: 200px; }
 
 .btn-country:hover {
-  background-color: #5F5F5F;
+  background-color: #00BDB3;
   color: #fff;
   height: 100px;
   font-size: 35px;
@@ -1602,7 +1602,7 @@ ul.rating {
   border: 0px; }
 
 .mfb-component__button--main, .mfb-component__button--child {
-  background-color: #5F5F5F; }
+  background-color: #00BDB3; }
 
 .container {
   border: 0px; }

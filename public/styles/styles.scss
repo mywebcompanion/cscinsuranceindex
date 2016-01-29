@@ -294,7 +294,7 @@ html {
   color:#fff !important;
   z-index:999;
   button{
-    background-color:black;
+    background-color:#00BDB3;
     opacity: 0.5;
     content-align:center;
     width:400px;
@@ -541,7 +541,7 @@ ul.rating {
 }
 
 .btn-country.active, .btn-country:active{
-  background-color:$theme-color-red;
+  background-color:#00BDB3;
   color:#fff;
   border : 0px;
   height:100px;
@@ -549,7 +549,7 @@ ul.rating {
   width:200px;
 }
 .btn-country:hover{
-  background-color:$theme-color-red;
+  background-color:#00BDB3;
   color:#fff;
   height:100px;
   font-size:35px;
@@ -642,7 +642,7 @@ ul.rating {
 }
 
 .mfb-component__button--main, .mfb-component__button--child {
-  background-color: $theme-color-red;
+  background-color: #00BDB3;
 }
 
 .container{
