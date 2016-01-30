@@ -8,7 +8,7 @@
         <div ng-include="'views/StatsMenu.html'"></div>
         <ul class="categ-stats col-xs-11" id="categ-stats">
             <li  ng-repeat = "(key, value) in categJSON[stats.market][stats.company]" class="metric-list" id="categ-{{$index}}">
-                <div ng-if="!(key === 'score')">
+                <div ng-if="categories.indexOf(key) > -1">
                     <div class="row row-eq-height container-row" ng-class-odd="'category-odd-row'" ng-class-even="'category-even-row'">
 
                         <div class="col col-md-7 categ-col-1">
