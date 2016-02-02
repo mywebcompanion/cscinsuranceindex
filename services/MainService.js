@@ -45,7 +45,10 @@ var MainService = function(){
         var countryname = req.body.countryname.toLowerCase();
         var companyname = req.body.companyname;
         console.log("Inside getCompanyInfo" + countryname + companyname);
-        var promise = CompanyModel.find({companyname: companyname, countryname : countryname}).exec();
+
+        var regexCountry = new RegExp([ countryname].join(""), "i");
+        var regexCompany = new RegExp([ companyname].join(""), "i");
+        var promise = CompanyModel.find({companyname: regexCompany, countryname : regexCountry}).exec();
         promise.then(function(data){
             var info = {};
             if(data){
