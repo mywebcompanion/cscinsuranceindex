@@ -15,8 +15,12 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
         var pattern4 = new RegExp(".com");
         var testVal = value.toLowerCase();
         if(pattern1.test(testVal) || pattern2.test(testVal) || pattern3.test(testVal) || pattern4.test(testVal)){
+            if(!pattern2.test(testVal)){
+                value = "http://" + value;
+            }
             return true;
         }
+
         return false;
 
     };
