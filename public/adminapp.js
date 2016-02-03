@@ -2,7 +2,7 @@
  * Created by ARUN on 23/12/2015.
  */
 
-var AdminApp = angular.module('AdminApp',['ngAnimate', 'ui.bootstrap','ui.router','ui.slider','flash']);
+var AdminApp = angular.module('AdminApp',['ngAnimate', 'ui.bootstrap','ui.router','ui.slider','flash','ui.grid', 'ui.grid.resizeColumns']);
 
 AdminApp.config(function($logProvider,$stateProvider,$urlRouterProvider){
     //$urlRouterProvider.otherwise('/home');

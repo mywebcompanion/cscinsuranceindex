@@ -1,7 +1,8 @@
 <ul class="metrics-box">
     <h3>Want to delete metric?</h3>
     <div flash-message="3000" ></div>
-    <li class="metric-list" ng-repeat="metric in metriclist">
+    <h3>Name</h3>
+    <li class="metric-list" ng-repeat="metric in metriclist" ng-class-odd="'oddmetrics-row'" ng-class-even="'evenmetrics-row'">
         <b>Name :</b><span>{{metric.name}}</span>
         <b>Category :</b><span>{{metric.category}}</span>
         <a class="deleteitem" href="#" ng-click="deleteMetric(metric.name)">
