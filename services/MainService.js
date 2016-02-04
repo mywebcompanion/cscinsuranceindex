@@ -19,6 +19,7 @@ var MainService = function(){
         var promise = MetricsDataModel.find({ market : regexCountry, companyName : regexCompany }).exec();
         promise.then(function(data){
             var output = JSONAdapter.metricDataAdapter(data);
+            console.log("Response sent to client is " + JSON.stringify(output));
             res.json(output);
         });
     };

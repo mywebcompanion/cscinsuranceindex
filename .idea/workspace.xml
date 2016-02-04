@@ -2,83 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f417cb3-df5d-4fdc-9963-5ec65e0b2ea4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/batch_delete_in_the_user_list_view.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/blog_demo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/custom_page.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/customized_sidebar_menu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/customized_validation_in_post_edition_view.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/dashboard_with_unmapped_user_panel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/dot_notation_in_listView.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/embedded_list_in_editionView.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/embedded_list_in_showView.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/empty_admin_app.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/empty_api_request.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/filters_on_the_post_list.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/mapped_post_list_view.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/mapped_post_list_view_with_related_user.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/mapped_user_list_view.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/mapped_user_list_with_mutation.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/ng-admin-09-video-thumbnail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/post_show_view_with_related_comments.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/posters_galore.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/quick_filter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/reference_in_editionView.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/reference_in_listView.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/reference_many_in_editionView.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/reference_many_in_listView.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/referenced_list.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/unmapped_user_list_view.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/updated_post_list_view.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/user_edition_view.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/user_friendly_search_filter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.yo-rc.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/API-mapping.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/reference/Application.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Configuration-reference.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Custom-pages.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Custom-types.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Dashboard.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/reference/Entity.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/FAQ.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/reference/Field.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Getting-started.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Installation.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Menus.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Production.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Relationships.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Reusable-directives.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/SUMMARY.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Theming.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Usage-example.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/reference/View.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/boot/authentication.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/component-config.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/config.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/datasources.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/metrics.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/metrics.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/middleware.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/middleware.production.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/model-config.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin-only.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin-only.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin-only.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin-only.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/reference/ngAdminConfigurationProvider.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/boot/root.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/boot/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/server.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/webpack.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/BooleanMetric.html" afterPath="$PROJECT_DIR$/public/views/BooleanMetric.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/JSONAdapter.js" afterPath="$PROJECT_DIR$/utils/JSONAdapter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/MainService.js" afterPath="$PROJECT_DIR$/services/MainService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/MetricModel.js" afterPath="$PROJECT_DIR$/model/MetricModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/RatingMetric.html" afterPath="$PROJECT_DIR$/public/views/RatingMetric.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/ValueMetric.html" afterPath="$PROJECT_DIR$/public/views/ValueMetric.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/styles.scss" afterPath="$PROJECT_DIR$/public/styles/styles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="csc-index.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -122,71 +53,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="model-config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/model-config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.846153" vertical-offset="182" max-vertical-offset="765">
-              <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metrics.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/models/metrics.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metrics.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/models/metrics.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3846154" vertical-offset="214" max-vertical-offset="799">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="ValueMetric.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/ValueMetric.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5470297" vertical-offset="255" max-vertical-offset="731">
-              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+            <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="714">
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MetricModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/MetricModel.js">
+      <file leaf-file-name="StatsController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/controllers/StatsController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.892857" vertical-offset="306" max-vertical-offset="1445">
+              <caret line="31" column="20" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.js">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="833">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="27" />
+            <state vertical-scroll-proportion="-12.928572" vertical-offset="522" max-vertical-offset="1037">
+              <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -195,28 +96,58 @@
       <file leaf-file-name="MainRouter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/router/MainRouter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-              <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+            <state vertical-scroll-proportion="-6.107143" vertical-offset="203" max-vertical-offset="1717">
+              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datasources.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/datasources.json">
+      <file leaf-file-name="MainService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/MainService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="323">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.4642856" vertical-offset="101" max-vertical-offset="1343">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registry.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/loopback/lib/registry.js">
+      <file leaf-file-name="JSONAdapter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/JSONAdapter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-33.607143" vertical-offset="1252" max-vertical-offset="8109">
-              <caret line="129" column="16" selection-start-line="129" selection-start-column="16" selection-end-line="129" selection-end-column="16" />
+            <state vertical-scroll-proportion="-12.928572" vertical-offset="2392" max-vertical-offset="2924">
+              <caret line="162" column="27" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RatingMetric.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/RatingMetric.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="629">
+              <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/styles/styles.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33333334" vertical-offset="10955" max-vertical-offset="12172">
+              <caret line="654" column="17" selection-start-line="654" selection-start-column="17" selection-end-line="654" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BooleanMetric.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/BooleanMetric.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.730769" vertical-offset="102" max-vertical-offset="884">
+              <caret line="27" column="131" selection-start-line="27" selection-start-column="131" selection-end-line="27" selection-end-column="131" />
               <folding />
             </state>
           </provider>
@@ -230,7 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/controllers/MainController.js" />
         <option value="$PROJECT_DIR$/public/views/country.html" />
         <option value="$PROJECT_DIR$/public/services/StateService.js" />
         <option value="$PROJECT_DIR$/public/services/StatsService.js" />
@@ -248,7 +178,6 @@
         <option value="$PROJECT_DIR$/public/countrymenu.html" />
         <option value="$PROJECT_DIR$/public/views/addbenchmark.html" />
         <option value="$PROJECT_DIR$/public/controllers/CountryController.js" />
-        <option value="$PROJECT_DIR$/utils/JSONAdapter.js" />
         <option value="$PROJECT_DIR$/services/CompanyService.js" />
         <option value="$PROJECT_DIR$/public/services/CompanyService.js" />
         <option value="$PROJECT_DIR$/public/home.html" />
@@ -258,16 +187,10 @@
         <option value="$PROJECT_DIR$/model/user.js" />
         <option value="$PROJECT_DIR$/model/UserModel.js" />
         <option value="$PROJECT_DIR$/public/views/StatsMenu.html" />
-        <option value="$PROJECT_DIR$/public/views/ValueMetric.html" />
-        <option value="$PROJECT_DIR$/public/views/RatingMetric.html" />
-        <option value="$PROJECT_DIR$/public/views/BooleanMetric.html" />
         <option value="$PROJECT_DIR$/public/views/OverallScore.html" />
         <option value="$PROJECT_DIR$/public/views/stats.html" />
         <option value="$PROJECT_DIR$/router/MainRouter.js" />
-        <option value="$PROJECT_DIR$/public/styles/styles.scss" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/services/MainService.js" />
-        <option value="$PROJECT_DIR$/public/controllers/StatsController.js" />
         <option value="$PROJECT_DIR$/public/views/CompanyInfo.html" />
         <option value="$PROJECT_DIR$/public/admin.html" />
         <option value="$PROJECT_DIR$/public/views/deletemetrics.html" />
@@ -281,6 +204,14 @@
         <option value="$PROJECT_DIR$/server/model-config.json" />
         <option value="$PROJECT_DIR$/common/models/metrics.json" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/model/MetricModel.js" />
+        <option value="$PROJECT_DIR$/public/controllers/StatsController.js" />
+        <option value="$PROJECT_DIR$/utils/JSONAdapter.js" />
+        <option value="$PROJECT_DIR$/services/MainService.js" />
+        <option value="$PROJECT_DIR$/public/views/BooleanMetric.html" />
+        <option value="$PROJECT_DIR$/public/views/RatingMetric.html" />
+        <option value="$PROJECT_DIR$/public/views/ValueMetric.html" />
+        <option value="$PROJECT_DIR$/public/styles/styles.scss" />
       </list>
     </option>
   </component>
@@ -378,7 +309,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -392,39 +323,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="csc-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="csc-index" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="csc-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="csc-index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -534,16 +437,16 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.504329" sideWeight="0.88092726" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38203463" sideWeight="0.88092726" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33116883" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962631" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18440464" sideWeight="0.7008734" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18440464" sideWeight="0.7022767" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.02124183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18440464" sideWeight="0.29694322" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.504329" sideWeight="0.119072706" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18440464" sideWeight="0.2977233" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38203463" sideWeight="0.119072706" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -671,45 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/JSONAdapter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.142858" vertical-offset="294" max-vertical-offset="2839">
-          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/BooleanMetric.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="884">
-          <caret line="30" column="100" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/ValueMetric.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="731">
-          <caret line="24" column="94" selection-start-line="24" selection-start-column="94" selection-end-line="24" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/RatingMetric.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="629">
-          <caret line="25" column="79" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1037">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/views/StatsMenu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="272">
@@ -750,34 +614,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/MainService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9642856" vertical-offset="229" max-vertical-offset="1326">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/controllers/StatsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.642857" vertical-offset="153" max-vertical-offset="1445">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/views/adminmenu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="362">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/stats.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8148148" vertical-offset="89" max-vertical-offset="884">
-          <caret line="11" column="77" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="77" />
           <folding />
         </state>
       </provider>
@@ -794,14 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2142857" vertical-offset="255" max-vertical-offset="1989">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/styles/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="12376">
-          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
           <folding />
         </state>
       </provider>
@@ -880,14 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/router/MainRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/loopback/lib/registry.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-33.607143" vertical-offset="1252" max-vertical-offset="8109">
@@ -912,34 +736,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/MetricModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/model-config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.846153" vertical-offset="182" max-vertical-offset="765">
           <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/metrics.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="609">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -962,8 +762,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5470297" vertical-offset="255" max-vertical-offset="731">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="255" max-vertical-offset="731">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MetricModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/stats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9444444" vertical-offset="102" max-vertical-offset="884">
+          <caret line="9" column="55" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/metrics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.928572" vertical-offset="522" max-vertical-offset="1037">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router/MainRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.107143" vertical-offset="203" max-vertical-offset="1717">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/JSONAdapter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.928572" vertical-offset="2392" max-vertical-offset="2924">
+          <caret line="162" column="27" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/MainService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4642856" vertical-offset="101" max-vertical-offset="1343">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/controllers/StatsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.892857" vertical-offset="306" max-vertical-offset="1445">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/BooleanMetric.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769" vertical-offset="102" max-vertical-offset="884">
+          <caret line="27" column="131" selection-start-line="27" selection-start-column="131" selection-end-line="27" selection-end-column="131" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/RatingMetric.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="629">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/ValueMetric.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="714">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="10955" max-vertical-offset="12172">
+          <caret line="654" column="17" selection-start-line="654" selection-start-column="17" selection-end-line="654" selection-end-column="17" />
           <folding />
         </state>
       </provider>

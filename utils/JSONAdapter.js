@@ -35,7 +35,12 @@ var JSONAdapter = {};
             if(metricTypeObj.hasOwnProperty("icon")){
                 metricTypeObj["icon"] = metricsObj.icon;
             } else{
-                metricTypeObj["icon"] = "";
+                metricTypeObj["icon"] = "fa fa-cog";
+            }
+            if(metricTypeObj.hasOwnProperty("iconcolor")){
+                metricTypeObj["iconcolor"] = metricsObj.iconcolor;
+            } else{
+                metricTypeObj["iconcolor"] = "#ccc";
             }
             if (metricType[metricsObj.type] === metricType["Value"] && metricsObj.hasOwnProperty("benchmarkvalue")) {
                 metricTypeObj["benchmarkvalue"] = metricsObj.benchmarkvalue;
