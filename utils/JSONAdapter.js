@@ -9,6 +9,7 @@ var JSONAdapter = {};
 
     JSONAdapter.metricDataAdapter = function(input, metricdb) {
 
+
     if (!(input instanceof Array))
     {
         input = [input]
@@ -18,6 +19,7 @@ var JSONAdapter = {};
     _.each(input, function (object) {
         var metrics = {};
         var market = object.market.toLowerCase();
+
         if (!output[market]) {
             output[market] = {};
         }
@@ -56,10 +58,16 @@ var JSONAdapter = {};
             }
             metrics[metricsObj.category][metricType[metricsObj.type]].push(metricTypeObj);
         });
-        if(object.hasOwnProperty("recommendations")) {
+        console.log("Recommendations=========================" + JSON.stringify((object.recommendations)));
+        if(!_.isEmpty(object.recommendations)) {
             _.each(object.recommendations, function(value,key){
+                console.log("What is metric key" + key + " Value is " + JSON.stringify(value));
+                console.log("======================IF=====================");
                 metrics[key].Recommendations = value;
             });
+        }
+        else{
+            console.log("======================ELSE=====================");
         }
         output[market][object.companyName] = metrics;
     });
@@ -116,7 +124,7 @@ var JSONAdapter = {};
 
             });
             if(numberOfCategories >0)
-                company["score"] = categoriesScore;
+                company["score"] = Math.round(categoriesScore)/10;
             else
                 company["score"] = 0;
         });
