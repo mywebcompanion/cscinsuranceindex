@@ -1,0 +1,41 @@
+{
+  "name": "metrics",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "weightage": {
+      "type": "number"
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "rateorder": {
+      "type": "string"
+    },
+    "benchmarkvalue": {
+      "type": "number"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "iconcolor": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,13 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "cscindex": {
+    "port": 47325,
+    "url": "mongodb://csc:csc@ds047325.mongolab.com:47325/cscinsuranceindex",
+    "database": "cscinsuranceindex",
+    "name": "cscindex",
+    "connector": "mongodb"
+  }
+}

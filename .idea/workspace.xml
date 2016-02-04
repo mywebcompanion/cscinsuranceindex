@@ -2,7 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f417cb3-df5d-4fdc-9963-5ec65e0b2ea4" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\csc-index\npm-debug.log" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/batch_delete_in_the_user_list_view.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/blog_demo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/custom_page.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/customized_sidebar_menu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/customized_validation_in_post_edition_view.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/dashboard_with_unmapped_user_panel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/dot_notation_in_listView.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/embedded_list_in_editionView.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/embedded_list_in_showView.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/empty_admin_app.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/empty_api_request.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/filters_on_the_post_list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/mapped_post_list_view.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/mapped_post_list_view_with_related_user.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/mapped_user_list_view.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/mapped_user_list_with_mutation.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/ng-admin-09-video-thumbnail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/post_show_view_with_related_comments.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/posters_galore.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/quick_filter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/reference_in_editionView.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/reference_in_listView.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/reference_many_in_editionView.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/reference_many_in_listView.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/referenced_list.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/unmapped_user_list_view.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/updated_post_list_view.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/user_edition_view.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/images/user_friendly_search_filter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.yo-rc.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/API-mapping.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/reference/Application.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Configuration-reference.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Custom-pages.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Custom-types.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Dashboard.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/reference/Entity.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/FAQ.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/reference/Field.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Getting-started.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Installation.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Menus.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Production.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Relationships.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Reusable-directives.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/SUMMARY.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Theming.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/Usage-example.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/reference/View.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/boot/authentication.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/component-config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/datasources.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/metrics.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/metrics.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/middleware.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/middleware.production.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/model-config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin-only.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin-only.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin-only.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin-only.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/build/ng-admin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/doc/reference/ngAdminConfigurationProvider.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/boot/root.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/boot/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/libs/ng-admin/webpack.config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="csc-index.iws" />
@@ -67,10 +142,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metrics.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="metrics.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/models/metrics.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.02058319" vertical-offset="216" max-vertical-offset="799">
+            <state vertical-scroll-proportion="0.3846154" vertical-offset="214" max-vertical-offset="799">
               <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
@@ -87,11 +162,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="731">
-              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.5470297" vertical-offset="255" max-vertical-offset="731">
+              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -203,9 +278,9 @@
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/datasources.json" />
         <option value="$PROJECT_DIR$/common/models/metric.json" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/model-config.json" />
         <option value="$PROJECT_DIR$/common/models/metrics.json" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -456,19 +531,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31060606" sideWeight="0.88092726" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.504329" sideWeight="0.88092726" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33116883" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962631" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18440464" sideWeight="0.70172685" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18440464" sideWeight="0.7008734" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.02124183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18440464" sideWeight="0.29827315" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31060606" sideWeight="0.119072706" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18440464" sideWeight="0.29694322" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.504329" sideWeight="0.119072706" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -813,14 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="833">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/loopback/lib/registry.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-33.607143" vertical-offset="1252" max-vertical-offset="8109">
@@ -853,14 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="731">
-          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/MetricModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
@@ -887,8 +946,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/models/metrics.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.02058319" vertical-offset="216" max-vertical-offset="799">
+        <state vertical-scroll-proportion="0.3846154" vertical-offset="214" max-vertical-offset="799">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="833">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5470297" vertical-offset="255" max-vertical-offset="731">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
           <folding />
         </state>
       </provider>
