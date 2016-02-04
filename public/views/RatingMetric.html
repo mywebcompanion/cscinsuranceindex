@@ -23,7 +23,10 @@
                         <span><b>{{value.RatingMetric[($index *2 +1)].name}}</b></span>
                     </div>
                     <div class="metric-bottom-area">
-                        <span star-rating rating-value="rating.value" max="5" >{{value.RatingMetric[($index *2 +1)].value}}</span>
+                        <span  ng-if="value.RatingMetric[($index *2 +1)]">
+                            <span star-rating rating-value="rating.value" max="5" >{{value.RatingMetric[($index *2 +1)].value}}</span>
+                        </span>
+
                     </div>
                 </span>
             </div>

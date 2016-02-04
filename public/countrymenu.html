@@ -24,7 +24,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div class="input-group" ng-show="selectedCountry">
-                <input  typeahead-on-select="renderCategory(insuranceCompany)" ng-change="renderCategory(insuranceCompany)" ng-model="insuranceCompany" placeholder="Search for your Insurance Company" uib-typeahead="company for company in insuranceCompanyList | filter:$viewValue | limitTo:8" class="form-control input-lg insurance-search" style="width:100%" type="text">
+                <input  typeahead-on-select="renderCategory(home.insuranceCompany)" ng-change="renderCategory(home.insuranceCompany)" ng-model="home.insuranceCompany" placeholder="Search for your Insurance Company" uib-typeahead="company for company in insuranceCompanyList | filter:$viewValue | limitTo:8" class="form-control input-lg insurance-search" style="width:100%" type="text">
                 <span class="input-group-btn">
                   <button class="btn btn-default btn-lg btn-insurance-search" type="button">
                       <i class="fa fa-search"></i>

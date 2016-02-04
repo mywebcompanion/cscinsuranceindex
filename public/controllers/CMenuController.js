@@ -8,6 +8,7 @@ InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope
 
     // http://jsfiddle.net/nw5ndzrt/
     $scope.selectedCountry = "";
+    $scope.home = {};
     $scope.btn = {
 
         malaysia : {
@@ -23,11 +24,11 @@ InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope
 
 
     $scope.renderCategory = function(insCompany){
-        $scope.activecompany = "";
+        $scope.home.activecompany = "";
         angular.forEach($scope.insuranceCompanyList, function(company){
             insCompany ? insCompany.trim() : "";
                 if(insCompany === company){
-                    $scope.activecompany = company;
+                    $scope.home.activecompany = company;
                     $rootScope.insuranceHeading = false;
                     $rootScope.MenuVisibility = true;
                     $rootScope.showCountryChart = false;
@@ -45,6 +46,8 @@ InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope
     $scope.selectedCountries = [];
 
     $scope.selectCountry = function(event,country) {
+        $scope.home.activecompany = "";
+        $scope.home.insuranceCompany = "";
         if(country != $scope.selectedCountry){
             if($scope.selectedCountry != "")
                 this.btn[$scope.selectedCountry].state = false;

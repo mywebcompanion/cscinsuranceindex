@@ -1670,6 +1670,9 @@ ul.rating {
   font-size: 12px;
   color: #5F5F5F; }
 
+.reco-list-item {
+  margin-bottom: 5px; }
+
 .admin-form-field {
   margin-top: 10px;
   margin-bottom: 10px;
