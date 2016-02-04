@@ -5,7 +5,9 @@
 
 var _ = require('underscore');
 var prettyjson = require('prettyjson');
+var trim = require('trim');
 var JSONAdapter = {};
+
 
     JSONAdapter.metricDataAdapter = function(input, metricdb) {
 
@@ -58,16 +60,21 @@ var JSONAdapter = {};
             }
             metrics[metricsObj.category][metricType[metricsObj.type]].push(metricTypeObj);
         });
-        console.log("Recommendations=========================" + JSON.stringify((object.recommendations)));
         if(!_.isEmpty(object.recommendations)) {
             _.each(object.recommendations, function(value,key){
-                console.log("What is metric key" + key + " Value is " + JSON.stringify(value));
-                console.log("======================IF=====================");
+                console.log("1");
+                value = _.map(value, function(val){
+                    val = trim(val).replace(/\s+/g,' ').replace(/\/n/g,'');
+                    console.log(val);
+                    return val;
+                });
+                console.log("2");
+
                 metrics[key].Recommendations = value;
             });
         }
         else{
-            console.log("======================ELSE=====================");
+
         }
         output[market][object.companyName] = metrics;
     });
