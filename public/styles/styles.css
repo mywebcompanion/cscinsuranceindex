@@ -1616,14 +1616,6 @@ ul.rating {
   background-color: #fff;
   font-size: 40px;
   color: #000; }
-  .metric-top-area .fa-facebook {
-    color: #2a00ff; }
-  .metric-top-area .fa-camera {
-    color: #ff0050; }
-  .metric-top-area .fa-globe {
-    color: purple; }
-  .metric-top-area .fa-rss {
-    color: #ff8c00; }
 
 .metric-bottom-area {
   height: 80px;
@@ -1672,5 +1664,10 @@ ul.rating {
   font-size: 11px;
   color: #777;
   border-radius: 2em !important; }
+
+.categ-reco {
+  margin-right: 10px;
+  font-size: 12px;
+  color: #5F5F5F; }
 
 /*# sourceMappingURL=styles.css.map */
