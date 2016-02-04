@@ -163,6 +163,11 @@ var AdminService = function(){
             res.json( metricDataSet);
         });
     };
+    var getMetricJSON = function(res){
+        console.log("Inside getMetricJSON");
+        var promise = MetricModel.find({}).exec();
+        return promise;
+    };
 
     var getAllMetrics = function(res){
         var promise1 = MetricModel.find({}).exec();
@@ -216,6 +221,7 @@ var AdminService = function(){
         getMetricsData : getMetricsData,
         saveRating : saveRating,
         getAllMetrics : getAllMetrics,
+        getMetricJSON : getMetricJSON,
         getValueMetrics : getValueMetrics,
         getAllCountriesInfo : getAllCountriesInfo
     };

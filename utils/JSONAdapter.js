@@ -7,7 +7,8 @@ var _ = require('underscore');
 var prettyjson = require('prettyjson');
 var JSONAdapter = {};
 
-    JSONAdapter.metricDataAdapter = function(input) {
+    JSONAdapter.metricDataAdapter = function(input, metricdb) {
+
     if (!(input instanceof Array))
     {
         input = [input]
@@ -21,6 +22,9 @@ var JSONAdapter = {};
             output[market] = {};
         }
         _.each(object.metrics, function (metricsObj) {
+            var metricRec = _.findWhere(metricdb, {name : metricsObj.name});
+
+
             metricTypeObj = {};
             if (!metrics[metricsObj.category]) {
                 metrics[metricsObj.category] = {};
@@ -31,14 +35,19 @@ var JSONAdapter = {};
             metricTypeObj["name"] = metricsObj.name;
             metricTypeObj["value"] = metricsObj.value;
             metricTypeObj["rateorder"] = metricsObj.rateorder;
-            metricTypeObj["weightage"] = 100;
-            if(metricTypeObj.hasOwnProperty("icon")){
-                metricTypeObj["icon"] = metricsObj.icon;
+
+            if(metricRec.weightage){
+                metricTypeObj["weightage"] = metricRec.weightage;
+            } else{
+                metricTypeObj["weightage"] = 100;
+            }
+            if(metricRec.icon){
+                metricTypeObj["icon"] = metricRec.icon;
             } else{
                 metricTypeObj["icon"] = "fa fa-cog";
             }
-            if(metricTypeObj.hasOwnProperty("iconcolor")){
-                metricTypeObj["iconcolor"] = metricsObj.iconcolor;
+            if(metricRec.iconcolor){
+                metricTypeObj["iconcolor"] = metricRec.iconcolor;
             } else{
                 metricTypeObj["iconcolor"] = "#ccc";
             }
