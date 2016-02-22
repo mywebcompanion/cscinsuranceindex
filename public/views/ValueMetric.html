@@ -5,6 +5,9 @@
                 <div class="row metric-display-row">
                     <div class="col-xs-6">
                         <span class="panel panel-box">
+                            <div class="metric-tooltip">
+                                <u ng-show="metric.name">whats this?</u>
+                            </div>
                             <div class="metric-top-area">
                                 <i ng-class="metric.icon" ng-style="{color:metric.iconcolor}"></i>
                             </div>
@@ -12,11 +15,18 @@
                                 <span><b>{{metric.name}}</b></span>
                             </div>
                             <div class="metric-bottom-area">
-                                <span class="value-metric element"> <b>{{metric.value}}</b></span></div>
+                                <span class="value-metric element"> <b>{{metric.value}}</b></span>
+                            </div>
+                            <div class="compare-metric">
+                                <button ng-show="metric.name" class="btn compare-btn">COMPARE</button>
+                            </div>
                         </span>
                     </div>
                     <div class="col-xs-6">
                         <span class="panel panel-box">
+                            <div  class="metric-tooltip">
+                                <u ng-show="value.ValueMetric[($index * 2+1)].name">whats this?</u>
+                            </div>
                             <div class="metric-top-area">
                                 <i ng-class="value.ValueMetric[($index *2 +1)].icon" ng-style="{ color:value.ValueMetric[($index *2 +1)].iconcolor}"></i>
                             </div>
@@ -25,6 +35,9 @@
                             </div>
                             <div class="metric-bottom-area">
                                 <span class="value-metric element"><b>{{value.ValueMetric[($index * 2+1)].value}}</b> </span>
+                            </div>
+                            <div  class="compare-metric">
+                                <button ng-show="value.ValueMetric[($index * 2+1)].name" class="btn compare-btn">COMPARE</button>
                             </div>
                         </span>
                     </div>

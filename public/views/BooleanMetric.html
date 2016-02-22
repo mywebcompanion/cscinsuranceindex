@@ -3,8 +3,11 @@
 
         <div class="row">
             <div class="col-xs-6">
-                <span class="panel panel-box">
-                    <div class="metric-top-area">
+                <span  class="panel panel-box">
+                    <div class="metric-tooltip">
+                        <u  ng-show="boolean.name" >whats this?</u>
+                    </div>
+                    <div  class="metric-top-area">
                         <i ng-class="boolean.icon" ng-style="{color:boolean.iconcolor}"></i>
                     </div>
                     <div class="panel-info">
@@ -20,10 +23,16 @@
                              </span>
                          </span>
                     </div>
+                    <div class="compare-metric">
+                        <button ng-show="boolean.name" class="btn compare-btn">COMPARE</button>
+                    </div>
                 </span>
             </div>
             <div class="col-xs-6">
-                <span class="panel panel-box">
+                <span  class="panel panel-box">
+                    <div class="metric-tooltip">
+                        <u ng-show="value.BooleanMetric[($index * 2+1)].name">whats this?</u>
+                    </div>
                     <div class="metric-top-area">
                         <i ng-class="value.BooleanMetric[($index *2 +1)].icon" ng-style="{ color:value.BooleanMetric[($index *2 +1)].iconcolor}"></i>
                     </div>
@@ -39,6 +48,9 @@
                                  <span class="glyphicon glyphicon-remove"></span>
                              </span>
                          </span>
+                    </div>
+                    <div  class="compare-metric">
+                        <button ng-show="value.BooleanMetric[($index * 2+1)].name" class="btn compare-btn">COMPARE</button>
                     </div>
                 </span>
             </div>

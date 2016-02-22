@@ -2,7 +2,10 @@
     <li ng-repeat="rating in value.RatingMetric | LoopFilter ">
         <div class="row">
             <div class="col-xs-6">
-                <span class="panel panel-box">
+                <span  class="panel panel-box">
+                     <div class="metric-tooltip">
+                         <u ng-show="rating.name" >whats this?</u>
+                     </div>
                     <div class="metric-top-area">
                         <i ng-class="rating.icon" ng-style="{color:rating.iconcolor}"></i>
                     </div>
@@ -12,11 +15,18 @@
                     <div class="metric-bottom-area">
                         <span class="rating-metric"> <span star-rating rating-value="rating.value" max="5" ></span>&nbsp;</span>
                     </div>
+                    <div  class="compare-metric">
+                        <button ng-show="rating.name" class="btn compare-btn">COMPARE</button>
+                    </div>
+
                 </span>
             </div>
             <div class="col-xs-6">
                 <span class="panel panel-box">
-                    <div class="metric-top-area">
+                     <div class="metric-tooltip">
+                         <u ng-show="value.RatingMetric[($index *2 +1)].name">whats this?</u>
+                     </div>
+                    <div  class="metric-top-area">
                         <i ng-class="value.RatingMetric[($index *2 +1)].icon" ng-style="{ color:value.RatingMetric[($index *2 +1)].iconcolor}"></i>
                     </div>
                     <div class="panel-info">
@@ -26,8 +36,11 @@
                         <span  ng-if="value.RatingMetric[($index *2 +1)]">
                             <span star-rating rating-value="rating.value" max="5" >{{value.RatingMetric[($index *2 +1)].value}}</span>
                         </span>
-
                     </div>
+                    <div  class="compare-metric">
+                        <button ng-show="value.RatingMetric[($index *2 +1)].name" class="btn compare-btn">COMPARE</button>
+                    </div>
+
                 </span>
             </div>
         </div>

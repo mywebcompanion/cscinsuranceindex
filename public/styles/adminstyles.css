@@ -1610,6 +1610,14 @@ ul.rating {
 .metric-list {
   padding-top: 40px !important; }
 
+.metric-tooltip {
+  font-size: 10px !important;
+  position: relative;
+  left: 125px; }
+  .metric-tooltip u {
+    text-decoration: none;
+    border-bottom: 1px dotted #ccc; }
+
 .metric-top-area {
   height: 80px;
   width: 350px;
@@ -1651,7 +1659,7 @@ ul.rating {
   position: absolute;
   top: 80px;
   width: 100%;
-  margin-top: -15px; }
+  margin-top: 10px; }
 
 .panel-info span {
   height: 24px;
@@ -1672,6 +1680,18 @@ ul.rating {
 
 .reco-list-item {
   margin-bottom: 5px; }
+
+.compare-btn {
+  width: 120px;
+  background-color: #00BDB3;
+  color: #fff;
+  border-radius: 10px; }
+
+.compare-metric {
+  height: 40px; }
+
+.metric-tooltip {
+  height: 20px; }
 
 .admin-form-field {
   margin-top: 10px;

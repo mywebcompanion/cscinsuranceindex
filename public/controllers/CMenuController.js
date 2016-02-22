@@ -27,11 +27,13 @@ InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope
         $scope.home.activecompany = "";
         angular.forEach($scope.insuranceCompanyList, function(company){
             insCompany ? insCompany.trim() : "";
+            console.log("InsCompany " + insCompany + "company" + company);
                 if(insCompany === company){
                     $scope.home.activecompany = company;
                     $rootScope.insuranceHeading = false;
                     $rootScope.MenuVisibility = true;
                     $rootScope.showCountryChart = false;
+                    console.log("Shoud transition to liststats");
                     $state.transitionTo('liststats', {
                         market: $scope.selectedCountry,
                         company:insCompany

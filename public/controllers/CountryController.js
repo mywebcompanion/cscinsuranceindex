@@ -31,7 +31,7 @@ InsuranceIndex.controller('CountryController', function($scope,$window, ChartCon
                 if($scope.countryList[i] === $scope.selected){
                     renderChart($scope.selected);
                     $(window).resize(function() {
-                        height = chart.height
+                        height = chart.height;
                         width = $("#chartRow").width() / 2;
                         chart.setSize(width, height, doAnimation = true);
                     });
