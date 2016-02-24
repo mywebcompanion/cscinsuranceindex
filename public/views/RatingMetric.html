@@ -15,9 +15,7 @@
                     <div class="metric-bottom-area">
                         <span class="rating-metric"> <span star-rating rating-value="rating.value" max="5" ></span>&nbsp;</span>
                     </div>
-                    <div  class="compare-metric">
-                        <button ng-show="rating.name" class="btn compare-btn">COMPARE</button>
-                    </div>
+                    <dynamic-tooltip message="rating.name" > </dynamic-tooltip>
 
                 </span>
             </div>
@@ -43,6 +41,9 @@
 
                 </span>
             </div>
+        </div>
+        <div ng-show="" class="row">
+
         </div>
     </li>
 </ul>

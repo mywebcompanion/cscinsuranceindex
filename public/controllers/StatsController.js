@@ -7,7 +7,7 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
         var pattern = /^_.*$/;
         return !pattern.test(val);
     };
-
+    $scope.message = {};
     $scope.isValidUrl = function(value){
         var pattern1 = new RegExp("www");
         var pattern2= new RegExp("http");

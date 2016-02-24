@@ -57,6 +57,7 @@ gulp.task('compresshome-2', function() {
 
             ,'public/app.js'
             ,'public/directives/StarDirective.js'
+            ,'public/directives/DynTooltip.js'
             ,'public/filter/LoopFilter.js'
             ,'public/services/GlobalValues.js'
             ,'public/services/StaticResourceFactory.js'
