@@ -15,7 +15,7 @@
                     <div class="metric-bottom-area">
                         <span class="rating-metric"> <span star-rating rating-value="rating.value" max="5" ></span>&nbsp;</span>
                     </div>
-                    <dynamic-tooltip message="rating.name" > </dynamic-tooltip>
+                    <dynamic-tooltip market="{{stats.market}}" company="{{stats.company}}" toolmsg="toolMessage.message" metricname="{{rating.name}}" > </dynamic-tooltip>
 
                 </span>
             </div>
@@ -35,10 +35,7 @@
                             <span star-rating rating-value="rating.value" max="5" >{{value.RatingMetric[($index *2 +1)].value}}</span>
                         </span>
                     </div>
-                    <div  class="compare-metric">
-                        <button ng-show="value.RatingMetric[($index *2 +1)].name" class="btn compare-btn">COMPARE</button>
-                    </div>
-
+                    <dynamic-tooltip market="{{stats.market}}" company="{{stats.company}}" toolmsg="toolMessage.message" metricname="{{value.RatingMetric[($index *2 +1)].name}}" > </dynamic-tooltip>
                 </span>
             </div>
         </div>

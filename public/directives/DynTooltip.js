@@ -7,18 +7,31 @@ InsuranceIndex.directive('dynamicTooltip',function($sce,$http){
     return{
         restrict : 'AE',
         scope:{
-            message : '@',
-            callback : '&'
+            metricname : '@',
+            callback : '&',
+            toolmsg: '=',
+            market: '@',
+            company: '@'
         },
         templateUrl : '../views/dyntooltip.html',
         link : function(scope, element, attr){
             $(element).find('button').bind('mouseover', function(e) {
-                alert("yes");
-                scope.message.name = $sce.trustAsHtml("<b>" + "jinganami" + "</b>");
-                /*var promise = $http.get('/product');
+
+                scope.toolmsg = $sce.trustAsHtml("<p>Loading Comparison data. Please wait .....</p>");
+                var promise = $http.post('/home/compare',{market:scope.market,company:scope.company,metricname:scope.metricname});
                 promise.success(function(resp){
-                    scope.message = $sce.trustAsHtml("<b>" + resp.product + "</b>");
-                });*/
+                    var htmlString = "";
+                    angular.forEach(resp, function(value,key){
+                        htmlString += "<div class='row' style='z-index:200'><div class='col-xs-6'>";
+                        htmlString += value.company;
+                        htmlString += "</div>";
+                        htmlString += "<div class='col-xs-6'>";
+                        htmlString += value.value;
+                        htmlString += "</div>";
+                        htmlString += "</div>";
+                    });
+                    scope.toolmsg = $sce.trustAsHtml(htmlString);
+                });
 
             });
         }

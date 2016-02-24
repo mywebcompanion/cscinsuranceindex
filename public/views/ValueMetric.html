@@ -17,9 +17,7 @@
                             <div class="metric-bottom-area">
                                 <span class="value-metric element"> <b>{{metric.value}}</b></span>
                             </div>
-                            <div class="compare-metric">
-                                <button ng-show="metric.name" class="btn compare-btn">COMPARE</button>
-                            </div>
+                            <dynamic-tooltip market="{{stats.market}}" company="{{stats.company}}" toolmsg="toolMessage.message" metricname="{{metric.name}}" > </dynamic-tooltip>
                         </span>
                     </div>
                     <div class="col-xs-6">
@@ -36,9 +34,7 @@
                             <div class="metric-bottom-area">
                                 <span class="value-metric element"><b>{{value.ValueMetric[($index * 2+1)].value}}</b> </span>
                             </div>
-                            <div  class="compare-metric">
-                                <button ng-show="value.ValueMetric[($index * 2+1)].name" class="btn compare-btn">COMPARE</button>
-                            </div>
+                            <dynamic-tooltip market="{{stats.market}}" company="{{stats.company}}" toolmsg="toolMessage.message" metricname="{{value.ValueMetric[($index * 2+1)].name}}" > </dynamic-tooltip>
                         </span>
                     </div>
                 </div>

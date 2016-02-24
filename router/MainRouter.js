@@ -37,6 +37,11 @@ MainRouter.post('/home/getCompanyInfo',function(req,res,next){
     MainService.getCompanyInfo(req,res);
 });
 
+MainRouter.post('/home/compare',function(req,res,next){
+    console.log("Inside compare service");
+    MainService.getComparisonReport(req,res);
+})
+
 //FACEBOOK PASSPORT AUTHENTICATION
 
 

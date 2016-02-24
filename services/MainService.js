@@ -34,6 +34,34 @@ var MainService = function(){
         });
     };
 
+    var getComparisonReport = function(req,res){
+        var market = req.body.market.trim();
+        var company = req.body.company.trim();
+        var metricname = req.body.metricname;
+        var regexCountry = new RegExp([ market].join(""), "i");
+        console.log("getComparisonReport + " + "market" + regexCountry);
+
+        var promise = MetricsDataModel.find({market: regexCountry}).exec();
+        var compareStats  = [];
+        promise.then(function(data){
+            _.each(data, function(metricinfo){
+                _.each(metricinfo.metrics, function(metric){
+                    if(metric.name === metricname){
+                        var metricObj = {};
+                        metricObj.company = metricinfo.companyName;
+                        metric.value ? metric.value : "";
+                        metricObj.value = metric.value;
+                        compareStats.push(metricObj);
+                    }
+                });
+            });
+            res.json(compareStats);
+        }, function(err){
+            console.log("Error fetching data from mongoDB" + err);
+        });
+
+    };
+
     var getAllStats = function(req,res){
         var market = req.body.market.toLowerCase().trim();
         var regex = new RegExp([ market].join(""), "i");
@@ -87,7 +115,8 @@ var MainService = function(){
         getStats: getStats,
         getAllStats : getAllStats,
         getAllCompanies: getAllCompanies,
-        getCompanyInfo: getCompanyInfo
+        getCompanyInfo: getCompanyInfo,
+        getComparisonReport: getComparisonReport
     }
 
 };

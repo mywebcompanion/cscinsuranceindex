@@ -23,9 +23,8 @@
                              </span>
                          </span>
                     </div>
-                    <div class="compare-metric">
-                        <button ng-show="boolean.name" class="btn compare-btn">COMPARE</button>
-                    </div>
+                    <dynamic-tooltip market="{{stats.market}}" company="{{stats.company}}" toolmsg="toolMessage.message" metricname="{{boolean.name}}" > </dynamic-tooltip>
+
                 </span>
             </div>
             <div class="col-xs-6">
@@ -49,9 +48,8 @@
                              </span>
                          </span>
                     </div>
-                    <div  class="compare-metric">
-                        <button ng-show="value.BooleanMetric[($index * 2+1)].name" class="btn compare-btn">COMPARE</button>
-                    </div>
+                    <dynamic-tooltip market="{{stats.market}}" company="{{stats.company}}" toolmsg="toolMessage.message" metricname="{{value.BooleanMetric[($index * 2+1)].name}}" > </dynamic-tooltip>
+
                 </span>
             </div>
         </div>
