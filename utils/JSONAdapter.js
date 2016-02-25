@@ -62,14 +62,10 @@ var JSONAdapter = {};
         });
         if(!_.isEmpty(object.recommendations)) {
             _.each(object.recommendations, function(value,key){
-                console.log("1");
                 value = _.map(value, function(val){
                     val = trim(val).replace(/\s+/g,' ').replace(/\/n/g,'');
-                    console.log(val);
                     return val;
                 });
-                console.log("2");
-
                 metrics[key].Recommendations = value;
             });
         }
@@ -88,9 +84,11 @@ var JSONAdapter = {};
                 var valueScore = 0;
                 var booleanScore = 0;
                 var ratingScore = 0;
+                var number = 0;
                 _.each(category, function (value, type) {
                     var score = 0;
                     var weightage = 0;
+                    number++;
                     switch (type) {
                         case "ValueMetric":
                             for (i = 0; i < value.length; i++) {
@@ -125,7 +123,7 @@ var JSONAdapter = {};
                             break;
                     }
                 });
-                category["score"] = Math.round((valueScore + booleanScore + ratingScore) /(3)) / 10;
+                category["score"] = Math.round((valueScore + booleanScore + ratingScore) /(number)) / 10;
                 numberOfCategories += 1;
                 categoriesScore += category["score"];
 

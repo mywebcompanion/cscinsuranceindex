@@ -44,6 +44,12 @@ InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope
         });
     };
 
+    function uniq(a) {
+        var seen = {};
+        return a.filter(function(item) {
+            return seen.hasOwnProperty(item) ? false : (seen[item] = true);
+        });
+    }
 
     $scope.selectedCountries = [];
 
@@ -75,13 +81,15 @@ InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope
         $scope.insuranceCompanyList = "";
         var promise = CountryStatsFactory.getAllCompanies();
         promise.success(function(response){
+            console.log($scope.insuranceCompanyList);
             var companies =[];
             for (company in response) {
+                console.log(response[company].countryname.toUpperCase(), $scope.selectedCountry.toUpperCase(), (response[company].countryname.toUpperCase() === $scope.selectedCountry.toUpperCase()));
                 if (response[company].countryname.toUpperCase() === $scope.selectedCountry.toUpperCase()) {
                     companies.push(response[company].companyname);
                 }
             }
-            $scope.insuranceCompanyList = companies;
+            $scope.insuranceCompanyList = uniq(companies);
         });
     }
 });
