@@ -81,16 +81,9 @@ var JSONAdapter = {};
             var numberOfCategories = 0;
             var categoriesScore = 0;
             _.each(company, function(category){
-                var valueScore = 0;
-                var booleanScore = 0;
-                var ratingScore = 0;
-                var number = 0;
+                var score = 0;
+                var weightage = 0;
                 _.each(category, function (value, type) {
-                    var score = 0;
-                    var valueWeightage = 0;
-                    var ratingWeightage = 0;
-                    var booleanWeightage = 0;
-                    number++;
                     switch (type) {
                         case "ValueMetric":
                             for (i = 0; i < value.length; i++) {
@@ -100,10 +93,9 @@ var JSONAdapter = {};
                                 } else{
                                     score += value[i].weightage;
                                 }
-                                valueWeightage += value[i].weightage;
+                                weightage += value[i].weightage;
                             }
-                            if(value.length > 0)
-                                valueScore = score/valueWeightage * 100;
+
                             break;
                         case "BooleanMetric":
                             for(i = 0; i < value.length; i++){
@@ -111,22 +103,20 @@ var JSONAdapter = {};
                                     score += value[i].weightage;
                                 else
                                     score += 0;
-                                booleanWeightage+= value[i].weightage;
+                                weightage += value[i].weightage;
                             }
-                            if(booleanWeightage > 0)
-                                booleanScore = score/booleanWeightage * 100;
+
                             break;
                         case "RatingMetric":
                             for(i = 0; i < value.length; i++){
                                 score += value[i].value * value[i].weightage / 100;
-                                ratingWeightage += value[i].weightage;
+                                weightage  += value[i].weightage;
                             }
-                            if(value.length > 0)
-                                ratingScore = score / ratingWeightage * 100;
                             break;
                     }
                 });
-                category["score"] = Math.round((valueScore + booleanScore + ratingScore) /(number)) / 10;
+                category["score"] = score / weightage * 100;
+                category["score"] = Math.round(category["score"]) / 10;
                 numberOfCategories += 1;
                 categoriesScore += category["score"];
 
