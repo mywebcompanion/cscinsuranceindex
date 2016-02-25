@@ -87,7 +87,9 @@ var JSONAdapter = {};
                 var number = 0;
                 _.each(category, function (value, type) {
                     var score = 0;
-                    var weightage = 0;
+                    var valueWeightage = 0;
+                    var ratingWeightage = 0;
+                    var booleanWeightage = 0;
                     number++;
                     switch (type) {
                         case "ValueMetric":
@@ -98,28 +100,29 @@ var JSONAdapter = {};
                                 } else{
                                     score += value[i].weightage;
                                 }
-                                weightage += value[i].weightage;
+                                valueWeightage += value[i].weightage;
                             }
                             if(value.length > 0)
-                                valueScore = score/weightage * 100;
+                                valueScore = score/valueWeightage * 100;
                             break;
                         case "BooleanMetric":
                             for(i = 0; i < value.length; i++){
                                 if(value[i].value === "yes")
-                                    score += 1;
+                                    score += value[i].weightage;
                                 else
                                     score += 0;
+                                booleanWeightage+= value[i].weightage;
                             }
-                            if(value.length > 0)
-                                booleanScore = score/value.length * 100;
+                            if(booleanWeightage > 0)
+                                booleanScore = score/booleanWeightage * 100;
                             break;
                         case "RatingMetric":
                             for(i = 0; i < value.length; i++){
                                 score += value[i].value * value[i].weightage / 100;
-                                weightage += value[i].weightage;
+                                ratingWeightage += value[i].weightage;
                             }
                             if(value.length > 0)
-                                ratingScore = score / weightage * 100;
+                                ratingScore = score / ratingWeightage * 100;
                             break;
                     }
                 });
