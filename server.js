@@ -16,7 +16,7 @@ if(config.has('Application.port')){
 
 var app = express();
 //mongoose.connect('mongodb://localhost/cscindex');
-mongoose.connect('mongodb://csc:csc@ds047325.mongolab.com:47325/cscinsuranceindex');
+mongoose.connect('mongodb://csc:CscDi2@ds017158-a0.mlab.com:17158,ds017158-a1.mlab.com:17158/cscdi2?replicaSet=rs-ds017158');
 
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(bodyParser.json());
