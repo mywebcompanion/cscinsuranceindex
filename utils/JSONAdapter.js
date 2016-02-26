@@ -11,7 +11,7 @@ var JSONAdapter = {};
 
     JSONAdapter.metricDataAdapter = function(input, metricdb) {
 
-
+        computeBenchMark(input);
     if (!(input instanceof Array))
     {
         input = [input]
@@ -58,6 +58,13 @@ var JSONAdapter = {};
             if (metricType[metricsObj.type] === metricType["Value"] && metricsObj.hasOwnProperty("benchmarkvalue")) {
                 metricTypeObj["benchmarkvalue"] = metricsObj.benchmarkvalue;
             }
+            else if(metricType[metricsObj.type] === metricType["Value"] && !metricsObj.hasOwnProperty("benchmarkvalue")){
+                if(object.market && benchMarkData[object.market] &&  benchMarkData[object.market][metricsObj.name] ){
+                    metricTypeObj["benchmarkvalue"] = benchMarkData[object.market][metricsObj.name].maxval;
+                }
+            }
+
+
             metrics[metricsObj.category][metricType[metricsObj.type]].push(metricTypeObj);
         });
         if(!_.isEmpty(object.recommendations)) {
@@ -182,8 +189,35 @@ JSONAdapter.metricDataGraphAdapter = function(input) {
 var benchMarkData = {};
 var computeBenchMark = function(input){
     _.each(input, function(data){
-
+        var key = data.market;
+        var metrickey = "metricRoot";
+        if(!benchMarkData.hasOwnProperty(key)){
+            benchMarkData[key] = {metrickey : {}};
+        }
+        _.each(data.metrics, function(metric){
+            if(metric.type === "Value"){
+                if(!benchMarkData[key].hasOwnProperty(metric.name)){
+                    benchMarkData[data.market][metric.name] = {
+                        "maxval": metric.value,
+                        "minval": metric.value,
+                        "rateorder" : metric.rateorder
+                    }
+                }
+                else{
+                    console.log("16");
+                    if(metric.value > benchMarkData[data.market][metric.name]["maxval"]){
+                        console.log("17");
+                        benchMarkData[data.market][metric.name]["maxval"] = metric.value;
+                    }
+                    else if(metric.value < benchMarkData[data.market][metric.name]["minval"]){
+                        benchMarkData[data.market][metric.name]["minval"] = metric.value;
+                    }
+                    console.log("18");
+                }
+            }
+        });
     });
+    console.log("BenchmarkData========" + JSON.stringify(benchMarkData));
 }
 
 module.exports = JSONAdapter;
