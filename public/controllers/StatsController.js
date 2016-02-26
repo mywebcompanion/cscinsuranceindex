@@ -22,9 +22,7 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
             }
             return true;
         }
-
         return false;
-
     };
 
     $scope.stats = {};

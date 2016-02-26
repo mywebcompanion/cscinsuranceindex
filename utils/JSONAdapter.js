@@ -56,6 +56,7 @@ var JSONAdapter = {};
                 metricTypeObj["iconcolor"] = "#ccc";
             }
             if (metricType[metricsObj.type] === metricType["Value"] && metricsObj.hasOwnProperty("benchmarkvalue")) {
+                if(metricsObj.benchmarkvalue > 0 )
                 metricTypeObj["benchmarkvalue"] = metricsObj.benchmarkvalue;
             }
             else if(metricType[metricsObj.type] === metricType["Value"] && !metricsObj.hasOwnProperty("benchmarkvalue")){
@@ -195,24 +196,28 @@ var computeBenchMark = function(input){
             benchMarkData[key] = {metrickey : {}};
         }
         _.each(data.metrics, function(metric){
+            if(metric.type === "Value" && metric.value){
+                metric.value = metric.value.replace(/[^\d\.]+/g,"");
+            }
+
             if(metric.type === "Value"){
                 if(!benchMarkData[key].hasOwnProperty(metric.name)){
-                    benchMarkData[data.market][metric.name] = {
-                        "maxval": metric.value,
-                        "minval": metric.value,
-                        "rateorder" : metric.rateorder
+                    if(metric.value && metric.value > 0){
+                        benchMarkData[data.market][metric.name] = {
+                            "maxval": metric.value,
+                            "minval": metric.value,
+                            "rateorder" : metric.rateorder
+                        }
                     }
+
                 }
                 else{
-                    console.log("16");
-                    if(metric.value > benchMarkData[data.market][metric.name]["maxval"]){
-                        console.log("17");
+                    if(metric.value && metric.value > benchMarkData[data.market][metric.name]["maxval"]){
                         benchMarkData[data.market][metric.name]["maxval"] = metric.value;
                     }
-                    else if(metric.value < benchMarkData[data.market][metric.name]["minval"]){
+                    else if(metric.value  && metric.value < benchMarkData[data.market][metric.name]["minval"]){
                         benchMarkData[data.market][metric.name]["minval"] = metric.value;
                     }
-                    console.log("18");
                 }
             }
         });
