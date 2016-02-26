@@ -30,7 +30,7 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
     $scope.stats = {};
     UIMaster.menuVisibility = true;
     UIMaster.insuranceHeading = true;
-    $scope.categories = ['Analytics','CMS','Email & chat','Mobile & UX','SEO & ads','social'];
+    $scope.categories = ['social','Analytics','Mobile & UX','Email & chat','CMS','SEO & ads'];
     $scope.percent = 70;
     $scope.categJSON = loadStats.data;
     $scope.stats.market = $stateParams.market;

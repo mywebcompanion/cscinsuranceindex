@@ -1659,7 +1659,7 @@ ul.rating {
   position: absolute;
   top: 80px;
   width: 100%;
-  margin-top: -15px; }
+  margin-top: 10px; }
 
 .panel-info span {
   height: 24px;
@@ -1692,5 +1692,10 @@ ul.rating {
 
 .metric-tooltip {
   height: 20px; }
+
+.reco-circle {
+  font-size: 7px;
+  padding-right: 10px;
+  color: #5F5F5F; }
 
 /*# sourceMappingURL=styles.css.map */

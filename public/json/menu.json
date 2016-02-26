@@ -1,14 +1,19 @@
 
 [
     {
+        "name" : "social",
+        "icon" : "glyphicon-thumbs-up",
+        "url": "social"
+    },
+    {
         "name" : "Analytics",
         "icon" : "glyphicon-signal",
         "url": "overview"
     },
     {
-        "name" : "CMS",
-        "icon" : "glyphicon-pencil",
-        "url": "social"
+        "name" : "SEO & ads",
+        "icon" : "glyphicon-search",
+        "url": "seo"
     },
     {
         "name" : "Email & chat",
@@ -17,19 +22,15 @@
 
     },
     {
+        "name" : "CMS",
+        "icon" : "glyphicon-pencil",
+        "url": "social"
+    },
+    {
         "name" : "Mobile & UX",
         "icon" : "glyphicon-phone",
         "url": "mobility"
 
-    },
-    {
-        "name" : "SEO & ads",
-        "icon" : "glyphicon-search",
-        "url": "seo"
-    },
-    {
-        "name" : "social",
-        "icon" : "glyphicon-thumbs-up",
-        "url": "social"
     }
+
 ]

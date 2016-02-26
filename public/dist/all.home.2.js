@@ -90,18 +90,31 @@ InsuranceIndex.directive('dynamicTooltip',function($sce,$http){
     return{
         restrict : 'AE',
         scope:{
-            message : '@',
+            metricname : '@',
             callback : '&',
-            toolMsg: '='
+            toolmsg: '=',
+            market: '@',
+            company: '@'
         },
         templateUrl : '../views/dyntooltip.html',
         link : function(scope, element, attr){
             $(element).find('button').bind('mouseover', function(e) {
-                scope.toolMsg = $sce.trustAsHtml("<b>" + "jinganami" + "</b>");
-                /*var promise = $http.get('/product');
+
+                scope.toolmsg = $sce.trustAsHtml("<p>Loading Comparison data. Please wait .....</p>");
+                var promise = $http.post('/home/compare',{market:scope.market,company:scope.company,metricname:scope.metricname});
                 promise.success(function(resp){
-                    scope.message = $sce.trustAsHtml("<b>" + resp.product + "</b>");
-                });*/
+                    var htmlString = "";
+                    angular.forEach(resp, function(value,key){
+                        htmlString += "<div class='row' style='z-index:200'><div class='col-xs-6'>";
+                        htmlString += value.company;
+                        htmlString += "</div>";
+                        htmlString += "<div class='col-xs-6'>";
+                        htmlString += value.value;
+                        htmlString += "</div>";
+                        htmlString += "</div>";
+                    });
+                    scope.toolmsg = $sce.trustAsHtml(htmlString);
+                });
 
             });
         }
@@ -532,6 +545,12 @@ InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope
         });
     };
 
+    function uniq(a) {
+        var seen = {};
+        return a.filter(function(item) {
+            return seen.hasOwnProperty(item) ? false : (seen[item] = true);
+        });
+    }
 
     $scope.selectedCountries = [];
 
@@ -563,13 +582,15 @@ InsuranceIndex.controller('CMenuController', function($scope,UIMaster,$rootScope
         $scope.insuranceCompanyList = "";
         var promise = CountryStatsFactory.getAllCompanies();
         promise.success(function(response){
+            console.log($scope.insuranceCompanyList);
             var companies =[];
             for (company in response) {
+                console.log(response[company].countryname.toUpperCase(), $scope.selectedCountry.toUpperCase(), (response[company].countryname.toUpperCase() === $scope.selectedCountry.toUpperCase()));
                 if (response[company].countryname.toUpperCase() === $scope.selectedCountry.toUpperCase()) {
                     companies.push(response[company].companyname);
                 }
             }
-            $scope.insuranceCompanyList = companies;
+            $scope.insuranceCompanyList = uniq(companies);
         });
     }
 });
@@ -665,6 +686,7 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
         return !pattern.test(val);
     };
     $scope.toolMessage = {};
+    $scope.toolMessage.message = "Loading..";
     $scope.message = {};
     $scope.isValidUrl = function(value){
         var pattern1 = new RegExp("www");
@@ -686,7 +708,7 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
     $scope.stats = {};
     UIMaster.menuVisibility = true;
     UIMaster.insuranceHeading = true;
-    $scope.categories = ['Analytics','CMS','Email & chat','Mobile & UX','SEO & ads','social'];
+    $scope.categories = ['social','Analytics','Mobile & UX','Email & chat','CMS','SEO & ads'];
     $scope.percent = 70;
     $scope.categJSON = loadStats.data;
     $scope.stats.market = $stateParams.market;

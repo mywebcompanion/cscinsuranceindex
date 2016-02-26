@@ -4,9 +4,9 @@
     "connector": "memory"
   },
   "cscindex": {
-    "port": 47325,
-    "url": "mongodb://csc:csc@ds047325.mongolab.com:47325/cscinsuranceindex",
-    "database": "cscinsuranceindex",
+    "port": 17158,
+    "url": "mongodb://csc:CscDi2@ds017158-a0.mlab.com:17158,ds017158-a1.mlab.com:17158/cscdi2?replicaSet=rs-ds017158",
+    "database": "cscdi2",
     "name": "cscindex",
     "connector": "mongodb"
   }

@@ -179,4 +179,11 @@ JSONAdapter.metricDataGraphAdapter = function(input) {
     return output;
 };
 
+var benchMarkData = {};
+var computeBenchMark = function(input){
+    _.each(input, function(data){
+
+    });
+}
+
 module.exports = JSONAdapter;
