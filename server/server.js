@@ -22,7 +22,8 @@ app.start = function() {
   });
 };
 
-mongoose.connect("mongodb://csc:CscDi2@ds017158-a0.mlab.com:17158,ds017158-a1.mlab.com:17158/cscdi2?replicaSet=rs-ds017158");
+//mongoose.connect("mongodb://csc:CscDi2@ds017158-a0.mlab.com:17158,ds017158-a1.mlab.com:17158/cscdi2?replicaSet=rs-ds017158");
+mongoose.connect("mongodb://csc:csc@ds047325.mongolab.com:47325/cscinsuranceindex");
 app.use(loopback.static(path.resolve(__dirname + './../public/')));
 
 app.use(bodyParser.urlencoded({extended : false}));
