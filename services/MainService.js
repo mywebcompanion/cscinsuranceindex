@@ -81,6 +81,7 @@ var MainService = function(){
                         return obj.value === "yes";
                     }
                     else{
+                        reverseSort = true;
                         return obj.value;
                     }
             });
