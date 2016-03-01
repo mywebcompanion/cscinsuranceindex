@@ -2,7 +2,7 @@
  * Created by ARUN on 9/12/2015.
  */
 
-var InsuranceIndex = angular.module('InsuranceIndex',['highcharts-ng','ngAnimate', 'ui.bootstrap','ui.router','ng-mfb','easypiechart']);
+var InsuranceIndex = angular.module('InsuranceIndex',['highcharts-ng','ngAnimate', 'ui.bootstrap','ui.router','ng-mfb','easypiechart','FBAngular']);
 InsuranceIndex.config(['$logProvider','$stateProvider','$urlRouterProvider',function($logProvider, $stateProvider, $urlRouterProvider){
     $stateProvider.state('index', {
         url : '/',

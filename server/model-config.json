@@ -35,5 +35,17 @@
   "metrics": {
     "dataSource": "cscindex",
     "public": true
+  },
+  "companyinfos": {
+    "dataSource": "cscindex",
+    "public": true
+  },
+  "metricdatas": {
+    "dataSource": "cscindex",
+    "public": true
+  },
+  "rating": {
+    "dataSource": "cscindex",
+    "public": false
   }
 }

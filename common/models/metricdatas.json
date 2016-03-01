@@ -1,0 +1,32 @@
+{
+  "name": "metricdatas",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "companyName": {
+      "type": "string",
+      "required": true
+    },
+    "market": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "metric" : {
+      "type":"embedsMany",
+      "model" : "rating",
+      "property":"metrics",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

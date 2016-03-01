@@ -1,0 +1,58 @@
+{
+  "name": "companyinfos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "companyname": {
+      "type": "string",
+      "required": true
+    },
+    "countryname": {
+      "type": "string",
+      "required": true
+    },
+    "weburl": {
+      "type": "string"
+    },
+    "blogurl": {
+      "type": "string"
+    },
+    "newsletter": {
+      "type": "string"
+    },
+    "androidapps": {
+      "type": "string"
+    },
+    "fb": {
+      "type": "string"
+    },
+    "iosapps": {
+      "type": "string"
+    },
+    "twitterhandle": {
+      "type": "string"
+    },
+    "facebookpage": {
+      "type": "string"
+    },
+    "googlepage": {
+      "type": "string"
+    },
+    "instagrampage": {
+      "type": "string"
+    },
+    "youtubechannel": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

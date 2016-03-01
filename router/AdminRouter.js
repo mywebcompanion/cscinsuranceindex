@@ -15,7 +15,7 @@ var path = require('path');
 AdminRouter.use('/config',ConfigRouter);
 
 AdminRouter.get('/', function(req,res,next){
-    res.sendFile(path.resolve(__dirname + '/../public/admin.html'));
+    res.sendFile(path.resolve(__dirname + '/../public/admin-old.html'));
 });
 
 AdminRouter.get('/getAllMetrics', function(req,res,next){

@@ -21,14 +21,16 @@ InsuranceIndex.directive('dynamicTooltip',function($sce,$http){
                 var promise = $http.post('/home/compare',{market:scope.market,company:scope.company,metricname:scope.metricname});
                 promise.success(function(resp){
                     var htmlString = "";
+                    var index = 0;
                     angular.forEach(resp, function(value,key){
-                        htmlString += "<div class='row' style='z-index:200'><div class='col-xs-6'>";
+                        htmlString += "<div class='row' style='z-index:200'><div class='col-xs-6' ng-class='{highrating : index == 0)}'>";
                         htmlString += value.company;
                         htmlString += "</div>";
-                        htmlString += "<div class='col-xs-6'>";
+                        htmlString += "<div class='col-xs-6' ng-class='{highrating : index == 0)}'>";
                         htmlString += value.value;
                         htmlString += "</div>";
                         htmlString += "</div>";
+                        ++index;
                     });
                     scope.toolmsg = $sce.trustAsHtml(htmlString);
                 });

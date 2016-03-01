@@ -17,7 +17,8 @@ var CompanySchema = new mongoose.Schema({
     facebookpage:String,
     googlepage:String,
     instagrampage:String,
-    youtubechannel:String
+    youtubechannel:String,
+    logo:String
 });
 
 var CompanyModel = mongoose.model('companyinfo', CompanySchema);

@@ -1,12 +1,13 @@
-<div class="country-controller" ng-controller="CountryController">
+<div class="country-controller" id="country-controller" ng-controller="CountryController"  >
 
 
     <div class="row chart-space" ng-show="showCountryChart">
         <div class="col-xs-2" ></div>
         <div class="col-xs-8 chart-area" >
-            <div id="main-chart"></div>
+            <div id="main-chart" ></div>
         </div>
     </div>
+
 
     <!-- Highchart custom tag not working for stacked column charts -->
     <!-- <highchart id="chart1" config="chartConfig"></highchart> -->

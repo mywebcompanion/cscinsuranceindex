@@ -2,7 +2,7 @@
  * Created by ARUN on 9/12/2015.
  */
 
-var InsuranceIndex = angular.module('InsuranceIndex',['highcharts-ng','ngAnimate', 'ui.bootstrap','ui.router','ng-mfb','easypiechart']);
+var InsuranceIndex = angular.module('InsuranceIndex',['highcharts-ng','ngAnimate', 'ui.bootstrap','ui.router','ng-mfb','easypiechart','FBAngular']);
 InsuranceIndex.config(['$logProvider','$stateProvider','$urlRouterProvider',function($logProvider, $stateProvider, $urlRouterProvider){
     $stateProvider.state('index', {
         url : '/',
@@ -104,14 +104,16 @@ InsuranceIndex.directive('dynamicTooltip',function($sce,$http){
                 var promise = $http.post('/home/compare',{market:scope.market,company:scope.company,metricname:scope.metricname});
                 promise.success(function(resp){
                     var htmlString = "";
+                    var index = 0;
                     angular.forEach(resp, function(value,key){
-                        htmlString += "<div class='row' style='z-index:200'><div class='col-xs-6'>";
+                        htmlString += "<div class='row' style='z-index:200'><div class='col-xs-6' ng-class='{highrating : index == 0)}'>";
                         htmlString += value.company;
                         htmlString += "</div>";
-                        htmlString += "<div class='col-xs-6'>";
+                        htmlString += "<div class='col-xs-6' ng-class='{highrating : index == 0)}'>";
                         htmlString += value.value;
                         htmlString += "</div>";
                         htmlString += "</div>";
+                        ++index;
                     });
                     scope.toolmsg = $sce.trustAsHtml(htmlString);
                 });
@@ -283,7 +285,8 @@ InsuranceIndex.factory('ChartConfig', function() {
                             }
                         });
                     }
-                }
+                },
+                renderTo : 'main-chart'
             },
 
             series: [
@@ -604,7 +607,21 @@ InsuranceIndex.controller('CountryController', function($scope,$window, ChartCon
     $scope.chartConfig = ChartConfig.getDefaultConfig();
     $scope.selected = undefined;
     $scope.countryList = ['Malaysia','HongKong','Singapore','India','Japan','Indonesia'];
+    function MainCtrl($scope, Fullscreen) {
 
+        $scope.goFullscreen = function () {
+
+            if (Fullscreen.isEnabled())
+                Fullscreen.cancel();
+            else
+                Fullscreen.all();
+
+            // Set Fullscreen to a specific element (bad practice)
+            // Fullscreen.enable( document.getElementById('img') )
+
+        }
+
+    }
 
     var renderChart = function(country){
         var promise = CountryStatsFactory.getCountryData(country);
@@ -613,7 +630,7 @@ InsuranceIndex.controller('CountryController', function($scope,$window, ChartCon
             $scope.chartConfig.series = $scope.chartConfig.series.splice(0,1);
             $scope.chartConfig.series = $scope.chartConfig.series.concat(data);
             $scope.chartConfig.title.text =   "Insurance Index" + " - " + country;
-            var chart = $('#main-chart').highcharts($scope.chartConfig);
+            var chart = new Highcharts.Chart($scope.chartConfig);
         });
         promise.error (function(err){
             console.log("For now :-) . " + err);
@@ -700,9 +717,7 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
             }
             return true;
         }
-
         return false;
-
     };
 
     $scope.stats = {};

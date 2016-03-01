@@ -62,7 +62,8 @@ InsuranceIndex.factory('ChartConfig', function() {
                             }
                         });
                     }
-                }
+                },
+                renderTo : 'main-chart'
             },
 
             series: [

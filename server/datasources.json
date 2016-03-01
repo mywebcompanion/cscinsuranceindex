@@ -7,7 +7,7 @@
     "port": 47325,
     "url": "mongodb://csc:csc@ds047325.mongolab.com:47325/cscinsuranceindex",
     "database": "cscinsuranceindex",
-    "name": "cscindexstatging",
+    "name": "cscindexstage",
     "connector": "mongodb"
   },
   "cscindex": {

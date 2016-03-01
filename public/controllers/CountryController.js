@@ -7,7 +7,21 @@ InsuranceIndex.controller('CountryController', function($scope,$window, ChartCon
     $scope.chartConfig = ChartConfig.getDefaultConfig();
     $scope.selected = undefined;
     $scope.countryList = ['Malaysia','HongKong','Singapore','India','Japan','Indonesia'];
+    function MainCtrl($scope, Fullscreen) {
 
+        $scope.goFullscreen = function () {
+
+            if (Fullscreen.isEnabled())
+                Fullscreen.cancel();
+            else
+                Fullscreen.all();
+
+            // Set Fullscreen to a specific element (bad practice)
+            // Fullscreen.enable( document.getElementById('img') )
+
+        }
+
+    }
 
     var renderChart = function(country){
         var promise = CountryStatsFactory.getCountryData(country);
@@ -16,7 +30,7 @@ InsuranceIndex.controller('CountryController', function($scope,$window, ChartCon
             $scope.chartConfig.series = $scope.chartConfig.series.splice(0,1);
             $scope.chartConfig.series = $scope.chartConfig.series.concat(data);
             $scope.chartConfig.title.text =   "Insurance Index" + " - " + country;
-            var chart = $('#main-chart').highcharts($scope.chartConfig);
+            var chart = new Highcharts.Chart($scope.chartConfig);
         });
         promise.error (function(err){
             console.log("For now :-) . " + err);

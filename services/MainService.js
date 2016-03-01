@@ -38,6 +38,7 @@ var MainService = function(){
         var market = req.body.market.trim();
         var company = req.body.company.trim();
         var metricname = req.body.metricname;
+        var reverseSort = false;
         var regexCountry = new RegExp([ market].join(""), "i");
         console.log("getComparisonReport + " + "market" + regexCountry);
 
@@ -51,10 +52,27 @@ var MainService = function(){
                         metricObj.company = metricinfo.companyName;
                         metric.value ? metric.value : "";
                         metricObj.value = metric.value;
+                        metricObj.rateorder = metric.rateorder;
+                        metricObj.type = metric.type;
                         compareStats.push(metricObj);
                     }
                 });
             });
+            compareStats = _.sortBy(compareStats, function(obj){
+                    if(obj.type === "Value" || obj.type === "Rating"){
+                        obj.value = obj.value.replace(/[^\d\.]+/g,"");
+                        if(obj.rateorder === "high"){
+                            reverseSort = true;
+                        }
+                        return Number(obj.value);
+                    }
+                    else{
+                        return obj.value === "yes";
+                    }
+            });
+            if(reverseSort){
+                compareStats = compareStats.reverse();
+            }
             res.json(compareStats);
         }, function(err){
             console.log("Error fetching data from mongoDB" + err);
