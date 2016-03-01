@@ -40,7 +40,6 @@ var MainService = function(){
         var metricname = req.body.metricname;
         var reverseSort = false;
         var regexCountry = new RegExp([ market].join(""), "i");
-        console.log("getComparisonReport + " + "market" + regexCountry);
 
         var promise = MetricsDataModel.find({market: regexCountry}).exec();
         var compareStats  = [];
@@ -59,15 +58,30 @@ var MainService = function(){
                 });
             });
             compareStats = _.sortBy(compareStats, function(obj){
-                    if(obj.type === "Value" || obj.type === "Rating"){
-                        obj.value = obj.value.replace(/[^\d\.]+/g,"");
+                    if(obj.type === "Value"){
+                        if(obj.value){
+                            obj.value = obj.value.replace(/[^\d\.]+/g,"");
+                        }
+                        else{
+                            reverseSort = true;
+                            return obj.value;
+                        }
+
                         if(obj.rateorder === "high"){
                             reverseSort = true;
                         }
-                        return Number(obj.value);
+                        if(obj.value){
+                            return Number(obj.value);
+                        }
+
+
+                    }
+                    else if(obj.type === "Value"){
+                        reverseSort = true;
+                        return obj.value === "yes";
                     }
                     else{
-                        return obj.value === "yes";
+                        return obj.value;
                     }
             });
             if(reverseSort){
