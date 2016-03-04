@@ -4,10 +4,12 @@
         <div class="row">
             <div class="col col-xs-6">
                 <h1>
-<!--
-                    <i class="fa fa-bank"></i>
--->
-                    <span><img src="{{stats.url}}" default=""></span>
+                    <span ng-show="stats.company === 'Tokio Marine'">
+                        <img styles="margin-bottom:20px;" src="http://res.cloudinary.com/dop9okwjs/image/upload/c_scale,h_50/v1457063845/images/tokio-marine-logo.png">
+                    </span>
+                    <span ng-show="!stats.company === 'Tenet Sompo'">
+                        <i class="fa fa-bank"></i>
+                    </span>
                     {{stats.company | uppercase}} [{{stats.market | uppercase}}]</h1>
             </div>
             <div class="col col-xs-6">
