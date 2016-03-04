@@ -7,7 +7,7 @@ var AdminApp = angular.module('AdminApp',['ngAnimate', 'ui.bootstrap','ui.router
 AdminApp.config(function($logProvider,$stateProvider,$urlRouterProvider){
     //$urlRouterProvider.otherwise('/home');
     $stateProvider.state('admin',{
-        url : '/old',
+        url : '/',
         controller : 'AdminController',
         templateUrl : 'views/adminhome.html'
     });
