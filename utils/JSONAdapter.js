@@ -21,6 +21,7 @@ var JSONAdapter = {};
     _.each(input, function (object) {
         var metrics = {};
         var market = object.market.toLowerCase();
+        output.url = object.url.toLowerCase();
 
         if (!output[market]) {
             output[market] = {};
