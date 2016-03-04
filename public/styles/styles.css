@@ -1698,4 +1698,7 @@ ul.rating {
   padding-right: 10px;
   color: #5F5F5F; }
 
+.tool-tip {
+  z-index: 100; }
+
 /*# sourceMappingURL=styles.css.map */
