@@ -130,7 +130,7 @@ var JSONAdapter = {};
 
             });
             if(numberOfCategories >0)
-                company["score"] = Math.round(categoriesScore)/10;
+                company["score"] = Math.round(categoriesScore/6*10)/10;
             else
                 company["score"] = 0;
         });
