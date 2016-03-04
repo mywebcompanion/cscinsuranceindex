@@ -9,18 +9,18 @@ AdminApp.config(function($logProvider,$stateProvider,$urlRouterProvider){
     $stateProvider.state('admin',{
         url : '/',
         controller : 'AdminController',
-        templateUrl : 'views/adminhome.html'
+        templateUrl : '/views/adminhome.html'
     });
 
     $stateProvider.state('admin.addcompany',{
         url : 'addcompany',
         controller : 'AdminController',
-        templateUrl : 'views/companyadmin.html'
+        templateUrl : '/views/companyadmin.html'
     });
     $stateProvider.state('admin.deletecompany',{
         url : 'deletecompany',
         controller : 'DeleteCompanyController',
-        templateUrl : 'views/deletecompany.html',
+        templateUrl : '/views/deletecompany.html',
         resolve:   {
             loadcompanies : function($http){
                 return $http.get('/admin/companyinfo').then(function(res){
@@ -32,7 +32,7 @@ AdminApp.config(function($logProvider,$stateProvider,$urlRouterProvider){
     $stateProvider.state('admin.editcompany',{
         url : 'editcompany',
         controller : 'EditCompanyController',
-        templateUrl : 'views/editcompany.html',
+        templateUrl : '/views/editcompany.html',
         resolve:   {
             editcompanies : function($http){
                 return $http.get('/admin/companyinfo').then(function(res){
@@ -45,12 +45,12 @@ AdminApp.config(function($logProvider,$stateProvider,$urlRouterProvider){
     $stateProvider.state('admin.addmetrics',{
         url : 'addmetrics',
         controller : 'AddMetricsController',
-        templateUrl : 'views/addmetrics.html'
+        templateUrl : '/views/addmetrics.html'
     });
     $stateProvider.state('admin.deletemetrics',{
         url : 'deletemetrics',
         controller : 'DeleteMetricsController',
-        templateUrl : 'views/deletemetrics.html',
+        templateUrl : '/views/deletemetrics.html',
         resolve:   {
             loadMetrics : function($http){
                 return $http.get('/admin/getAllMetrics').then(function(res){
@@ -62,7 +62,7 @@ AdminApp.config(function($logProvider,$stateProvider,$urlRouterProvider){
     $stateProvider.state('admin.addbenchmark',{
         url : 'addbenchmark',
         controller : 'AddBenchMarkController',
-        templateUrl : 'views/addbenchmark.html',
+        templateUrl : '/views/addbenchmark.html',
         resolve:   {
             loadMetrics : function($http){
                 return $http.get('/admin/getValueMetrics').then(function(res){
@@ -74,7 +74,7 @@ AdminApp.config(function($logProvider,$stateProvider,$urlRouterProvider){
     $stateProvider.state('admin.rating',{
         url : 'rating',
         controller : 'RatingController',
-        templateUrl : 'views/ratecompany.html',
+        templateUrl : '/views/ratecompany.html',
         resolve:   {
             loadMarketPromise : function($http){
                 return $http.get('/admin/metricsdata').then(function(res){

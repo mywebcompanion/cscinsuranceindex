@@ -20,7 +20,6 @@ mongoose.connect('mongodb://csc:CscDi2@ds017158-a0.mlab.com:17158,ds017158-a1.ml
 
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(bodyParser.json());
-app.use(express.static(__dirname +'/public'));
 app.use(cors());
 
 var MainRouter = require("./router/MainRouter");
