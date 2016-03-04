@@ -1698,6 +1698,9 @@ ul.rating {
   padding-right: 10px;
   color: #5F5F5F; }
 
+.comment-text {
+  font-size: 20px; }
+
 .admin-form-field {
   margin-top: 10px;
   margin-bottom: 10px;

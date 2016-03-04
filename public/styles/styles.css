@@ -1698,7 +1698,7 @@ ul.rating {
   padding-right: 10px;
   color: #5F5F5F; }
 
-.tool-tip {
-  z-index: 100; }
+.comment-text {
+  font-size: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
