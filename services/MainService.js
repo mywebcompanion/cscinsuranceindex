@@ -107,7 +107,6 @@ var MainService = function(){
                 var output = JSONAdapter.metricDataGraphAdapter(countryMetrics[market]);
                 console.log("Sending response " + JSON.stringify(output));
                 res.json(output);
-
             }, function(err){
                 var countryMetrics = JSONAdapter.metricDataAdapter(data, []);
                 var output = JSONAdapter.metricDataGraphAdapter(countryMetrics[market]);

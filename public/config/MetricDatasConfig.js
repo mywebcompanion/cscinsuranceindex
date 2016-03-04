@@ -45,18 +45,18 @@ var getMetricDataConfig = function (nga) {
         return ret;
     };
     metricdata.editionView().fields([
+        nga.field('companyName').editable(false),
+        nga.field('market').editable(false),
+        nga.field('url'),
         nga.field('metrics','embedded_list')
             .targetFields([
                 nga.field('name').editable(false).map(function(value, entry){
                     addCustomField(value.entry);
                 })
-
-
             ])
     ]);
 
     metricdata.creationView().fields(metricdata.listView().fields());
-
 
     return metricdata;
 };
