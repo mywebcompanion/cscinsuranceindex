@@ -9,9 +9,9 @@ var trim = require('trim');
 var JSONAdapter = {};
 
 
-    JSONAdapter.metricDataAdapter = function(input, metricdb) {
+JSONAdapter.metricDataAdapter = function(input, metricdb) {
 
-        computeBenchMark(input);
+    computeBenchMark(input);
     if (!(input instanceof Array))
     {
         input = [input]
@@ -21,9 +21,6 @@ var JSONAdapter = {};
     _.each(input, function (object) {
         var metrics = {};
         var market = object.market.toLowerCase();
-        if(object.url){
-            output.url = object.url.toLowerCase();
-        }
 
         if (!output[market]) {
             output[market] = {};
@@ -60,11 +57,15 @@ var JSONAdapter = {};
             }
             if (metricType[metricsObj.type] === metricType["Value"] && metricsObj.hasOwnProperty("benchmarkvalue")) {
                 if(metricsObj.benchmarkvalue > 0 )
-                metricTypeObj["benchmarkvalue"] = metricsObj.benchmarkvalue;
+                    metricTypeObj["benchmarkvalue"] = metricsObj.benchmarkvalue;
             }
             else if(metricType[metricsObj.type] === metricType["Value"] && !metricsObj.hasOwnProperty("benchmarkvalue")){
                 if(object.market && benchMarkData[object.market] &&  benchMarkData[object.market][metricsObj.name] ){
-                    metricTypeObj["benchmarkvalue"] = benchMarkData[object.market][metricsObj.name].maxval;
+                    if(metricRec.rateorder === "high") {
+                        metricTypeObj["benchmarkvalue"] = benchMarkData[object.market][metricsObj.name].maxval;
+                    } else{
+                        metricTypeObj["benchmarkvalue"] = benchMarkData[object.market][metricsObj.name].minval;
+                    }
                 }
             }
 
@@ -86,7 +87,7 @@ var JSONAdapter = {};
         output[market][object.companyName] = metrics;
     });
 
-     //Part II
+    //Part II
     var out = _.each(output, function(country){
         _.each(country, function(company){
             var numberOfCategories = 0;
@@ -100,17 +101,22 @@ var JSONAdapter = {};
                             for (i = 0; i < value.length; i++) {
                                 if((value[i].hasOwnProperty('benchmarkvalue')) &&
                                     (parseInt(value[i].value) <= parseInt(value[i].benchmarkvalue))) {
-                                    score += value[i].value / value[i].benchmarkvalue * value[i].weightage;
+                                    if(value[i].rateorder === "high")
+                                    {
+                                        score += value[i].value / value[i].benchmarkvalue * value[i].weightage;
+                                    } else{
+                                        score += value[i].benchmarkvalue / value[i].value * value[i].weightage;
+                                    }
                                 } else{
                                     score += value[i].weightage;
                                 }
                                 weightage += value[i].weightage;
                             }
-
                             break;
                         case "BooleanMetric":
                             for(i = 0; i < value.length; i++){
-                                if(value[i].value === "yes")
+                                if((value[i].value === "yes" && value[i].rateorder === "high") ||
+                                    (value[i].value === "no" && value[i].rateorder === "low"))
                                     score += value[i].weightage;
                                 else
                                     score += 0;
@@ -120,7 +126,12 @@ var JSONAdapter = {};
                             break;
                         case "RatingMetric":
                             for(i = 0; i < value.length; i++){
-                                score += value[i].value * value[i].weightage / 100;
+                                if(value[i].rateorder === "high") {
+                                    score += value[i].value * value[i].weightage / 100;
+                                } else {
+                                    score += (10 - value[i].value) * value[i].weightage / 100;
+
+                                }
                                 weightage  += value[i].weightage;
                             }
                             break;
