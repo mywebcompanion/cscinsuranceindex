@@ -34,6 +34,7 @@ InsuranceIndex.controller('StatsController', function($scope,UIMaster,ChartConfi
     $scope.stats.market = $stateParams.market;
     $scope.stats.company = $stateParams.company;
     $scope.stats.overallScore = loadStats.data[$scope.stats.market][$scope.stats.company]["score"];
+    $scope.stats.companyInfo = {};
     CompanyService.loadCompanyInfo($stateParams.company, $stateParams.market).success(function(data){
         $scope.stats.companyInfo = data;
     });
